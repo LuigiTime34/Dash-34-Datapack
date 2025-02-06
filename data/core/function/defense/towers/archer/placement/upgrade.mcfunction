@@ -5,7 +5,7 @@ $place template core:defense/towers/archer/upgrade$(building) ~$(x_offset) ~ ~$(
 $data modify entity @n[tag=$(building)] data.x_offset set from entity @s data.x_offset
 $data modify entity @n[tag=$(building)] data.z_offset set from entity @s data.z_offset
 $data modify entity @n[tag=$(building)] data.rotation set from entity @s data.rotation
-$data modify entity @n[tag=$(building)] data.sell_cost set value $(sell_cost)
+$scoreboard players set @n[tag=$(building)] defense.money $(cost)
 kill @s
 kill @n[tag=tower-center-marker]
 playsound block.anvil.use master @a ~ ~2 ~ 10 0.7

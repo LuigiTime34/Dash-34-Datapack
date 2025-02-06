@@ -1,5 +1,5 @@
 execute store result score $sell.cost defense.money run data get entity @s data.sell_cost 0.5
-execute at @s run playsound entity.wither.break_block master @a ~ ~ ~ 1 0.8
+execute at @s run playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ 0.6 0.9
 execute store result storage core:tower_sell sell_cost int 1 run scoreboard players get $sell.cost defense.money
 function core:defense/towers/element/sell_macro with storage core:tower_sell
 scoreboard players reset $sell.cost defense.money

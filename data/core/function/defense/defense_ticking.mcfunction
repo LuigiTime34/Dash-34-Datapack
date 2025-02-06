@@ -1,6 +1,8 @@
 # Secret 0_0
 execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:lime_terracotta"}}}} run effect give @s minecraft:jump_boost 1 4 false
 
+#    Wave Start    #
+execute unless score $wave_timer defense.wave matches 1.. unless entity @e[tag=defense-monster] run scoreboard players set $wave_timer defense.wave 150
 #    Monster Movement    #
 execute as @e[tag=defense-monster] at @s run function core:defense/monsters/movement/movement_ticking
 #   Monster Abilities   #
@@ -46,9 +48,21 @@ execute as @e[tag=defense-monster] run scoreboard players operation @s defense.d
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
 
 # Archer Tower
-# All of the archer towers
-execute as @e[tag=archer-skeleton] at @s run rotate @s facing entity @e[tag=defense-monster,distance=..50,limit=1,sort=furthest] feet
-execute as @e[tag=archer-skeleton] at @s unless entity @n[tag=defense-monster,distance=..50] run rotate @s -180 0
+# Rotation :o
+execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..9.5] feet
+execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..11.5] feet
+execute as @e[tag=archer-skellie_witch2] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
+execute as @e[tag=archer-skellie_witch_final] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..23.5] feet
+execute as @e[tag=archer-skellie_pillager2] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..13.5] feet
+execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
+
+execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..9.5] run function core:defense/towers/global/rotate_back
+execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..11.5] run function core:defense/towers/global/rotate_back
+execute as @e[tag=archer-skellie_witch2] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..18.5] run function core:defense/towers/global/rotate_back
+execute as @e[tag=archer-skellie_witch_final] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..23.5] run function core:defense/towers/global/rotate_back
+execute as @e[tag=archer-skellie_pillager2] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..13.5] run function core:defense/towers/global/rotate_back
+execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..18.5] run function core:defense/towers/global/rotate_back
+
 execute as @e[tag=archer-skeleton] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 # Witch/Wizard ticking

@@ -10,6 +10,7 @@ function core:defense/scoreboard/update_gold with storage core:wave_number
 data modify storage core:tower_rotation x_offset set from entity @s data.x_offset
 data modify storage core:tower_rotation z_offset set from entity @s data.z_offset
 data modify storage core:tower_rotation rotation set from entity @s data.rotation
-$data modify storage core:tower_rotation sell_cost set value $(cost)
+$scoreboard players add @s defense.money $(cost)
+execute store result storage core:tower_rotation cost int 1 run scoreboard players get @s defense.money
 $data modify storage core:tower_rotation building set value $(building)
 function core:defense/towers/archer/placement/upgrade with storage core:tower_rotation
