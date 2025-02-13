@@ -34,6 +34,7 @@ scoreboard objectives add defense.movement dummy
 scoreboard objectives add defense.distance dummy
 scoreboard objectives add defense.targetx dummy
 scoreboard objectives add defense.targetz dummy
+scoreboard objectives add defense.tree_cooldown dummy
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
 
