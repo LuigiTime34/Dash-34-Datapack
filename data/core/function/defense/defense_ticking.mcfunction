@@ -135,3 +135,7 @@ execute as @e[tag=element-center-marker,tag=earth2] if score @s defense.towers m
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill @s
+
+# TREEEEE
+execute as @e[tag=defense.tree_marker] if score @s defense.tree_cooldown matches 1.. run scoreboard players remove @s defense.tree_cooldown 1
+execute as @e[tag=defense.tree_marker] if score @s defense.tree_cooldown matches 1 at @s run function core:defense/towers/tree/trees/move_down
