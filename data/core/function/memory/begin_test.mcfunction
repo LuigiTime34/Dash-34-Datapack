@@ -30,3 +30,4 @@ fill -2 -59 -37 2 -59 -37 air
 execute as @e[tag=memory-button,nbt=!{transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.0f, 0.0f, 0.0f], translation: [0.0f, 0.0f, 0.0f]}}] run data merge entity @s {interpolation_duration:20,start_interpolation:0,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.0f, 0.0f, 0.0f], translation: [0.0f, 0.0f, 0.0f]}}
 
 schedule function core:memory/reset 10s
+function core:memory/countdown

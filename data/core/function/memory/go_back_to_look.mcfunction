@@ -1,4 +1,5 @@
 schedule function core:memory/reset 10s
+function core:memory/countdown
 tp @p[gamemode=adventure] 0 -60 -31 180 0
 clear @p[gamemode=adventure]
 scoreboard players remove #memory memory 1
@@ -18,7 +19,7 @@ execute if score #memory memory matches 10 run clone 20 -60 -27 8 -59 -27 -6 -60
 setblock -2 -59 -25 minecraft:air
 setblock 0 -59 -25 minecraft:air
 setblock 2 -59 -25 minecraft:air
-kill @e[tag=memory-button]
+execute as @e[tag=memory-button,nbt=!{transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.0f, 0.0f, 0.0f], translation: [0.0f, 0.0f, 0.0f]}}] run data merge entity @s {interpolation_duration:20,start_interpolation:0,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.0f, 0.0f, 0.0f], translation: [0.0f, 0.0f, 0.0f]}}
 tellraw @p[gamemode=adventure] ["",{"text":"You went back to look! (+5 Points)","color":"red"}]
 playsound minecraft:entity.wither.hurt master @p[gamemode=adventure] ~ ~ ~ 100000000000000
 scoreboard players add #score memory 5

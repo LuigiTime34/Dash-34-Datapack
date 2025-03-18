@@ -1,0 +1,1 @@
+give @s bat_spawn_egg[entity_data={id:"minecraft:marker",Tags:["gear-marker"]},item_name='"Place Gear"'] 1

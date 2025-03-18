@@ -14,15 +14,23 @@ stopsound @a * ui.toast.challenge_complete
 ###############
 #    Music    #
 ###############
+execute as @a[gamemode=adventure,tag=!started] if score @s left matches 1.. run advancement revoke @s only core:internal/detect_join
+execute if score $menumusic music matches 0 run function core:start/music_reset
 execute if score $1stmusic music matches 0 run function core:escape/music_reset
 execute if score $2ndmusic music matches 0 run function core:memory/music_reset
 execute if score $3rdmusic music matches 0 run function core:parkour/music_reset
+execute as @a[tag=!started,gamemode=adventure] if score $menumusic music matches 1.. run scoreboard players remove $menumusic music 1
 execute as @p[tag=escape-started,tag=!escape-done] if score $1stmusic music matches 1.. run scoreboard players remove $1stmusic music 1
 execute as @p[tag=memory-started,tag=!memory-done] if score $2ndmusic music matches 1.. run scoreboard players remove $2ndmusic music 1
 execute as @p[tag=parkour-started,tag=!parkour-done] if score $3rdmusic music matches 1.. run scoreboard players remove $3rdmusic music 1
-
 execute if score #timerticks2 timer matches 20 run function core:timer/second2
 execute if score #timerseconds2 timer matches 60 run function core:timer/minute2
+
+# Detect music toggle click
+execute as @a[tag=!started] if score @s music matches 1 run function core:start/music_toggle/tellraw
+execute as @a[tag=!started] if score @s music matches 2 run function core:start/music_toggle/set_custom
+execute as @a[tag=!started] if score @s music matches 3 run function core:start/music_toggle/set_minecraft
+execute as @a[tag=!started] if score @s music matches 4 run function core:start/music_toggle/set_none
 
 
 ##################

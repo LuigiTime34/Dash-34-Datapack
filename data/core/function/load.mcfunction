@@ -4,7 +4,7 @@ scoreboard objectives add items.cooldown dummy
 scoreboard objectives add mobs.axethrow dummy
 scoreboard objectives add delay dummy
 scoreboard objectives add timer dummy
-scoreboard objectives add music dummy
+scoreboard objectives add music trigger
 scoreboard objectives add defense dummy
 scoreboard objectives add memory dummy
 scoreboard objectives add defense.abilities dummy
@@ -35,6 +35,7 @@ scoreboard objectives add defense.distance dummy
 scoreboard objectives add defense.targetx dummy
 scoreboard objectives add defense.targetz dummy
 scoreboard objectives add defense.tree_cooldown dummy
+scoreboard objectives add left minecraft.custom:leave_game
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
 

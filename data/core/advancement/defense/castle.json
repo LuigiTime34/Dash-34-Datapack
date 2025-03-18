@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:chiseled_tuff"
+      "id": "minecraft:gold_block"
     },
-    "title": "Better Late than Never",
-    "description": "Complete the escape room in over 15 minutes",
-    "frame": "task",
+    "title": "In The Hall of the Mountain King",
+    "description": "Find the hidden lore in the castle",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
-  "parent": "core:escape/root",
+  "parent": "core:defense/root",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"
@@ -23,6 +23,6 @@
   ],
   "rewards":
   {
-    "function": "core:anti_challenge_complete"
+    "function": "core:hidden_complete"
   }
 }

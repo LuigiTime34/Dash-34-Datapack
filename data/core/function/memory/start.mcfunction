@@ -1,7 +1,8 @@
 scoreboard players set $memory-started progress 1
-scoreboard players set $memory-started progress 0
+scoreboard players set $escape-started progress 0
 setblock 8 -55 -30 minecraft:redstone_block
 clone -8 -54 -33 -8 -56 -31 -7 -60 -33
+clone -22 -56 -32 -22 -56 -32 -22 -60 -32
 fill -8 -58 -33 -8 -60 -31 air
 tag @s add memory-started
 tp @s 0 -60 -31 180 0

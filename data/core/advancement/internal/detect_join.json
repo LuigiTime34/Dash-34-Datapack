@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "join": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": [
+        [
+            "join"
+        ]
+    ],
+    "rewards": {
+        "function": "core:start/play_music"
+    }
+}

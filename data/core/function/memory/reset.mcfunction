@@ -1,3 +1,4 @@
+playsound block.bell.resonate master @a ~ ~ ~ 1000000000000000000 2
 fill -6 -59 -34 6 -59 -35 air
 clear @p[gamemode=adventure]
 execute if score #memory memory matches 2 run function core:memory/random/reset_items {"z":"36"}
