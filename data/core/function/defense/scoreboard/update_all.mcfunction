@@ -1,0 +1,7 @@
+$scoreboard players display name $defense.health defense.display ["",{"text":"\u0001","color":"white"},{"text": "\u0001","font": "minecraft:negative"},{"text": "\u0003","font": "minecraft:positive"},{"text":"     "},{"text": "$(health)","font": "minecraft:negative"},{"text": "$(spaces)","font": "minecraft:positive"},{"text":"$(health)","color":"red"}]
+
+$scoreboard players display name $money defense.display ["",{"text":"\u0002","color":"white"},{"text": "\u0002","font": "minecraft:negative"},{"text": "\u0003","font": "minecraft:positive"},{"text":"     "},{"text": "$(money)","font": "minecraft:negative"},{"text": "$(spaces)","font": "minecraft:positive"},{"text":"$(money)","color":"gold"}]
+
+$scoreboard players display name $wave_level defense.display ["",{"text":"\u0003","color":"white"},{"text": "\u0003","font": "minecraft:negative"},{"text": "\u0003","font": "minecraft:positive"},{"text":"     "},{"text": "$(wave)","font": "minecraft:negative"},{"text": "$(spaces)","font": "minecraft:positive"},{"text":"$(wave)","color":"dark_aqua"}]
+
+$scoreboard players display name $wave_timer defense.display ["",{"text":"\u0004","color":"white"},{"text": "\u0004","font": "minecraft:negative"},{"text": "\u0003","font": "minecraft:positive"},{"text":"     "},{"text": "$(timer)","font": "minecraft:negative"},{"text": "$(spaces)","font": "minecraft:positive"},{"text":"$(timer)","color":"aqua"}]

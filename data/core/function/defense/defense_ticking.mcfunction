@@ -1,6 +1,11 @@
 # Secret 0_0
 execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:lime_terracotta"}}}} run effect give @s minecraft:jump_boost 1 4 false
 
+#    ATM Click detect    #
+execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-buy] interaction run function core:defense/atm/get_values
+execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-down] interaction run function core:defense/atm/change_amount_down
+execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-up] interaction run function core:defense/atm/change_amount_up
+
 #    Wave Start    #
 execute unless score $wave_timer defense.wave matches 1.. unless entity @e[tag=defense-monster] run scoreboard players set $wave_timer defense.wave 150
 #    Monster Movement    #

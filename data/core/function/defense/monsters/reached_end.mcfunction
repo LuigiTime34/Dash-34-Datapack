@@ -8,5 +8,4 @@ tellraw @a ["",{"text":"Lost","color":"aqua"},{"text":" [","color":"gold","bold"
 scoreboard players operation $defense.health defense.damage -= @s defense.damage
 execute store result bossbar defense_health value run scoreboard players get $defense.health defense.damage
 kill @s
-execute store result storage core:wave_number health float 1 run scoreboard players get $defense.health defense.damage
-function core:defense/scoreboard/update_health with storage core:wave_number
+function core:defense/scoreboard/get_highest

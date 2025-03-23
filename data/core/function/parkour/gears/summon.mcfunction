@@ -1,2 +1,2 @@
 kill @e[type=item,nbt={Item:{id:"minecraft:chain",components:{"minecraft:custom_data":{gear:1b}}}}]
-execute as @e[tag=gear-marker] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:chain",components:{custom_data:{gear:1b}}},NoGravity:true,Age:-1,PickupDelay:0s}
+execute as @e[tag=gear-marker] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:chain",components:{custom_data:{gear:1b}}},NoGravity:true,Age:-32768,PickupDelay:0s}

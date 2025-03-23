@@ -7,3 +7,5 @@ scoreboard players set $gears parkour 0
 scoreboard players set $deaths parkour 0
 execute at @a run playsound minecraft:sound.custom.3rdpuzzle_greeting voice @a ~ ~ ~ 10000000000000000000000000000
 schedule function core:parkour/door/door1 680t
+kill @e[type=item,nbt={Item:{id:"minecraft:chain"}}]
+function core:parkour/gears/summon
