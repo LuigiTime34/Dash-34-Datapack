@@ -61,6 +61,10 @@ execute as @e[tag=archer-skellie_witch_final] at @s positioned ~ -59 ~ run rotat
 execute as @e[tag=archer-skellie_pillager2] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..13.5] feet
 execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
 
+# Show ranges with particles
+execute as @e[tag=tower-center-marker] at @s run rotate @s ~6 ~
+execute as @e[tag=tower-center-marker] at @s positioned ~ -58.5 ~ run function core:defense/towers/archer/get_range
+
 execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..9.5] run function core:defense/towers/global/rotate_back
 execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..11.5] run function core:defense/towers/global/rotate_back
 execute as @e[tag=archer-skellie_witch2] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..18.5] run function core:defense/towers/global/rotate_back
