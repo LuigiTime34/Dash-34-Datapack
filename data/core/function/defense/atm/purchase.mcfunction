@@ -7,7 +7,7 @@ $scoreboard players remove $money defense.money $(gold_cost)
 $give @s emerald $(emerald_cost)
 
 # Particles and sounds
-execute at @n[tag=atm-interaction] run particle happy_villager ~ ~ ~ 0.5 0.5 0.5 0.3 10
+execute at @n[tag=atm-interaction] run particle happy_villager ~ ~ ~ 0.7 0.7 0.7 0 10
 function core:defense/atm/sounds/sound1
 
 # Update display
