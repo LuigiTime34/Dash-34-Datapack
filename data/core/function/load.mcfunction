@@ -37,6 +37,8 @@ scoreboard objectives add defense.targetz dummy
 scoreboard objectives add defense.tree_cooldown dummy
 scoreboard objectives add left minecraft.custom:leave_game
 scoreboard objectives add defense.range_indicator dummy
+scoreboard objectives add defense.towers_range_particle dummy
+scoreboard objectives add defense.items dummy
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
 
