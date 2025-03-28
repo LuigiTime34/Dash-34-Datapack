@@ -3,8 +3,8 @@
     "icon": {
     "id": "minecraft:emerald"
     },
-    "title": "Zombie Villager",
-    "description": "Health: 30\nSpeed: 0.5 BPS\nAbility: Steals 10 gold upon death",
+    "title": "Zombie_Villager",
+    "description": "Health: 40\nSpeed: 0.5 BPS\nGreedy: Steals 10 gold upon death",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

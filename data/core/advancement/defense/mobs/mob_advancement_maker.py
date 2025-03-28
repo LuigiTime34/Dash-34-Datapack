@@ -12,7 +12,7 @@ while i < len(mobs):
     try:
         mob_dict[mob]["Health"] = mobs[i + 1].strip().split(": ")[1]
         mob_dict[mob]["Speed"] = mobs[i + 2].strip().split(": ")[1]
-        mob_dict[mob]["Ability"] = mobs[i + 3].strip().split(": ")[1]
+        mob_dict[mob]["Ability"] = mobs[i + 3].strip()[9:]
         mob_dict[mob]["Icon"] = mobs[i + 4].strip()
     except IndexError:
         print(f"Error: Not enough data for mob {mob}")
@@ -29,7 +29,7 @@ for mob in mob_dict:
     "id": "minecraft:{mob_dict[mob].get('Icon', 'default_icon')}"
     }},
     "title": "{mob}",
-    "description": "Health: {mob_dict[mob]['Health']}\\nSpeed: {mob_dict[mob]['Speed']}\\nAbility: {mob_dict[mob]['Ability']}",
+    "description": "Health: {mob_dict[mob]['Health']}\\nSpeed: {mob_dict[mob]['Speed']}\\n{mob_dict[mob]['Ability']}",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

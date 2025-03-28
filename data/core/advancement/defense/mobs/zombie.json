@@ -4,7 +4,7 @@
     "id": "minecraft:rotten_flesh"
     },
     "title": "Zombie",
-    "description": "Health: 10\nSpeed: 0.2 BPS\nAbility: None",
+    "description": "Health: 10\nSpeed: 0.2 BPS\n",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

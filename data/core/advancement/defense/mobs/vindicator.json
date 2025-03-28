@@ -4,13 +4,13 @@
     "id": "minecraft:iron_axe"
     },
     "title": "Vindicator",
-    "description": "Health: 80\nSpeed: 0.45 BPS\nAbility: Can attack your allies",
+    "description": "Health: 80\nSpeed: 0.7 BPS\nReckless: Every 5 seconds, has a chance to hurt nearby enemies",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "core:defense/mobs/endermite",
+  "parent": "core:defense/mobs/pillager",
   "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

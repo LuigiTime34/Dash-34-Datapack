@@ -18,6 +18,10 @@ execute unless score $wave_timer defense.wave matches 1.. unless entity @e[tag=d
 execute as @e[tag=defense-monster] at @s run function core:defense/monsters/movement/movement_ticking
 #   Monster Abilities   #
 
+# Vindicator
+execute as @e[tag=defense-monster,tag=defense-vindicator] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense-monster,tag=defense-vindicator] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/vindicator
+
 # Witch
 execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
 execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/witch
@@ -69,7 +73,7 @@ execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ run ro
 
 # Show ranges with particles
 execute as @e[tag=tower-center-marker] at @s run rotate @s ~6 ~
-execute as @e[tag=tower-center-marker] at @s positioned ~ -58.5 ~ run function core:defense/towers/global/get_range
+execute as @e[tag=tower-center-marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
 
 execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..9.5] run function core:defense/towers/global/rotate_back
 execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..11.5] run function core:defense/towers/global/rotate_back
@@ -111,7 +115,7 @@ execute as @e[tag=element-center-marker] if score @s defense.towers matches 1.. 
 
 # Show ranges with particles
 execute as @e[tag=element-center-marker] at @s run rotate @s ~6 ~
-execute as @e[tag=element-center-marker] at @s positioned ~ -58.5 ~ run function core:defense/towers/global/get_range
+execute as @e[tag=element-center-marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
 
 # Base
 execute as @e[tag=element-center-marker,tag=!fire1,tag=!fire2,tag=!wind1,tag=!wind2,tag=!ice1,tag=!ice2,tag=!earth1,tag=!earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_base {"fire_damage":"3","range":"9.5","ice_damage":"3","earth_damage":"7","wind_damage":"2","ignite_time":"60","freeze_time":"100","freeze_power":"10","cooldown":"150","blow_power":"0.3"}

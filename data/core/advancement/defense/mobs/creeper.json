@@ -4,13 +4,13 @@
     "id": "minecraft:gunpowder"
     },
     "title": "Creeper",
-    "description": "Health: 40\nSpeed: 0.5 BPS\nAbility: Deals 10 extra damage to your base",
+    "description": "Health: 40\nSpeed: 0.5 BPS\nExplosive: Deals 10 extra damage to your base",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "core:defense/mobs/skeleton",
+  "parent": "core:defense/mobs/spider",
   "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

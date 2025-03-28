@@ -1,101 +1,101 @@
 Zombie
 Health: 10
 Speed: 0.2 BPS
-Ability: None
+Ability: 
 rotten_flesh
 
 Skeleton
 Health: 10
 Speed: 0.4 BPS
-Ability: None
+Ability: 
 bone
-
-Creeper
-Health: 40
-Speed: 0.5 BPS
-Ability: Deals 10 extra damage to your base
-gunpowder
 
 Spider
 Health: 25
 Speed: 0.6 BPS
-Ability: None
+Ability: 
 spider_eye
+
+Creeper
+Health: 40
+Speed: 0.5 BPS
+Ability: Explosive: Deals 10 extra damage to your base
+gunpowder
 
 Witch
 Health: 40
 Speed: 0.35 BPS
-Ability: Heals nearby monsters in a small radius over time
+Ability: Brewer: Heals nearby monsters in a small radius over time
 blaze_powder
 
 Husk
 Health: 50
-Speed: 0.4 BPS
-Ability: Deals 20 extra damage to your base
+Speed: 0.5 BPS
+Ability: Destructive: Deals 20 extra damage to your base
 sand
 
 Stray
 Health: 50
-Speed: 0.5 BPS
-Ability: Immune to ice related towers
+Speed: 0.6 BPS
+Ability: Frozen: Immune to ice damage
 bow
 
 Zombie_Villager
-Health: 30
+Health: 40
 Speed: 0.5 BPS
-Ability: Steals 10 gold upon death
+Ability: Greedy: Steals 10 gold upon death
 emerald
 
 Silverfish
 Health: 20
-Speed: 0.35 BPS
-Ability: Every 5-10 seconds, burrows into the ground.  When burrowed it can't move and cant be attacked, but gains regeneration
+Speed: 0.9 BPS
+Ability: Burrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration
 infested_stone
 
 Piglin
-Health: 40
-Speed: 0.45 BPS
-Ability: Gives 30 extra gold upon death
+Health: 70
+Speed: 0.55 BPS
+Ability: Rich: Gives 30 extra gold upon death
 crossbow
 
 Blaze
-Health: 30
-Speed: 0.5 BPS
-Ability: Deals 30 extra damage to your base; Immune to fire
+Health: 60
+Speed: 0.7 BPS
+Ability: Firey: Deals 30 extra damage to your base; Immune to fire, but takes more ice damage
 blaze_rod
 
 Wither_Skeleton
 Health: 60
 Speed: 0.4 BPS
-Ability: When below half health, doubles in Speed
+Ability: Beserk: When below half health, doubles in Speed
 stone_sword
 
 Enderman
 Health: 50
 Speed: 0.45 BPS
-Ability: Every 10 seconds, teleports to the nerest intersection
+Ability: Blink: Every 10 seconds, teleports forward
 ender_pearl
 
 Endermite
 Health: 20
 Speed: 1 BPS
-Ability: Has a %50 chance of spawning every time an enderman teleports
+Ability: Parasitic: Has a %50 chance of spawning every time an enderman teleports
 purpur_block
+
+Pillager
+Health: 70
+Speed: 0.6 BPS
+Ability: 
+crossbow
 
 Vindicator
 Health: 80
-Speed: 0.45 BPS
-Ability: Can attack your allies
+Speed: 0.7 BPS
+Ability: Reckless: Every 5 seconds, has a chance to hurt nearby enemies
 iron_axe
 
-Pillager
-Health: 60
-Speed: 0.5 BPS
-Ability: Can attack your allies
-crossbow
-
 Piglin_Brute
-Health: 70
-Speed: 0.45 BPS
-Ability: Deals 50 extra damage to your base
+Health: 100
+Speed: 0.8 BPS
+Ability: Devastating: Deals 50 extra damage to your base
 golden_axe

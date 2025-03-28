@@ -4,13 +4,13 @@
     "id": "minecraft:spider_eye"
     },
     "title": "Spider",
-    "description": "Health: 25\nSpeed: 0.6 BPS\nAbility: None",
+    "description": "Health: 25\nSpeed: 0.6 BPS\n",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "core:defense/mobs/creeper",
+  "parent": "core:defense/mobs/skeleton",
   "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

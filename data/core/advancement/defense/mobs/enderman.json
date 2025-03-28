@@ -4,7 +4,7 @@
     "id": "minecraft:ender_pearl"
     },
     "title": "Enderman",
-    "description": "Health: 50\nSpeed: 0.45 BPS\nAbility: Every 10 seconds, teleports to the nerest intersection",
+    "description": "Health: 50\nSpeed: 0.45 BPS\nBlink: Every 10 seconds, teleports forward",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

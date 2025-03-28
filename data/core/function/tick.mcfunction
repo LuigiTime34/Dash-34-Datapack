@@ -19,6 +19,8 @@ execute if score $menumusic music matches 0 run function core:start/music_reset
 execute if score $1stmusic music matches 0 run function core:escape/music_reset
 execute if score $2ndmusic music matches 0 run function core:memory/music_reset
 execute if score $3rdmusic music matches 0 run function core:parkour/music_reset
+execute if score $4thmusic music matches 0 run function core:defense/music_reset
+
 execute as @a[tag=!started,gamemode=adventure] if score $menumusic music matches 1.. run scoreboard players remove $menumusic music 1
 execute as @p[tag=escape-started,tag=!escape-done] if score $1stmusic music matches 1.. run scoreboard players remove $1stmusic music 1
 execute as @p[tag=memory-started,tag=!memory-done] if score $2ndmusic music matches 1.. run scoreboard players remove $2ndmusic music 1

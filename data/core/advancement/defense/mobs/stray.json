@@ -4,7 +4,7 @@
     "id": "minecraft:bow"
     },
     "title": "Stray",
-    "description": "Health: 50\nSpeed: 0.5 BPS\nAbility: Immune to ice related towers",
+    "description": "Health: 50\nSpeed: 0.6 BPS\nFrozen: Immune to ice damage",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

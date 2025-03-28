@@ -3,8 +3,8 @@
     "icon": {
     "id": "minecraft:stone_sword"
     },
-    "title": "Wither Skeleton",
-    "description": "Health: 60\nSpeed: 0.4 BPS\nAbility: When below half health, doubles in Speed",
+    "title": "Wither_Skeleton",
+    "description": "Health: 60\nSpeed: 0.4 BPS\nBeserk: When below half health, doubles in Speed",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
