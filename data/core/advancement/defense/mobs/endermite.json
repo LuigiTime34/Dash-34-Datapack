@@ -4,7 +4,7 @@
     "id": "minecraft:purpur_block"
     },
     "title": "Endermite",
-    "description": "Health: 20\nSpeed: 1 BPS\nParasitic: Has a %50 chance of spawning every time an enderman teleports",
+    "description": "Health: 20\nSpeed: 2 BPS\nParasitic: Has a %50 chance of spawning every time an enderman teleports",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

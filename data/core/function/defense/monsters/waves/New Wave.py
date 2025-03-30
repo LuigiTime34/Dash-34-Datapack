@@ -12,6 +12,8 @@ def create_wave_function(wave_number, mobs):
     print(f"Creating wave {wave_number} function...")
     
     with open(filename, 'w') as f:
+        # Write mob thing
+        f.write(f"execute if score $wave_track defense.wave matches 1 run scoreboard players set $mobs_left defense.wave {len(mobs)}\n")
         # Write mob summoning commands
         for i, mob in enumerate(mobs):
             f.write(f"execute if score $wave_track defense.wave matches {i+1} run function core:defense/monsters/summon/{mob.lower()}\n")

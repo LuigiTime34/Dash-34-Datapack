@@ -5,7 +5,7 @@ schedule function core:defense/atm/button_release_up 2t append
 
 execute positioned -67 -59 106 run playsound minecraft:block.crafter.craft master @a ~ ~ ~ 5 1
 
-execute unless score $emerald_cost defense.money matches 10 run scoreboard players add $gold_cost defense.money 100
+execute unless score $emerald_cost defense.money matches 10 run scoreboard players add $gold_cost defense.money 50
 execute unless score $emerald_cost defense.money matches 10 run scoreboard players add $emerald_cost defense.money 1
 
 # Update displays

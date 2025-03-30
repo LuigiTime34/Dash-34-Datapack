@@ -4,7 +4,7 @@
     "id": "minecraft:blaze_rod"
     },
     "title": "Blaze",
-    "description": "Health: 60\nSpeed: 0.7 BPS\nFirey: Deals 30 extra damage to your base; Immune to fire",
+    "description": "Health: 60\nSpeed: 1.4 BPS\nFirey: Deals 30 extra damage to your base; Immune to fire, but takes more ice damage",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

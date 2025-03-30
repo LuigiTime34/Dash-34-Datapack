@@ -1,3 +1,4 @@
+execute if score $wave_track defense.wave matches 1 run scoreboard players set $mobs_left defense.wave 3
 execute if score $wave_track defense.wave matches 1 run function core:defense/monsters/summon/zombie
 execute if score $wave_track defense.wave matches 2 run function core:defense/monsters/summon/zombie
 execute if score $wave_track defense.wave matches 3 run function core:defense/monsters/summon/skeleton

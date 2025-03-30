@@ -4,7 +4,7 @@
     "id": "minecraft:infested_stone"
     },
     "title": "Silverfish",
-    "description": "Health: 20\nSpeed: 0.9 BPS\nBurrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration",
+    "description": "Health: 20\nSpeed: 1.8 BPS\nBurrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

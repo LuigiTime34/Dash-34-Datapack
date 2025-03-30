@@ -9,5 +9,6 @@ execute as @a if score @s defense.kill_piglin matches 1.. run scoreboard players
 scoreboard players add $money defense.money 10
 playsound minecraft:entity.experience_orb.pickup master @s
 scoreboard players remove @s defense.kill 1
+scoreboard players remove $mobs_left defense.wave 1
 
 function core:defense/scoreboard/get_highest

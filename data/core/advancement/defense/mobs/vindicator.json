@@ -4,7 +4,7 @@
     "id": "minecraft:iron_axe"
     },
     "title": "Vindicator",
-    "description": "Health: 80\nSpeed: 0.7 BPS\nReckless: Every 5 seconds, has a chance to hurt nearby enemies",
+    "description": "Health: 80\nSpeed: 1.4 BPS\nReckless: Every 5 seconds, has a chance to hurt nearby enemies",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

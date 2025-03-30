@@ -1,0 +1,11 @@
+{
+    "values":
+    [
+        "core:defense/arrow",
+        "core:defense/falling_stalactite",
+        "core:defense/freeze",
+        "core:defense/on_fire",
+        "core:defense/sting",
+        "core:defense/wind_charge"
+    ]
+}
