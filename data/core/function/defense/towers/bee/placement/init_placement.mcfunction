@@ -1,4 +1,4 @@
-$place template core:defense/towers/tree/base ~$(x_offset) ~ ~$(z_offset) $(rotation)
+$place template core:defense/towers/bee/base ~$(x_offset) ~ ~$(z_offset) $(rotation)
 $data modify entity @n[tag=tower-barrel-marker] data.x_offset set value $(x_offset)
 $data modify entity @n[tag=tower-barrel-marker] data.z_offset set value $(z_offset)
 $data modify entity @n[tag=tower-barrel-marker] data.rotation set value $(rotation)

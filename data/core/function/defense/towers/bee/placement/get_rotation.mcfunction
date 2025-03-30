@@ -12,4 +12,4 @@ data modify storage core:tower_rotation z_offset set from entity @s data.z_offse
 data modify storage core:tower_rotation rotation set from entity @s data.rotation
 $data modify storage core:tower_rotation sell_cost set value $(cost)
 $data modify storage core:tower_rotation building set value $(building)
-function core:defense/towers/tree/placement/upgrade with storage core:tower_rotation
+function core:defense/towers/bee/placement/upgrade with storage core:tower_rotation

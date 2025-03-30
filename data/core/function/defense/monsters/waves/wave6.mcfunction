@@ -4,7 +4,6 @@ execute if score $wave_track defense.wave matches 3 run function core:defense/mo
 execute if score $wave_track defense.wave matches 4 run function core:defense/monsters/summon/skeleton
 execute if score $wave_track defense.wave matches 5 run function core:defense/monsters/summon/creeper
 execute if score $wave_track defense.wave matches 6 run function core:defense/monsters/summon/spider
-execute if score $wave_track defense.wave matches 7 run function core:defense/monsters/summon/spider
-execute if score $wave_track defense.wave matches 8 run function core:defense/monsters/summon/witch
-execute if score $wave_track defense.wave matches 1..8 run schedule function core:defense/monsters/waves/wave6 3s
-execute if score $wave_track defense.wave matches 1..8 run scoreboard players add $wave_track defense.wave 1
+execute if score $wave_track defense.wave matches 7 run function core:defense/monsters/summon/witch
+execute if score $wave_track defense.wave matches 1..7 run schedule function core:defense/monsters/waves/wave6 3s
+execute if score $wave_track defense.wave matches 1..7 run scoreboard players add $wave_track defense.wave 1

@@ -1,1 +1,1 @@
-execute positioned 2 -59 108 run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 1.6
+execute positioned -67 -59 106 run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 1.6

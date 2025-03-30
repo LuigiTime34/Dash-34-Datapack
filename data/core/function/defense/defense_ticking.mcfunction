@@ -33,13 +33,28 @@ execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.
 execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 100 run function core:defense/monsters/abilities/silverfish2
 
 # Enderman
-# execute as @e[tag=defense-monster,tag=defense-enderman] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-# execute as @e[tag=defense-monster,tag=defense-enderman] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/enderman
+execute as @e[tag=defense-monster,tag=defense-enderman] if score @s defense.abilities matches 4.. run scoreboard players remove @s defense.abilities 1
+
+execute as @e[tag=defense-monster,tag=defense-enderman] at @s if score @s defense.abilities matches 4 run function core:defense/monsters/abilities/enderman
+
+# Create a marker for each enderman that doesn't have one
+execute as @e[tag=defense-monster,tag=defense-enderman,tag=!has_marker] at @s run function core:defense/monsters/abilities/summon_enderman_marker
+
+# Update marker positions to their linked endermen
+execute as @e[tag=defense.enderman-marker] at @s run function core:defense/monsters/abilities/update_enderman_marker
+
+# Kill markers when their linked enderman no longer exists
+execute as @e[tag=defense.enderman-marker] unless score @s defense.marker_id = @n[tag=defense-monster,tag=defense-enderman] defense.entity_id run kill @s
+
+# Teleport endermen that are too far from their markers
+execute as @e[tag=defense-monster,tag=defense-enderman,tag=!defense.enderman-tping] at @s if entity @e[tag=defense.enderman-marker,distance=3..,limit=1,sort=nearest] if score @s defense.entity_id = @e[tag=defense.enderman-marker,distance=3..,limit=1,sort=nearest] defense.marker_id run tp @s @e[tag=defense.enderman-marker,limit=1,sort=nearest]
 
 # Wither Skeleton
 execute as @e[tag=defense-monster,tag=defense-wither_skeleton] store result score @s defense.abilities run data get entity @s Health
-execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..30 run scoreboard players set @s defense.speed 120
-execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches 30.. unless score @s defense.speed matches 40 run scoreboard players set @s defense.speed 40
+execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..29 unless score @s defense.speed matches 160 at @s run playsound block.trial_spawner.ominous_activate master @a ~ ~ ~ 1
+execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..29 unless score @s defense.speed matches 160 at @s run particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0.2 0.4 0.2 0 35
+execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..30 unless score @s defense.speed matches 160 run attribute @s attack_knockback base set 160
+execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches 30.. unless score @s defense.speed matches 40 run attribute @s attack_knockback base set 40
 
 
 # Kill detection for money
@@ -85,9 +100,9 @@ execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ unless
 execute as @e[tag=archer-skeleton] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 # Witch/Wizard ticking
-execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players add @s defense.slowness 15
+execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players set @s defense.archer_slowness 15
 execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run tag @s add defense.slowed
-execute as @e[tag=defense-monster,tag=defense.slowed,nbt=!{active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players remove @s defense.slowness 15
+execute as @e[tag=defense-monster,tag=defense.slowed,nbt=!{active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players set @s defense.archer_slowness 15
 execute as @e[tag=defense-monster,tag=defense.slowed,nbt=!{active_effects:[{id:"minecraft:slowness"}]}] run tag @s remove defense.slowed
 
 execute as @e[tag=defense-monster,tag=!defense.weakened,nbt={active_effects:[{id:"minecraft:weakness"}]}] run tag @s add defense.weakened
@@ -144,7 +159,7 @@ execute as @e[tag=element-center-marker,tag=ice1] if score @s defense.towers mat
 execute as @e[tag=element-center-marker,tag=ice2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_ice_high {"ice_damage":"7.5","range":"15.5","cooldown":"100"}
 # Ice Ticking
 execute at @e[tag=element-snowstorm] run particle snowflake ~ ~ ~ 0.5 1 0.5 0 30
-execute as @e[tag=defense-monster] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.slowness 30
+execute as @e[tag=defense-monster] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.ice_power 30
 execute as @e[tag=defense-monster] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.freeze_timer 50
 execute as @e[tag=element-snowstorm] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 60
 execute as @e[tag=element-snowstorm] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
@@ -152,7 +167,7 @@ execute as @e[tag=element-snowstorm] if score @s defense.towers matches 1 at @s 
 # Timer
 execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1.. run scoreboard players remove @s defense.element.freeze_timer 1
 execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1.. at @s run particle snowflake ~ ~ ~ 0.2 1 0.2 0 5
-execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1 run scoreboard players set @s defense.slowness 0
+execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1 run scoreboard players set @s defense.element.ice_power 0
 
 # Wind 1
 execute as @e[tag=element-center-marker,tag=wind1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_wind_med {"fire_damage":"2","range":"15.5","ice_damage":"2","earth_damage":"3","wind_damage":"4","ignite_time":"20","freeze_time":"20","freeze_power":"5","cooldown":"125","blow_power":"0.6"}
@@ -168,6 +183,18 @@ execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run sc
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill @s
 
-# TREEEEE
-execute as @e[tag=defense.tree_marker] if score @s defense.tree_cooldown matches 1.. run scoreboard players remove @s defense.tree_cooldown 1
-execute as @e[tag=defense.tree_marker] if score @s defense.tree_cooldown matches 1 at @s run function core:defense/towers/tree/trees/move_down
+# BEE TOWER
+execute as @e[tag=bee-center-marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
+execute as @e[tag=bee-center-marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+
+# Show ranges with particles
+execute as @e[tag=bee-center-marker] at @s run rotate @s ~6 ~
+execute as @e[tag=bee-center-marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
+
+# Base
+execute as @e[tag=bee-center-marker,tag=!upgrade1] if score @s defense.towers matches 1 at @s positioned ~ ~2 ~ run function core:defense/towers/bee/launch_bees {"cooldown":"160","damage":"3","range":"7","bee_count":"2"}
+# First Upgrade
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
+
+# Bee ticking
+execute as @n[tag=defense.bee_display] at @s run function core:defense/towers/bee/bee_ticking

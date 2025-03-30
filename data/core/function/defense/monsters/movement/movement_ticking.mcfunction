@@ -1,7 +1,5 @@
 # End of path
 execute if block ~ ~-0.1 ~ black_concrete run function core:defense/monsters/reached_end
-# Update health display at start
-# execute if entity @n[tag=defense-start,distance=..0.01] run data modify entity @s HurtTime set value 10
 # Determine Speed
 execute store result score @s defense.speed run attribute @s attack_knockback base get
 # Move

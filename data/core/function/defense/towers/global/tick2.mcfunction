@@ -22,9 +22,9 @@ $execute if items entity @s $(slot) *[custom_data~{element_upgrade_earth2:1b}] a
 $execute if items entity @s $(slot) *[custom_data~{element_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/sell
 
 
-# TREEEEE UPGRADES
-$execute if items entity @s $(slot) *[custom_data~{tree_upgrade1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=tree-center-marker] run function core:defense/towers/tree/placement/get_rotation {"building":"1","cost":"60","item_slot":"13","slot_to_replace":"13"}
-$execute if items entity @s $(slot) *[custom_data~{tree_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=tree-center-marker] run function core:defense/towers/tree/sell
+# beeEEE UPGRADES
+$execute if items entity @s $(slot) *[custom_data~{bee_upgrade1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"1","cost":"60","item_slot":"13","slot_to_replace":"13"}
+$execute if items entity @s $(slot) *[custom_data~{bee_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/sell
 
 # TENT UPGRADES
 # $execute if items entity @s $(slot) *[custom_data~{tent_upgrade1:1b}] run function core:defense/towers/tent/placement/upgrade {"building":"1"}
