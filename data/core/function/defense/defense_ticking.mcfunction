@@ -71,9 +71,7 @@ execute as @e[tag=defense-monster,tag=defense-enderman] at @s if score @s defens
 # Create a marker for each enderman that doesn't have one
 execute as @e[tag=defense-monster,tag=defense-enderman,tag=!has_marker] at @s run function core:defense/monsters/abilities/summon_enderman_marker
 
-# Teleport endermen that are too far from their markers
-execute as @e[tag=defense-monster,tag=defense-enderman,tag=!defense.enderman-tping] at @s if entity @e[tag=defense.enderman-marker,distance=3..,limit=1,sort=nearest] if score @s defense.entity_id = @e[tag=defense.enderman-marker,distance=3..,limit=1,sort=nearest] defense.marker_id run tp @s @e[tag=defense.enderman-marker,limit=1,sort=nearest]
-
+# Teleport endermen that are too far from their markers and
 # Update marker positions to their linked endermen
 execute as @e[tag=defense.enderman-marker] at @s run function core:defense/monsters/abilities/update_enderman_marker
 
