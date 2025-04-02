@@ -6,7 +6,7 @@
     "title": "Zombie Villager",
     "description": "Health: 40\nSpeed: 1 BPS\nGreedy: Steals 10 gold upon death",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   },

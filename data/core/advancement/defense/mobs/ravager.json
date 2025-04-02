@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-    "id": "minecraft:blaze_powder"
+    "id": "minecraft:saddle"
     },
-    "title": "Witch",
-    "description": "Health: 40\nSpeed: 0.7 BPS\nBrewer: Heals nearby monsters in a small radius over time",
+    "title": "Ravager",
+    "description": "Health: 500\nSpeed: 1.25 BPS\nDeals 100 extra base damage. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "core:defense/mobs/creeper",
+  "parent": "core:defense/mobs/piglin_brute",
   "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

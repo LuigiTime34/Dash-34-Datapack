@@ -6,7 +6,7 @@
     "title": "Vindicator",
     "description": "Health: 80\nSpeed: 1.4 BPS\nReckless: Every 5 seconds, has a chance to hurt nearby enemies",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   },

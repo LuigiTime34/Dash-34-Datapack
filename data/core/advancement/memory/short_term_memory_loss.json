@@ -5,7 +5,7 @@
     },
     "title": "Short Term Memory Loss",
     "description": "Finish the Memory Puzzles with 30 or more points ",
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

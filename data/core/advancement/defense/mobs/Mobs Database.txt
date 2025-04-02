@@ -99,3 +99,9 @@ Health: 100
 Speed: 1.6 BPS
 Ability: Devastating: Deals 50 extra damage to your base
 golden_axe
+
+Ravager
+Health: 500
+Speed: 1.25 BPS
+Ability: Deals 100 extra base damage. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.
+saddle

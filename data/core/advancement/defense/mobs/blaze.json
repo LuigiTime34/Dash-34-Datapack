@@ -6,7 +6,7 @@
     "title": "Blaze",
     "description": "Health: 60\nSpeed: 1.4 BPS\nFirey: Deals 30 extra damage to your base; Immune to fire, but takes more ice damage",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   },

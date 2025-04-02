@@ -5,7 +5,7 @@
     },
     "title": "Better Late than Never",
     "description": "Complete the escape room in over 15 minutes",
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

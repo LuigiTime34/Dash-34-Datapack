@@ -31,7 +31,7 @@ for mob in mob_dict:
     "title": "{mob}",
     "description": "Health: {mob_dict[mob]['Health']}\\nSpeed: {mob_dict[mob]['Speed']}\\n{mob_dict[mob]['Ability']}",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   }},

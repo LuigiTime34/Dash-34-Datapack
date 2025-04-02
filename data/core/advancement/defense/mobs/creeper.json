@@ -6,7 +6,7 @@
     "title": "Creeper",
     "description": "Health: 40\nSpeed: 1 BPS\nExplosive: Deals 10 extra damage to your base",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   },

@@ -6,7 +6,7 @@
     "title": "Endermite",
     "description": "Health: 20\nSpeed: 2 BPS\nParasitic: Has a %50 chance of spawning every time an enderman teleports",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   },

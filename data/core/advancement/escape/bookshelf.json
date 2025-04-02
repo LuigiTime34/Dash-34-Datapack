@@ -5,7 +5,7 @@
     },
     "title": "Behind the Shelves",
     "description": "Find the hidden emerald",
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true

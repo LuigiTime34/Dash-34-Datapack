@@ -5,7 +5,7 @@
     },
     "title": "In The Hall of the Mountain King",
     "description": "Find the hidden lore in the castle",
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true

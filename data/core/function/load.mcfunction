@@ -43,6 +43,7 @@ scoreboard objectives add defense.element.ice_power dummy
 scoreboard objectives add defense.bee.honey_slowness dummy
 scoreboard objectives add defense.entity_id dummy
 scoreboard objectives add defense.marker_id dummy
+scoreboard objectives add defense.ravager_speed dummy
 
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
