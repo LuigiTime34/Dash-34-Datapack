@@ -95,12 +95,14 @@ execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense
 execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense.ravager_speed matches 1 run function core:defense/monsters/boss/ravager/remove_speed
 # Ram Ability
 execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-ravager,type=ravager] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/disable_tower/animation
+execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/disable_tower/init
 # Animation timer
 execute if score $ravager_idx defense.boss_animation matches 1.. run scoreboard players remove $ravager_idx defense.boss_animation 1
+execute if score $ravager_idx defense.boss_animation matches 1.. as @e[tag=defense-ravager] run function core:defense/monsters/boss/ravager/disable_tower/animation
 # Disable timer
 execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 200 run tag @e[tag=defense.ravager_disabled,limit=1] remove defense.ravager_disabled
-execute as @e[tag=defense.ravager_disabled] run scoreboard players add @s defense.towers 1
+execute as @e[tag=defense.ravager_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
+execute as @e[tag=defense.ravager_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
 execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ ~ 1 3 1 0 30
 execute as @e[tag=defense.ravager_disabled] unless entity @e[tag=defense-ravager,limit=1] run tag @s remove defense.ravager_disabled
 

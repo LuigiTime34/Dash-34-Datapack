@@ -1,31 +1,26 @@
 Wave 1
 Zombie
-Zombie
 
 Wave 2
 Zombie
 Zombie
-Skeleton
 
 Wave 3
 Zombie
 Zombie
 Skeleton
-Skeleton
 
 Wave 4
 Zombie
 Zombie
+Zombie
 Skeleton
-Skeleton
-Creeper
 
 Wave 5
 Zombie
 Zombie
 Skeleton
 Skeleton
-Creeper
 Spider
 
 Wave 6
@@ -33,68 +28,62 @@ Zombie
 Zombie
 Skeleton
 Skeleton
-Creeper
 Spider
-Witch
+Spider
 
 Wave 7
 Zombie
 Zombie
 Skeleton
 Skeleton
-Creeper
 Spider
-Witch
-Husk
+Creeper
 
 Wave 8
 Zombie
 Zombie
 Skeleton
 Skeleton
-Creeper
 Spider
+Creeper
 Witch
-Husk
-Stray
 
 Wave 9
 Zombie
 Zombie
 Skeleton
 Skeleton
-Creeper
 Spider
+Creeper
 Witch
 Husk
-Stray
-Zombie_Villager
 
 Wave 10
-Silverfish
-Zombie_Villager
+Zombie
 Zombie
 Skeleton
+Skeleton
+Spider
+Creeper
 Witch
 Husk
 Stray
-Creeper
-Spider
 
 Wave 11
-Silverfish
-Piglin
+Zombie
 Zombie
 Skeleton
+Skeleton
+Spider
+Creeper
 Witch
 Husk
 Stray
-Creeper
-Spider
+Zombie_Villager
 
 Wave 12
-Piglin
-Blaze
+Silverfish
+Zombie_Villager
 Zombie
 Skeleton
 Witch
@@ -104,6 +93,28 @@ Creeper
 Spider
 
 Wave 13
+Silverfish
+Piglin
+Zombie
+Skeleton
+Witch
+Husk
+Stray
+Creeper
+Spider
+
+Wave 14
+Piglin
+Blaze
+Zombie
+Skeleton
+Witch
+Husk
+Stray
+Creeper
+Spider
+
+Wave 15
 Wither_Skeleton
 Blaze
 Piglin
@@ -114,7 +125,7 @@ Stray
 Zombie_Villager
 Silverfish
 
-Wave 14
+Wave 16
 Enderman
 Wither_Skeleton
 Blaze
@@ -127,18 +138,7 @@ Silverfish
 Creeper
 Spider
 
-Wave 15 (BOSS WAVE)
-Enderman
-Enderman
-Wither_Skeleton
-Wither_Skeleton
-Blaze
-Blaze
-Piglin
-Piglin
-
-Wave 16
-Pillager
+Wave 17
 Pillager
 Enderman
 Wither_Skeleton
@@ -151,8 +151,7 @@ Husk
 Witch
 Spider
 
-Wave 17
-Vindicator
+Wave 18
 Pillager
 Pillager
 Enderman
@@ -165,8 +164,7 @@ Stray
 Husk
 Witch
 
-Wave 18
-Vindicator
+Wave 19
 Vindicator
 Pillager
 Pillager
@@ -179,8 +177,7 @@ Zombie_Villager
 Stray
 Husk
 
-Wave 19
-Piglin_Brute
+Wave 20
 Vindicator
 Vindicator
 Pillager
@@ -193,7 +190,20 @@ Silverfish
 Zombie_Villager
 Stray
 
-Wave 20
+Wave 21
+Piglin_Brute
+Vindicator
+Vindicator
+Pillager
+Pillager
+Enderman
+Wither_Skeleton
+Blaze
+Piglin
+Silverfish
+Zombie_Villager
+
+Wave 22
 Piglin_Brute
 Piglin_Brute
 Vindicator
@@ -207,123 +217,63 @@ Piglin
 Silverfish
 Zombie_Villager
 
-Wave 21
-Piglin_Brute
-Piglin_Brute
-Vindicator
-Vindicator
-Pillager
-Pillager
-Enderman
-Enderman
-Wither_Skeleton
-Wither_Skeleton
-Blaze
-Blaze
-Piglin
-Piglin
-Silverfish
-Silverfish
-
-Wave 22
-Piglin_Brute
-Vindicator
-Vindicator
-Vindicator
-Pillager
-Pillager
-Pillager
-Enderman
-Enderman
-Enderman
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Blaze
-Blaze
-Blaze
-Piglin
-Piglin
-Piglin
-
 Wave 23
-Vindicator
-Vindicator
+Piglin_Brute
+Piglin_Brute
 Vindicator
 Vindicator
 Pillager
 Pillager
-Pillager
-Pillager
-Enderman
-Enderman
 Enderman
 Enderman
 Wither_Skeleton
 Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
 Blaze
 Blaze
-Blaze
-Blaze
+Piglin
+Piglin
 
 Wave 24
 Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Vindicator
 Vindicator
 Vindicator
 Vindicator
 Pillager
 Pillager
 Pillager
-Pillager
-Enderman
 Enderman
 Enderman
 Enderman
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
-Wither_Skeleton
+Blaze
+Blaze
+Blaze
 
 Wave 25
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
 Vindicator
 Vindicator
 Vindicator
 Vindicator
-Vindicator
-Enderman
-Enderman
-Enderman
-Enderman
-Enderman
 Pillager
 Pillager
 Pillager
 Pillager
-Pillager
+Enderman
+Enderman
+Enderman
+Enderman
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
+Blaze
+Blaze
+Blaze
+Blaze
 
 Wave 26
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Blaze
-Blaze
-Blaze
-Blaze
-Blaze
-Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
@@ -332,34 +282,20 @@ Vindicator
 Vindicator
 Vindicator
 Vindicator
-Vindicator
 Pillager
 Pillager
 Pillager
 Pillager
-Pillager
+Enderman
+Enderman
+Enderman
+Enderman
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
 
 Wave 27
-Enderman
-Enderman
-Enderman
-Enderman
-Enderman
-Enderman
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Blaze
-Blaze
-Blaze
-Blaze
-Blaze
-Blaze
-Piglin_Brute
-Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
@@ -369,25 +305,18 @@ Vindicator
 Vindicator
 Vindicator
 Vindicator
-Vindicator
+Enderman
+Enderman
+Enderman
+Enderman
+Enderman
+Pillager
+Pillager
+Pillager
+Pillager
+Pillager
 
 Wave 28
-Pillager
-Pillager
-Pillager
-Pillager
-Pillager
-Pillager
-Pillager
-Enderman
-Enderman
-Enderman
-Enderman
-Enderman
-Enderman
-Enderman
-Wither_Skeleton
-Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
@@ -398,35 +327,23 @@ Blaze
 Blaze
 Blaze
 Blaze
-Blaze
-Blaze
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
-Piglin_Brute
-Piglin_Brute
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Pillager
+Pillager
+Pillager
+Pillager
+Pillager
 
 Wave 29
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Pillager
-Pillager
-Pillager
-Pillager
-Pillager
-Pillager
-Pillager
-Pillager
-Enderman
-Enderman
 Enderman
 Enderman
 Enderman
@@ -439,35 +356,26 @@ Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
 Blaze
 Blaze
 Blaze
 Blaze
 Blaze
 Blaze
-Blaze
-Blaze
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Vindicator
 
 Wave 30
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Pillager
 Pillager
 Pillager
 Pillager
@@ -482,8 +390,6 @@ Enderman
 Enderman
 Enderman
 Enderman
-Enderman
-Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
@@ -498,4 +404,10 @@ Blaze
 Blaze
 Blaze
 Blaze
-Blaze
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute

@@ -1,3 +1,5 @@
+# First, see if the entity is a ravager and is in its animation mode. If it is, stop the function.
+execute if score $ravager_idx defense.boss_animation matches 1.. if entity @s[tag=defense-ravager] run return 0
 # Get any modifiers to the enemy's speed and set the speed accordingly
 scoreboard players reset @s defense.slowness
 scoreboard players operation @s defense.slowness += @s defense.element.ice_power
