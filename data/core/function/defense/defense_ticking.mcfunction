@@ -1,30 +1,53 @@
 # Secret 0_0
 execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:lime_terracotta"}}}} run effect give @s minecraft:jump_boost 1 4 false
-
-#    ATM Click detect    #
+# ====================================================================================================================
+#         _______ __  __ 
+#      /\|__   __|  \/  |
+#     /  \  | |  | \  / |
+#    / /\ \ | |  | |\/| |
+#   / ____ \| |  | |  | |
+#  /_/    \_\_|  |_|  |_|
+# ====================================================================================================================
 execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-buy] interaction run function core:defense/atm/get_values
 execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-down] interaction run function core:defense/atm/change_amount_down
 execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-up] interaction run function core:defense/atm/change_amount_up
-
-
-#    Items     #
+# ====================================================================================================================
+#   _____ _______ ______ __  __  _____ 
+#  |_   _|__   __|  ____|  \/  |/ ____|
+#    | |    | |  | |__  | \  / | (___  
+#    | |    | |  |  __| | |\/| |\___ \ 
+#   _| |_   | |  | |____| |  | |____) |
+#  |_____|  |_|  |______|_|  |_|_____/ 
+# ====================================================================================================================
 execute as @e[tag=defense.boulder-marker] at @s as @n[type=tnt,distance=..1] unless score @s defense.items matches 1.. run function core:defense/items/boulders/tnt_init
 execute as @e[type=tnt] at @s if score @s defense.items matches 1.. run scoreboard players remove @s defense.items 1
 execute as @e[type=tnt] at @s if score @s defense.items matches 1 run function core:defense/items/boulders/tnt_explode
-
-#    Wave Start    #
+# ====================================================================================================================
+#  __          ____      ________  _____ 
+#  \ \        / /\ \    / /  ____|/ ____|
+#   \ \  /\  / /  \ \  / /| |__  | (___  
+#    \ \/  \/ / /\ \ \/ / |  __|  \___ \ 
+#     \  /\  / ____ \  /  | |____ ____) |
+#      \/  \/_/    \_\/   |______|_____/ 
+# ====================================================================================================================
 # Wave end
 execute if score $mobs_left defense.wave matches 0 unless score $wave_timer defense.wave matches 1.. run function core:defense/monsters/waves/end_of_wave
 execute unless score $wave_timer defense.wave matches 1.. if score $mobs_left defense.wave matches 0 run scoreboard players set $wave_timer defense.wave 150
 execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"head":{"items":"minecraft:iron_helmet","predicates":{"minecraft:custom_data":{"defense.start_wave":true}}}}}} run function core:defense/monsters/waves/get_wave
 # Display mobs left
 execute if score $mobs_left defense.wave matches 1.. run title @a[gamemode=adventure] actionbar [{"text":"Mobs Left: ","color":"yellow"},{"score":{"name":"$mobs_left","objective":"defense.wave"},"color":"gold","bold":true}]
-
-
-#    Monster Movement    #
+# ====================================================================================================================
+#   __  __  ____  _   _  _____ _______ ______ _____   _____ 
+#  |  \/  |/ __ \| \ | |/ ____|__   __|  ____|  __ \ / ____|
+#  | \  / | |  | |  \| | (___    | |  | |__  | |__) | (___  
+#  | |\/| | |  | | . ` |\___ \   | |  |  __| |  _  / \___ \ 
+#  | |  | | |__| | |\  |____) |  | |  | |____| | \ \ ____) |
+#  |_|  |_|\____/|_| \_|_____/   |_|  |______|_|  \_\_____/ 
+# ====================================================================================================================
+#    Movement    #
 execute as @e[tag=defense-monster] at @s run function core:defense/monsters/movement/movement_ticking
 
-#   Monster Abilities   #
+#   Abilities   #
 
 # Vindicator
 execute as @e[tag=defense-monster,tag=defense-vindicator] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
@@ -72,21 +95,27 @@ execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense
 execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense.ravager_speed matches 1 run function core:defense/monsters/boss/ravager/remove_speed
 # Ram Ability
 execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-ravager,type=ravager] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/disable_tower
+execute as @e[tag=defense-ravager,type=ravager] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/disable_tower/animation
+# Animation timer
+execute if score $ravager_idx defense.boss_animation matches 1.. run scoreboard players remove $ravager_idx defense.boss_animation 1
+# Disable timer
 execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 200 run tag @e[tag=defense.ravager_disabled,limit=1] remove defense.ravager_disabled
 execute as @e[tag=defense.ravager_disabled] run scoreboard players add @s defense.towers 1
-execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ ~ 1 3 1 0 50
-
+execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ ~ 1 3 1 0 30
 execute as @e[tag=defense.ravager_disabled] unless entity @e[tag=defense-ravager,limit=1] run tag @s remove defense.ravager_disabled
 
-# Kill detection for money
+#    Kill detection for money    #
 execute as @a if score @s defense.kill matches 1.. at @s run function core:defense/monsters/killed_monster
-
-
-
-#   Towers   #
+# ====================================================================================================================
+#   _______ ______          ________ _____   _____ 
+#  |__   __/ __ \ \        / /  ____|  __ \ / ____|
+#     | | | |  | \ \  /\  / /| |__  | |__) | (___  
+#     | | | |  | |\ \/  \/ / |  __| |  _  / \___ \ 
+#     | | | |__| | \  /\  /  | |____| | \ \ ____) |
+#     |_|  \____/   \/  \/   |______|_|  \_\_____/ 
+# ====================================================================================================================
 # Tower Placement
-execute as @p store result score @s defense.rotation run data get entity @s Rotation[0]
+execute as @p[gamemode=adventure] store result score @s defense.rotation run data get entity @s Rotation[0]
 # Tower Upgrade Ticking Commands:
 execute as @p[gamemode=adventure] at @s at @n[tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/tick
 execute as @e[tag=tower-barrel-marker,type=marker,tag=!open] at @s if block ~ ~ ~ minecraft:barrel[open=true] run tag @s add open
@@ -98,19 +127,27 @@ execute as @e[tag=defense-monster] run scoreboard players operation @s defense.t
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.targetz -= $start.z defense.targetz
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance = @s defense.targetx
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
-
-# Archer Tower
-# Rotation :o
+# Display Ranges
+execute as @e[tag=defense.tower_marker] at @s run rotate @s ~6 ~
+execute as @e[tag=defense.tower_marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
+# Cooldown
+execute as @e[tag=defense.tower_marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
+execute as @e[tag=defense.tower_marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+# ====================================================================================================================
+#                  _               
+#                 | |              
+#    __ _ _ __ ___| |__   ___ _ __ 
+#   / _` | '__/ __| '_ \ / _ \ '__|
+#  | (_| | | | (__| | | |  __/ |   
+#   \__,_|_|  \___|_| |_|\___|_|   
+# ====================================================================================================================
+# Rotation for the skeletons (and pillagers and witches for the later ones)
 execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..9.5] feet
 execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..11.5] feet
 execute as @e[tag=archer-skellie_witch2] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
 execute as @e[tag=archer-skellie_witch_final] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..23.5] feet
 execute as @e[tag=archer-skellie_pillager2] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..13.5] feet
 execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
-
-# Show ranges with particles
-execute as @e[tag=tower-center-marker] at @s run rotate @s ~6 ~
-execute as @e[tag=tower-center-marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
 
 execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..9.5] run function core:defense/towers/global/rotate_back
 execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..11.5] run function core:defense/towers/global/rotate_back
@@ -119,8 +156,32 @@ execute as @e[tag=archer-skellie_witch_final] at @s positioned ~ -59 ~ unless en
 execute as @e[tag=archer-skellie_pillager2] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..13.5] run function core:defense/towers/global/rotate_back
 execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..18.5] run function core:defense/towers/global/rotate_back
 
+# Cooldown (again, since the archer towers are just special like that and I'm too lazy to make it better)
 execute as @e[tag=archer-skeleton] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+
+
+# Base
+execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"100","damage":"5","range":"9.5"}
+
+# First Upgrade
+execute as @e[tag=archer-skellie_pillager1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
+
+# Pillager Upgrade 1 - shoot two times
+execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 5 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
+execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
+
+# Pillager Upgrade 2 - shoot three times
+execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 7 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
+execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 4 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
+execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"30","damage":"20","range":"18.5"}
+
+# Witch Upgrade 1
+execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}
+
+# Witch Upgrade 2
+execute as @e[tag=archer-skellie_witch_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"50","damage":"12","range":"23.5"}
+
 # Witch/Wizard ticking
 execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players set @s defense.archer_slowness 15
 execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run tag @s add defense.slowed
@@ -129,31 +190,14 @@ execute as @e[tag=defense-monster,tag=defense.slowed,nbt=!{active_effects:[{id:"
 
 execute as @e[tag=defense-monster,tag=!defense.weakened,nbt={active_effects:[{id:"minecraft:weakness"}]}] run tag @s add defense.weakened
 execute as @e[tag=defense-monster,tag=defense.weakened,nbt=!{active_effects:[{id:"minecraft:weakness"}]}] run tag @s remove defense.weakened
-
-
-# Base
-execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"100","damage":"5","range":"9.5"}
-# First Upgrade
-execute as @e[tag=archer-skellie_pillager1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
-# Pillager Upgrade 1
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
-# Pillager Upgrade 2
-execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"30","damage":"20","range":"18.5"}
-# Witch Upgrade 1
-execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}
-# Witch Upgrade 2
-execute as @e[tag=archer-skellie_witch_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"50","damage":"12","range":"23.5"}
-
-
-
-# Elemental Tower
-execute as @e[tag=element-center-marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
-execute as @e[tag=element-center-marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
-
-# Show ranges with particles
-execute as @e[tag=element-center-marker] at @s run rotate @s ~6 ~
-execute as @e[tag=element-center-marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
-
+# ====================================================================================================================
+#        _                           _        _ 
+#       | |                         | |      | |
+#    ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |
+#   / _ \ |/ _ \ '_ ` _ \ / _ \ '_ \| __/ _` | |
+#  |  __/ |  __/ | | | | |  __/ | | | || (_| | |
+#   \___|_|\___|_| |_| |_|\___|_| |_|\__\__,_|_|
+# ====================================================================================================================
 # Base
 execute as @e[tag=element-center-marker,tag=!fire1,tag=!fire2,tag=!wind1,tag=!wind2,tag=!ice1,tag=!ice2,tag=!earth1,tag=!earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_base {"fire_damage":"3","range":"9.5","ice_damage":"3","earth_damage":"7","wind_damage":"2","ignite_time":"60","freeze_time":"150","freeze_power":"10","cooldown":"100","blow_power":"0.3"}
 # Base different particles
@@ -206,15 +250,14 @@ execute as @e[tag=element-center-marker,tag=earth2] if score @s defense.towers m
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill @s
-
-# BEE TOWER
-execute as @e[tag=bee-center-marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
-execute as @e[tag=bee-center-marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
-
-# Show ranges with particles
-execute as @e[tag=bee-center-marker] at @s run rotate @s ~6 ~
-execute as @e[tag=bee-center-marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
-
+# ====================================================================================================================
+#   _               
+#  | |              
+#  | |__   ___  ___ 
+#  | '_ \ / _ \/ _ \
+#  | |_) |  __/  __/
+#  |_.__/ \___|\___|
+# ====================================================================================================================
 # Base
 execute as @e[tag=bee-center-marker,tag=!upgrade1] if score @s defense.towers matches 1 at @s positioned ~ ~2 ~ run function core:defense/towers/bee/launch_bees {"cooldown":"160","damage":"3","range":"7","bee_count":"2"}
 # First Upgrade
