@@ -45,7 +45,7 @@ scoreboard objectives add defense.boss_animation dummy
 scoreboard objectives add defense.health dummy
 
 team add defense_enemies
-bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
+bossbar add defense.mobs_left ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]
 
 team add Players
 team add Monsters

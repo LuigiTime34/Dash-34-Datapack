@@ -32,10 +32,10 @@ execute as @e[type=tnt] at @s if score @s defense.items matches 1 run function c
 # ====================================================================================================================
 # Wave end
 execute if score $mobs_left defense.wave matches 0 unless score $wave_timer defense.wave matches 1.. run function core:defense/monsters/waves/end_of_wave
-execute unless score $wave_timer defense.wave matches 1.. if score $mobs_left defense.wave matches 0 run scoreboard players set $wave_timer defense.wave 150
 execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"head":{"items":"minecraft:iron_helmet","predicates":{"minecraft:custom_data":{"defense.start_wave":true}}}}}} run function core:defense/monsters/waves/get_wave
-# Display mobs left
-execute if score $mobs_left defense.wave matches 1.. run title @a[gamemode=adventure] actionbar [{"text":"Mobs Left: ","color":"yellow"},{"score":{"name":"$mobs_left","objective":"defense.wave"},"color":"gold","bold":true}]
+# Display mobs left in the bossbar
+# execute if score $mobs_left defense.wave matches 1.. run title @a[gamemode=adventure] actionbar [{"text":"Mobs Left: ","color":"yellow"},{"score":{"name":"$mobs_left","objective":"defense.wave"},"color":"gold","bold":true}]
+execute store result bossbar minecraft:defense.mobs_left value run scoreboard players get $mobs_left defense.wave
 # ====================================================================================================================
 #   __  __  ____  _   _  _____ _______ ______ _____   _____ 
 #  |  \/  |/ __ \| \ | |/ ____|__   __|  ____|  __ \ / ____|
@@ -103,9 +103,12 @@ execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ 
 execute as @e[tag=defense.ravager_disabled] unless entity @e[tag=defense-ravager,limit=1] run tag @s remove defense.ravager_disabled
 
 #  Display extra gold recently gotten
-execute if score $recent_hit defense.money matches 1.. run scoreboard players remove $recent_hit defense.money 1
-execute if score $recent_hit defense.money matches 0 run scoreboard players set $recent_money defense.money 0
-execute if score $recent_hit defense.money matches 0 run function core:defense/scoreboard/get_highest
+execute if score $recent_kill defense.money matches 1.. run scoreboard players remove $recent_kill defense.money 1
+execute if score $recent_kill defense.money matches 0 run scoreboard players set $recent_money defense.money 0
+execute if score $recent_kill defense.money matches 0 run function core:defense/scoreboard/get_highest
+execute if score $recent_hit defense.damage matches 1.. run scoreboard players remove $recent_hit defense.damage 1
+execute if score $recent_hit defense.damage matches 0 run scoreboard players set $recent_damage defense.damage 0
+execute if score $recent_hit defense.damage matches 0 run function core:defense/scoreboard/get_highest
 # ====================================================================================================================
 #   _______ ______          ________ _____   _____ 
 #  |__   __/ __ \ \        / /  ____|  __ \ / ____|
