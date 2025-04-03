@@ -102,8 +102,10 @@ execute as @e[tag=defense.ravager_disabled,tag=tower-center-marker] at @s run sc
 execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ ~ 1 3 1 0 30
 execute as @e[tag=defense.ravager_disabled] unless entity @e[tag=defense-ravager,limit=1] run tag @s remove defense.ravager_disabled
 
-#    Kill detection for money    #
-execute as @a if score @s defense.kill matches 1.. at @s run function core:defense/monsters/killed_monster
+#  Display extra gold recently gotten
+execute if score $recent_hit defense.money matches 1.. run scoreboard players remove $recent_hit defense.money 1
+execute if score $recent_hit defense.money matches 0 run scoreboard players set $recent_money defense.money 0
+execute if score $recent_hit defense.money matches 0 run function core:defense/scoreboard/get_highest
 # ====================================================================================================================
 #   _______ ______          ________ _____   _____ 
 #  |__   __/ __ \ \        / /  ____|  __ \ / ____|

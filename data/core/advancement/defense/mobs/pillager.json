@@ -4,7 +4,7 @@
     "id": "minecraft:crossbow"
     },
     "title": "Pillager",
-    "description": "Health: 70\nSpeed: 1.2 BPS\n",
+    "description": "Health: 70\nSpeed: 1.2 BPS\nGold: 16\n",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

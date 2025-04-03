@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "hit_zombie_villager": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"defense-zombie_villager\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hit_zombie_villager"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/gold_reward/zombie_villager_gold"
+    }
+}

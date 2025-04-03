@@ -5,7 +5,7 @@ execute at @s unless entity @n[tag=defense.tower_marker,distance=..13] run retur
 data modify storage core:ravager_rotation y_rotation set from entity @s Rotation[0]
 data modify storage core:ravager_rotation x_rotation set from entity @s Rotation[1]
 # Tag the closest tower to be the one selected to be rammed into.
-tag @n[tag=defense.tower_marker] add defense.ravager_ram
+execute at @s run tag @n[tag=defense.tower_marker] add defense.ravager_ram
 # Add 20 ticks to the cooldown (since the animation takes that long)
 scoreboard players add @s defense.abilities 20
 

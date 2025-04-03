@@ -4,7 +4,7 @@
     "id": "minecraft:sand"
     },
     "title": "Husk",
-    "description": "Health: 50\nSpeed: 1 BPS\nDestructive: Deals 20 extra damage to your base",
+    "description": "Health: 50\nSpeed: 1 BPS\nGold: 8\nDestructive: Deals 20 extra damage to your base",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

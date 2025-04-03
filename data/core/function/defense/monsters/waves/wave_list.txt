@@ -1,11 +1,14 @@
 Wave 1
 Zombie
+Zombie
 
 Wave 2
 Zombie
 Zombie
+Zombie
 
 Wave 3
+Zombie
 Zombie
 Zombie
 Skeleton
@@ -15,12 +18,14 @@ Zombie
 Zombie
 Zombie
 Skeleton
+Skeleton
 
 Wave 5
 Zombie
 Zombie
 Skeleton
 Skeleton
+Spider
 Spider
 
 Wave 6
@@ -30,6 +35,7 @@ Skeleton
 Skeleton
 Spider
 Spider
+Creeper
 
 Wave 7
 Zombie
@@ -37,6 +43,7 @@ Zombie
 Skeleton
 Skeleton
 Spider
+Creeper
 Creeper
 
 Wave 8
@@ -46,6 +53,7 @@ Skeleton
 Skeleton
 Spider
 Creeper
+Witch
 Witch
 
 Wave 9
@@ -57,6 +65,7 @@ Spider
 Creeper
 Witch
 Husk
+Husk
 
 Wave 10
 Zombie
@@ -64,26 +73,32 @@ Zombie
 Skeleton
 Skeleton
 Spider
-Creeper
-Witch
-Husk
-Stray
-
-Wave 11
-Zombie
-Zombie
-Skeleton
-Skeleton
 Spider
 Creeper
+Creeper
+Witch
+Witch
+Husk
+Husk
+Stray
+Stray
+Zombie_Villager
+
+Wave 11
+Silverfish
+Zombie_Villager
+Zombie
+Skeleton
 Witch
 Husk
 Stray
-Zombie_Villager
+Creeper
+Spider
 
 Wave 12
 Silverfish
-Zombie_Villager
+Silverfish
+Piglin
 Zombie
 Skeleton
 Witch
@@ -95,6 +110,7 @@ Spider
 Wave 13
 Silverfish
 Piglin
+Piglin
 Zombie
 Skeleton
 Witch
@@ -104,6 +120,7 @@ Creeper
 Spider
 
 Wave 14
+Piglin
 Piglin
 Blaze
 Zombie
@@ -115,9 +132,10 @@ Creeper
 Spider
 
 Wave 15
-Wither_Skeleton
-Blaze
 Piglin
+Blaze
+Blaze
+Wither_Skeleton
 Skeleton
 Witch
 Husk
@@ -126,8 +144,9 @@ Zombie_Villager
 Silverfish
 
 Wave 16
-Enderman
 Wither_Skeleton
+Wither_Skeleton
+Blaze
 Blaze
 Piglin
 Witch
@@ -135,13 +154,12 @@ Husk
 Stray
 Zombie_Villager
 Silverfish
-Creeper
-Spider
 
 Wave 17
-Pillager
 Enderman
 Wither_Skeleton
+Wither_Skeleton
+Blaze
 Blaze
 Piglin
 Silverfish
@@ -149,49 +167,58 @@ Zombie_Villager
 Stray
 Husk
 Witch
-Spider
 
 Wave 18
-Pillager
-Pillager
+Enderman
 Enderman
 Wither_Skeleton
+Wither_Skeleton
+Blaze
 Blaze
 Piglin
 Silverfish
 Zombie_Villager
 Stray
 Husk
-Witch
 
 Wave 19
-Vindicator
 Pillager
 Pillager
 Enderman
+Enderman
 Wither_Skeleton
+Wither_Skeleton
+Blaze
 Blaze
 Piglin
 Silverfish
 Zombie_Villager
 Stray
-Husk
 
 Wave 20
-Vindicator
-Vindicator
 Pillager
 Pillager
+Pillager
+Vindicator
+Vindicator
+Enderman
+Enderman
 Enderman
 Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
+Blaze
+Blaze
 Blaze
 Piglin
+Piglin
+Silverfish
 Silverfish
 Zombie_Villager
-Stray
+Zombie_Villager
 
 Wave 21
-Piglin_Brute
+Vindicator
 Vindicator
 Vindicator
 Pillager
@@ -205,7 +232,7 @@ Zombie_Villager
 
 Wave 22
 Piglin_Brute
-Piglin_Brute
+Vindicator
 Vindicator
 Vindicator
 Pillager
@@ -222,6 +249,7 @@ Piglin_Brute
 Piglin_Brute
 Vindicator
 Vindicator
+Vindicator
 Pillager
 Pillager
 Enderman
@@ -234,6 +262,8 @@ Piglin
 Piglin
 
 Wave 24
+Piglin_Brute
+Piglin_Brute
 Piglin_Brute
 Vindicator
 Vindicator
@@ -252,6 +282,9 @@ Blaze
 Blaze
 
 Wave 25
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
 Vindicator
 Vindicator
 Vindicator
@@ -300,6 +333,7 @@ Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
 Vindicator
 Vindicator
 Vindicator
@@ -315,6 +349,11 @@ Pillager
 Pillager
 Pillager
 Pillager
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
 
 Wave 28
 Wither_Skeleton
@@ -322,6 +361,8 @@ Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
+Wither_Skeleton
+Blaze
 Blaze
 Blaze
 Blaze
@@ -332,11 +373,14 @@ Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
 Vindicator
 Vindicator
 Vindicator
 Vindicator
 Vindicator
+Vindicator
+Pillager
 Pillager
 Pillager
 Pillager
@@ -350,6 +394,8 @@ Enderman
 Enderman
 Enderman
 Enderman
+Enderman
+Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
@@ -362,12 +408,15 @@ Blaze
 Blaze
 Blaze
 Blaze
+Blaze
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
+Vindicator
 Vindicator
 Vindicator
 Vindicator
@@ -383,6 +432,8 @@ Pillager
 Pillager
 Pillager
 Pillager
+Pillager
+Enderman
 Enderman
 Enderman
 Enderman
@@ -397,6 +448,8 @@ Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
+Wither_Skeleton
+Blaze
 Blaze
 Blaze
 Blaze
@@ -411,3 +464,13 @@ Piglin_Brute
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Vindicator
+Ravager

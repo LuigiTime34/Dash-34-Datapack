@@ -1,5 +1,5 @@
 execute if score $wave_track defense.wave matches 1 run scoreboard players set $mobs_left defense.wave 11
-execute if score $wave_track defense.wave matches 1 run function core:defense/monsters/summon/piglin_brute
+execute if score $wave_track defense.wave matches 1 run function core:defense/monsters/summon/vindicator
 execute if score $wave_track defense.wave matches 2 run function core:defense/monsters/summon/vindicator
 execute if score $wave_track defense.wave matches 3 run function core:defense/monsters/summon/vindicator
 execute if score $wave_track defense.wave matches 4 run function core:defense/monsters/summon/pillager

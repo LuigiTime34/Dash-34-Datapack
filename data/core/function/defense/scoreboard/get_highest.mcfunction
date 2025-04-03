@@ -3,6 +3,8 @@ execute store result storage core:defense_scoreboard health int 1 run scoreboard
 execute store result storage core:defense_scoreboard money int 1 run scoreboard players get $money defense.money
 execute store result storage core:defense_scoreboard wave int 1 run scoreboard players get $wave_level defense.wave
 execute store result storage core:defense_scoreboard timer int 1 run scoreboard players get $wave_timer defense.wave
+# also get the most recent gold gathered
+execute store result storage core:defense_scoreboard recent_gold int 1 run scoreboard players get $recent_money defense.money
 
 # Get highest score for each category, and then add spaces to the scoreboard based on which one is the highest.
 scoreboard players set #max defense.display -2147483648

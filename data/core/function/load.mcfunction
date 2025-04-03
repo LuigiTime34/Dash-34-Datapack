@@ -17,9 +17,6 @@ scoreboard objectives add parkour.belttimer dummy
 scoreboard objectives add defense.damage dummy
 scoreboard objectives add defense.extra_damage dummy
 scoreboard objectives add defense.money dummy
-scoreboard objectives add defense.kill_piglin minecraft.killed:minecraft.piglin
-scoreboard objectives add defense.kill_villager minecraft.killed:minecraft.zombie_villager
-scoreboard objectives add defense.kill minecraft.custom:minecraft.mob_kills
 scoreboard objectives add archercasttemp dummy
 scoreboard objectives add defense.archer_slowness dummy
 scoreboard objectives add defense.archer_weakness dummy
@@ -45,6 +42,7 @@ scoreboard objectives add defense.entity_id dummy
 scoreboard objectives add defense.marker_id dummy
 scoreboard objectives add defense.ravager_speed dummy
 scoreboard objectives add defense.boss_animation dummy
+scoreboard objectives add defense.health dummy
 
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}

@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "hit_creeper": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"defense-creeper\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hit_creeper"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/gold_reward/creeper_gold"
+    }
+}

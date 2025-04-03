@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "hit_piglin_brute": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"defense-piglin_brute\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hit_piglin_brute"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/gold_reward/piglin_brute_gold"
+    }
+}

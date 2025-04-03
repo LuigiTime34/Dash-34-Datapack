@@ -4,7 +4,7 @@
     "id": "minecraft:gunpowder"
     },
     "title": "Creeper",
-    "description": "Health: 40\nSpeed: 1 BPS\nExplosive: Deals 10 extra damage to your base",
+    "description": "Health: 40\nSpeed: 1 BPS\nGold: 6\nExplosive: Deals 10 extra damage to your base",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

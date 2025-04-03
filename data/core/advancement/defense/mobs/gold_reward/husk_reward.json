@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "hit_husk": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"defense-husk\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hit_husk"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/gold_reward/husk_gold"
+    }
+}

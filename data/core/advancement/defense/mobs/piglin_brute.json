@@ -3,8 +3,8 @@
     "icon": {
     "id": "minecraft:golden_axe"
     },
-    "title": "Piglin Brute",
-    "description": "Health: 100\nSpeed: 1.6 BPS\nDevastating: Deals 50 extra damage to your base",
+    "title": "Piglin_Brute",
+    "description": "Health: 100\nSpeed: 1.6 BPS\nGold: 20\nDevastating: Deals 50 extra damage to your base",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

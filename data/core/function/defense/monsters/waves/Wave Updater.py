@@ -64,5 +64,5 @@ def bulk_create_waves(input_file):
 
 # Example usage
 if __name__ == "__main__":
-    input_file = input("Enter the path to the wave definition file:\n> ")
+    input_file = 'Dash-34-Datapack\\data\\core\\function\\defense\\monsters\\waves\\wave_list.txt'
     bulk_create_waves(input_file)

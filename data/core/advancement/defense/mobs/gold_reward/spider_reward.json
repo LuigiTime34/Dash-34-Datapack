@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "hit_spider": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"defense-spider\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hit_spider"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/gold_reward/spider_gold"
+    }
+}
