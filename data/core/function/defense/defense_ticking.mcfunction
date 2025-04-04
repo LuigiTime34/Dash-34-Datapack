@@ -130,6 +130,7 @@ execute as @e[tag=defense-monster] run scoreboard players operation @s defense.t
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.targetz -= $start.z defense.targetz
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance = @s defense.targetx
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
+execute as @e[tag=defense-monster,tag=defense-iron_golem] run scoreboard players operation @s defense.distance += $iron_golem defense.distance
 # Display Ranges
 execute as @e[tag=defense.tower_marker] at @s run rotate @s ~6 ~
 execute as @e[tag=defense.tower_marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range

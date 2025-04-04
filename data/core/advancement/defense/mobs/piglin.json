@@ -4,7 +4,7 @@
     "id": "minecraft:crossbow"
     },
     "title": "Piglin",
-    "description": "Health: 70\nSpeed: 1.1 BPS\nGold: 10\nRich: Gives 30 extra gold upon death",
+    "description": "Health: 70\nSpeed: 1.1 BPS\nGold: 15\nRich: Gives 30 extra gold upon death",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

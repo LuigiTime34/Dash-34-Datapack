@@ -4,7 +4,7 @@
     "id": "minecraft:spider_eye"
     },
     "title": "Spider",
-    "description": "Health: 25\nSpeed: 1.2 BPS\nGold: 4\n",
+    "description": "Health: 25\nSpeed: 1.2 BPS\nGold: 6\n",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
