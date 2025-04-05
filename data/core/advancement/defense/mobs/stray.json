@@ -10,7 +10,7 @@
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "core:defense/mobs/husk",
+  "parent": "core:defense/mobs/zombie_villager",
   "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

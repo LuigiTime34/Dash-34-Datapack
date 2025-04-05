@@ -148,22 +148,30 @@ Witch
 Wave 20
 Enderman
 Enderman
+Enderman
+Pillager
 Pillager
 Pillager
 Vindicator
 Vindicator
+Vindicator
 Blaze
 Blaze
+Silverfish
 Silverfish
 Silverfish
 
 Wave 21
 Vindicator
 Vindicator
+Vindicator
+Pillager
 Pillager
 Pillager
 Pillager
 Piglin_Brute
+Piglin_Brute
+Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 
@@ -173,9 +181,12 @@ Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
+Wither_Skeleton
 Enderman
 Enderman
 Enderman
+Enderman
+Silverfish
 Silverfish
 Silverfish
 Silverfish
@@ -185,12 +196,17 @@ Spider
 Spider
 Spider
 Spider
+Pillager
+Pillager
 
 Wave 23
+Piglin_Brute
 Piglin_Brute
 Vindicator
 Vindicator
 Vindicator
+Vindicator
+Pillager
 Pillager
 Pillager
 Pillager
@@ -200,28 +216,36 @@ Blaze
 Blaze
 Blaze
 Blaze
+Blaze
+Stray
 Stray
 Stray
 Stray
 Stray
 Witch
 Witch
+Witch
 Husk
 Husk
 Husk
+Wither_Skeleton
+Wither_Skeleton
 
 Wave 25
 Enderman
 Enderman
 Enderman
 Enderman
+Enderman
 Witch
 Witch
 Witch
+Witch
 Zombie_Villager
 Zombie_Villager
 Zombie_Villager
 Zombie_Villager
+Vindicator
 Vindicator
 Vindicator
 Vindicator
@@ -229,19 +253,26 @@ Vindicator
 Wave 26
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
 Pillager
 Pillager
 Pillager
 Pillager
+Pillager
+Blaze
 Blaze
 Blaze
 
 Wave 27
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
+Vindicator
 Vindicator
 Vindicator
 Vindicator
@@ -249,6 +280,8 @@ Vindicator
 Enderman
 Enderman
 Enderman
+Enderman
+Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
@@ -257,10 +290,14 @@ Wave 28
 Piglin_Brute
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
 Blaze
 Blaze
 Blaze
 Blaze
+Blaze
+Creeper
+Creeper
 Creeper
 Creeper
 Creeper
@@ -272,10 +309,14 @@ Husk
 Husk
 
 Wave 29
+Piglin_Brute
+Piglin_Brute
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
+Wither_Skeleton
+Pillager
 Pillager
 Pillager
 Pillager
@@ -284,6 +325,8 @@ Pillager
 Vindicator
 Vindicator
 Vindicator
+Vindicator
+Enderman
 Enderman
 Enderman
 Enderman
@@ -293,3 +336,9 @@ Witch
 Wave 30
 Piglin_Brute
 Piglin_Brute
+Piglin_Brute
+Vindicator
+Vindicator
+Vindicator
+Witch
+Witch

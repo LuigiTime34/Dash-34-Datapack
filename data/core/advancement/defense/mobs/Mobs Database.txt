@@ -26,12 +26,12 @@ Gold Reward: 9
 Ability: Explosive: Deals 10 extra damage to your base
 gunpowder
 
-Witch
-Health: 40
-Speed: 0.7 BPS
-Gold Reward: 10
-Ability: Brewer: Heals nearby monsters in a small radius over time
-blaze_powder
+Silverfish
+Health: 20
+Speed: 1.8 BPS
+Gold Reward: 7
+Ability: Burrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration
+infested_stone
 
 Husk
 Health: 50
@@ -40,6 +40,20 @@ Gold Reward: 12
 Ability: Destructive: Deals 20 extra damage to your base
 sand
 
+Witch
+Health: 40
+Speed: 0.7 BPS
+Gold Reward: 10
+Ability: Brewer: Heals nearby monsters in a small radius over time
+blaze_powder
+
+Zombie_Villager
+Health: 40
+Speed: 1 BPS
+Gold Reward: 0
+Ability:
+emerald
+
 Stray
 Health: 50
 Speed: 1.2 BPS
@@ -47,12 +61,12 @@ Gold Reward: 13
 Ability: Frozen: Immune to ice damage
 bow
 
-Zombie_Villager
-Health: 40
-Speed: 1 BPS
-Gold Reward: 12
-Ability: Greedy: Steals 10 gold upon death
-emerald
+Blaze
+Health: 60
+Speed: 1.4 BPS
+Gold Reward: 18
+Ability: Firey: Deals 30 extra damage to your base; Immune to fire, but takes more ice damage
+blaze_rod
 
 Iron_Golem
 Health: 200
@@ -61,26 +75,12 @@ Gold Reward: 35
 Ability: Tank: Has permanent armor that reduces incoming damage. Causes towers to focus on itself
 carved_pumpkin
 
-Silverfish
-Health: 20
-Speed: 1.8 BPS
-Gold Reward: 7
-Ability: Burrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration
-infested_stone
-
 Piglin
 Health: 70
 Speed: 1.1 BPS
 Gold Reward: 15
 Ability: Rich: Gives 30 extra gold upon death
 crossbow
-
-Blaze
-Health: 60
-Speed: 1.4 BPS
-Gold Reward: 18
-Ability: Firey: Deals 30 extra damage to your base; Immune to fire, but takes more ice damage
-blaze_rod
 
 Wither_Skeleton
 Health: 60
@@ -114,7 +114,7 @@ Vindicator
 Health: 80
 Speed: 1.4 BPS
 Gold Reward: 27
-Ability: Reckless: Every 5 seconds, has a chance to hurt nearby enemies
+Ability: Reckless: Every 5 seconds, has a chance to hurt itself to gain a boost of speed
 iron_axe
 
 Piglin_Brute
@@ -125,7 +125,7 @@ Ability: Devastating: Deals 50 extra damage to your base
 golden_axe
 
 Ravager
-Health: 500
+Health: 750
 Speed: 1.25 BPS
 Gold Reward: 0
 Ability: Deals 100 extra base damage. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.

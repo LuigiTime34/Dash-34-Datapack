@@ -3,14 +3,14 @@
     "icon": {
     "id": "minecraft:carved_pumpkin"
     },
-    "title": "Iron_Golem",
+    "title": "Iron Golem",
     "description": "Health: 200\nSpeed: 0.8 BPS\nGold: 35\nTank: Has permanent armor that reduces incoming damage. Causes towers to focus on itself",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "core:defense/mobs/zombie_villager",
+  "parent": "core:defense/mobs/blaze",
   "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

@@ -10,7 +10,7 @@
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "core:defense/mobs/silverfish",
+  "parent": "core:defense/mobs/iron_golem",
   "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"
