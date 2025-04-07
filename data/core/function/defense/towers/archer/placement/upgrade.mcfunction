@@ -8,6 +8,7 @@ $data modify entity @n[tag=$(building)] data.rotation set from entity @s data.ro
 $scoreboard players set @n[tag=$(building)] defense.money $(cost)
 kill @s
 kill @n[tag=tower-center-marker]
+kill @n[tag=tower-barrel-display]
 execute as @n[tag=archer-skeleton] at @s run function core:defense/towers/global/rotate_back
 execute as @n[tag=tower-barrel-marker] at @s run function core:defense/towers/global/rotate_back
 execute as @n[tag=tower-barrel-marker] at @s positioned ^ ^ ^1 run tp @p[gamemode=adventure] ~ -59 ~

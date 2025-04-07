@@ -7,16 +7,16 @@ $execute if items entity @s $(slot) *[custom_data~{archer_upgrade_pillager2:1b}]
 $execute if items entity @s $(slot) *[custom_data~{archer_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=tower-center-marker] run function core:defense/towers/archer/sell
 
 # ELEMENT UPGRADES
-$execute if items entity @s $(slot) *[custom_data~{element_upgrade_fire1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_fire1","cost":"100","item_slot":"5","slot_to_replace":"10"}
-$execute if items entity @s $(slot) *[custom_data~{element_upgrade_fire2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_fire2","cost":"350","item_slot":"6","slot_to_replace":"13"}
+$execute if items entity @s $(slot) *[custom_data~{element_upgrade_fire1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_fire1","cost":"75","item_slot":"5","slot_to_replace":"10"}
+$execute if items entity @s $(slot) *[custom_data~{element_upgrade_fire2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_fire2","cost":"300","item_slot":"6","slot_to_replace":"13"}
 
-$execute if items entity @s $(slot) *[custom_data~{element_upgrade_wind1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_wind1","cost":"100","item_slot":"7","slot_to_replace":"12"}
+$execute if items entity @s $(slot) *[custom_data~{element_upgrade_wind1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_wind1","cost":"75","item_slot":"7","slot_to_replace":"12"}
 $execute if items entity @s $(slot) *[custom_data~{element_upgrade_wind2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_wind2","cost":"350","item_slot":"8","slot_to_replace":"13"}
 
-$execute if items entity @s $(slot) *[custom_data~{element_upgrade_ice1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_ice1","cost":"100","item_slot":"9","slot_to_replace":"14"}
+$execute if items entity @s $(slot) *[custom_data~{element_upgrade_ice1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_ice1","cost":"75","item_slot":"9","slot_to_replace":"14"}
 $execute if items entity @s $(slot) *[custom_data~{element_upgrade_ice2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_ice2","cost":"350","item_slot":"10","slot_to_replace":"13"}
 
-$execute if items entity @s $(slot) *[custom_data~{element_upgrade_earth1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_earth1","cost":"100","item_slot":"11","slot_to_replace":"16"}
+$execute if items entity @s $(slot) *[custom_data~{element_upgrade_earth1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_earth1","cost":"75","item_slot":"11","slot_to_replace":"16"}
 $execute if items entity @s $(slot) *[custom_data~{element_upgrade_earth2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_earth2","cost":"350","item_slot":"12","slot_to_replace":"13"}
 
 $execute if items entity @s $(slot) *[custom_data~{element_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/sell

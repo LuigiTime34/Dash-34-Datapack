@@ -1,6 +1,6 @@
 item replace entity @p[gamemode=adventure] weapon.mainhand from block -1 -43 0 container.1
-execute unless score $money defense.money matches 30.. run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 2 1
-execute unless score $money defense.money matches 30.. run return run tellraw @a {"text": "Not enough gold!","color": "gold"}
+execute unless score $money defense.money matches 20.. run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 2 1
+execute unless score $money defense.money matches 20.. run return run tellraw @a {"text": "Not enough gold!","color": "gold"}
 
 scoreboard players remove $money defense.money 30
 

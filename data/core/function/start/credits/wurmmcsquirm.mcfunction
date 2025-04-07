@@ -1,1 +1,2 @@
 tellraw @a ["",{"text":"W","color":"#86f0ff"},{"text":"u","color":"#9196f5"},{"text":"r","color":"#9c5beb"},{"text":"m","color":"#a721e1"},{"text":"M","color":"#b200d7"},{"text":"c","color":"#b400c3"},{"text":"S","color":"#b600af"},{"text":"q","color":"#b8009b"},{"text":"u","color":"#ba0087"},{"text":"i","color":"#bc0073"},{"text":"r","color":"#be005f"},{"text":"m","color":"#c0004b"}]
+tellraw @a {"text":"-----------------------\n- Lead Builder\n- Idea Helper\n------------------------","color":"#c0004b"}

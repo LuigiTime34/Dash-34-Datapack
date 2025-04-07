@@ -1,1 +1,2 @@
 tellraw @a ["",{"text":"g","color":"#fff44f"},{"text":"o","color":"#f4e356"},{"text":"o","color":"#e9d25d"},{"text":"f","color":"#dec164"},{"text":"y","color":"#d3b06b"},{"text":"_","color":"#c89f72"},{"text":"g","color":"#bd8e79"},{"text":"o","color":"#b27d80"},{"text":"b","color":"#a76c87"},{"text":"l","color":"#9c5b8e"},{"text":"i","color":"#914a95"},{"text":"n","color":"#86399c"}]
+tellraw @a {"text":"-----------------------\n- Co-Builder\n- Idea Assister\n- Lover of KITTIES\n------------------------","color":"#86399c"}

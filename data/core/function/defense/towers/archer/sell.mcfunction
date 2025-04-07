@@ -5,6 +5,7 @@ fill ~-3 ~ ~-3 ~3 ~12 ~3 air destroy
 execute at @s run playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ 0.6 0.9
 kill @s
 kill @n[tag=tower-center-marker]
+kill @n[tag=tower-barrel-display]
 tag @n[tag=archer-skeleton] add dead-skellie
 execute as @n[tag=dead-skellie] at @s run tp @s ~ ~-300 ~
 execute as @n[tag=dead-skellie] at @s run kill @s

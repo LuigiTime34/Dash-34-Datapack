@@ -137,6 +137,9 @@ execute as @e[tag=defense.tower_marker] at @s positioned ~ -58.5 ~ if entity @p[
 # Cooldown
 execute as @e[tag=defense.tower_marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=defense.tower_marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+# Glowing barrels
+execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt=!{Glowing:1b},distance=..10] run data modify entity @s Glowing set value 1b
+execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt={Glowing:1b},distance=10..] run data modify entity @s Glowing set value 0b
 # ====================================================================================================================
 #                  _               
 #                 | |              
@@ -171,14 +174,11 @@ execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 run func
 # First Upgrade
 execute as @e[tag=archer-skellie_pillager1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
 
-# Pillager Upgrade 1 - shoot two times
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 5 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
+# Pillager Upgrade 1
+execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"60","damage":"10","range":"13.5"}
 
-# Pillager Upgrade 2 - shoot three times
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 7 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 4 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
-execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"30","damage":"20","range":"18.5"}
+# Pillager Upgrade 2
+execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"55","damage":"20","range":"18.5"}
 
 # Witch Upgrade 1
 execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}

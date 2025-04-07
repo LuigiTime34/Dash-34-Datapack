@@ -1,1 +1,2 @@
 tellraw @a ["",{"text":"G","color":"#404040"},{"text":"a","color":"#403b45"},{"text":"m","color":"#40364a"},{"text":"e","color":"#40314f"},{"text":"M","color":"#402c54"},{"text":"a","color":"#402759"},{"text":"s","color":"#40225e"},{"text":"t","color":"#401d63"},{"text":"e","color":"#401868"},{"text":"r","color":"#40136d"},{"text":"5","color":"#400e72"},{"text":"1","color":"#400977"},{"text":"1","color":"#40047c"},{"text":"7","color":"#400086"}]
+tellraw @a {"text":"-----------------------\n- Co-Builder\n- Co-Coder\n- Website Dev\n------------------------","color":"#400086"}

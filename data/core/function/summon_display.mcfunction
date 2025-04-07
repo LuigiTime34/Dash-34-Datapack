@@ -1,0 +1,1 @@
+execute align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:item_display ~ ~-1 ~ {item: {count: 1, id: "minecraft:dirt"}, transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.9375f, 0.9375f, 0.9375f], translation: [0.0f, 0.0f, 0.0f]},Tags:["tower-barrel-display"]}

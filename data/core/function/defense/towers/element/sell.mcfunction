@@ -5,5 +5,6 @@ execute at @s run playsound minecraft:block.respawn_anchor.deplete master @a ~ ~
 fill ~-3 ~ ~-3 ~3 ~14 ~3 air destroy
 kill @s
 kill @n[tag=element-center-marker]
+kill @n[tag=tower-barrel-display]
 clear @a *[custom_data~{tower_upgrade:1b}]
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{tower_upgrade:1b}}}}]
