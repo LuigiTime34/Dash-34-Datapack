@@ -4,18 +4,18 @@ execute if score $wave_track defense.wave matches 1 run function core:defense/mo
 execute if score $wave_track defense.wave matches 2 run function core:defense/monsters/summon/enderman
 execute if score $wave_track defense.wave matches 3 run function core:defense/monsters/summon/enderman
 execute if score $wave_track defense.wave matches 4 run function core:defense/monsters/summon/enderman
-execute if score $wave_track defense.wave matches 5 run function core:defense/monsters/summon/enderman
+execute if score $wave_track defense.wave matches 5 run function core:defense/monsters/summon/witch
 execute if score $wave_track defense.wave matches 6 run function core:defense/monsters/summon/witch
 execute if score $wave_track defense.wave matches 7 run function core:defense/monsters/summon/witch
-execute if score $wave_track defense.wave matches 8 run function core:defense/monsters/summon/witch
-execute if score $wave_track defense.wave matches 9 run function core:defense/monsters/summon/witch
+execute if score $wave_track defense.wave matches 8 run function core:defense/monsters/summon/zombie_villager
+execute if score $wave_track defense.wave matches 9 run function core:defense/monsters/summon/zombie_villager
 execute if score $wave_track defense.wave matches 10 run function core:defense/monsters/summon/zombie_villager
-execute if score $wave_track defense.wave matches 11 run function core:defense/monsters/summon/zombie_villager
-execute if score $wave_track defense.wave matches 12 run function core:defense/monsters/summon/zombie_villager
-execute if score $wave_track defense.wave matches 13 run function core:defense/monsters/summon/zombie_villager
-execute if score $wave_track defense.wave matches 14 run function core:defense/monsters/summon/vindicator
-execute if score $wave_track defense.wave matches 15 run function core:defense/monsters/summon/vindicator
-execute if score $wave_track defense.wave matches 16 run function core:defense/monsters/summon/vindicator
-execute if score $wave_track defense.wave matches 17 run function core:defense/monsters/summon/vindicator
+execute if score $wave_track defense.wave matches 11 run function core:defense/monsters/summon/vindicator
+execute if score $wave_track defense.wave matches 12 run function core:defense/monsters/summon/vindicator
+execute if score $wave_track defense.wave matches 13 run function core:defense/monsters/summon/vindicator
+execute if score $wave_track defense.wave matches 14 run function core:defense/monsters/summon/breeze
+execute if score $wave_track defense.wave matches 15 run function core:defense/monsters/summon/breeze
+execute if score $wave_track defense.wave matches 16 run function core:defense/monsters/summon/chicken_jockey
+execute if score $wave_track defense.wave matches 17 run function core:defense/monsters/summon/chicken_jockey
 execute if score $wave_track defense.wave matches 1..17 run schedule function core:defense/monsters/waves/wave25 3s
 execute if score $wave_track defense.wave matches 1..17 run scoreboard players add $wave_track defense.wave 1

@@ -1,5 +1,5 @@
 {
-  "display": {
+    "display": {
     "icon": {
     "id": "minecraft:blaze_rod"
     },
@@ -9,16 +9,16 @@
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
-  },
-  "parent": "core:defense/mobs/stray",
-  "criteria": {
+    },
+    "parent": "core:defense/mobs/stray",
+    "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"
     }
-  },
-  "requirements": [
+    },
+    "requirements": [
     [
     "impossible"
     ]
-  ]
-  }
+    ]
+    }

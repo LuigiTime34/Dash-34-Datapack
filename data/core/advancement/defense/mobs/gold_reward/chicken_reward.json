@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "hit_chicken_jockey": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"defense-chicken\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hit_chicken_jockey"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/gold_reward/chicken_gold"
+    }
+}

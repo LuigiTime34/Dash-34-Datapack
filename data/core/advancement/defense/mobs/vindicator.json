@@ -1,5 +1,5 @@
 {
-  "display": {
+    "display": {
     "icon": {
     "id": "minecraft:iron_axe"
     },
@@ -9,16 +9,16 @@
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
-  },
-  "parent": "core:defense/mobs/pillager",
-  "criteria": {
+    },
+    "parent": "core:defense/mobs/pillager",
+    "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"
     }
-  },
-  "requirements": [
+    },
+    "requirements": [
     [
     "impossible"
     ]
-  ]
-  }
+    ]
+    }

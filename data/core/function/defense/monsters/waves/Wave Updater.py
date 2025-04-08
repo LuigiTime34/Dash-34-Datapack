@@ -5,10 +5,10 @@ def create_wave_function(wave_number, mobs):
     Create a Minecraft function file for a specific wave
     """
     # Ensure the directory exists
-    os.makedirs('Dash-34-Datapack\\data\\core\\function\\defense\\monsters\\waves', exist_ok=True)
+    os.makedirs('data\\core\\function\\defense\\monsters\\waves', exist_ok=True)
     
     # Open the file for writing
-    filename = f'Dash-34-Datapack\\data\\core\\function\\defense\\monsters\\waves\\wave{wave_number}.mcfunction'
+    filename = f'data\\core\\function\\defense\\monsters\\waves\\wave{wave_number}.mcfunction'
     print(f"Creating wave {wave_number} function...")
     
     with open(filename, 'w') as f:
@@ -65,5 +65,5 @@ def bulk_create_waves(input_file):
 
 # Example usage
 if __name__ == "__main__":
-    input_file = 'Dash-34-Datapack\\data\\core\\function\\defense\\monsters\\waves\\wave_list.txt'
+    input_file = 'data\\core\\function\\defense\\monsters\\waves\\wave_list.txt'
     bulk_create_waves(input_file)

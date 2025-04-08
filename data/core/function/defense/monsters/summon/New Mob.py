@@ -18,7 +18,7 @@ def create_mcfunction_file():
 
     # Create the file path
     path = os.path.join(
-        "Dash-34-Datapack", "data", "core", "function", "defense", "monsters", "summon"
+        "data", "core", "function", "defense", "monsters", "summon"
     )
     os.makedirs(path, exist_ok=True)
     file_path = os.path.join(path, f"{mob}.mcfunction")

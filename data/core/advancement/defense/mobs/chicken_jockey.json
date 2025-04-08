@@ -1,16 +1,16 @@
 {
     "display": {
     "icon": {
-    "id": "minecraft:emerald"
+    "id": "minecraft:feather"
     },
-    "title": "Zombie Villager",
-    "description": "Health: 40\nSpeed: 1 BPS\nGold: 0\n",
+    "title": "Chicken Jockey",
+    "description": "Health: 40\nSpeed: 0.6 BPS\nGold: 7\nDismount: A fast Baby Zombie (25 Health, 2 BPS) rides this Chicken. When the Chicken dies, the Baby Zombie continues alone.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/witch",
+    "parent": "core:defense/mobs/blaze",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

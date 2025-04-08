@@ -1,0 +1,29 @@
+{
+    "display": {
+    "icon": {
+    "id": "minecraft:tipped_arrow",
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "minecraft:poison"
+      }
+    }
+    },
+    "title": "Bogged",
+    "description": "Health: 60\nSpeed: 1.2 BPS\nGold: 12\nRegrowth: Passively heals every second",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+    },
+    "parent": "core:defense/mobs/piglin",
+    "criteria": {
+    "impossible": {
+    "trigger": "minecraft:impossible"
+    }
+    },
+    "requirements": [
+    [
+    "impossible"
+    ]
+    ]
+    }

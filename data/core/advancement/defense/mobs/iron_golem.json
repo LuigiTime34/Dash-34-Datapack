@@ -1,5 +1,5 @@
 {
-  "display": {
+    "display": {
     "icon": {
     "id": "minecraft:carved_pumpkin"
     },
@@ -9,16 +9,16 @@
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
-  },
-  "parent": "core:defense/mobs/blaze",
-  "criteria": {
+    },
+    "parent": "core:defense/mobs/chicken_jockey",
+    "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"
     }
-  },
-  "requirements": [
+    },
+    "requirements": [
     [
     "impossible"
     ]
-  ]
-  }
+    ]
+    }

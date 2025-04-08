@@ -118,9 +118,9 @@ function core:defense/scoreboard/get_highest
 
 def main():
     # File paths
-    mobs_database_file = "Dash-34-Datapack/data/core/advancement/defense/mobs/Mobs Database.txt"
-    advancement_base_path = "Dash-34-Datapack/data/core/advancement/defense/mobs/gold_reward"
-    mcfunction_base_path = "Dash-34-Datapack/data/core/function/defense/monsters/gold_reward"
+    mobs_database_file = "data/core/advancement/defense/mobs/Mobs Database.txt"
+    advancement_base_path = "data/core/advancement/defense/mobs/gold_reward"
+    mcfunction_base_path = "data/core/function/defense/monsters/gold_reward"
     
     # Read the mobs database
     mobs_data = read_mobs_database(mobs_database_file)

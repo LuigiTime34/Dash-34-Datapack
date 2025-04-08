@@ -1,5 +1,5 @@
 {
-  "display": {
+    "display": {
     "icon": {
     "id": "minecraft:blaze_powder"
     },
@@ -9,16 +9,16 @@
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
-  },
-  "parent": "core:defense/mobs/husk",
-  "criteria": {
+    },
+    "parent": "core:defense/mobs/husk",
+    "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"
     }
-  },
-  "requirements": [
+    },
+    "requirements": [
     [
     "impossible"
     ]
-  ]
-  }
+    ]
+    }

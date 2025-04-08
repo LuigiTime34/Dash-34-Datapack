@@ -11,6 +11,6 @@ execute if score $wave_track defense.wave matches 8 run function core:defense/mo
 execute if score $wave_track defense.wave matches 9 run function core:defense/monsters/summon/piglin_brute
 execute if score $wave_track defense.wave matches 10 run function core:defense/monsters/summon/wither_skeleton
 execute if score $wave_track defense.wave matches 11 run function core:defense/monsters/summon/wither_skeleton
-execute if score $wave_track defense.wave matches 12 run function core:defense/monsters/summon/wither_skeleton
+execute if score $wave_track defense.wave matches 12 run function core:defense/monsters/summon/bogged
 execute if score $wave_track defense.wave matches 1..12 run schedule function core:defense/monsters/waves/wave21 3s
 execute if score $wave_track defense.wave matches 1..12 run scoreboard players add $wave_track defense.wave 1

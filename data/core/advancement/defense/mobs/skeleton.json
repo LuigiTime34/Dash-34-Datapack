@@ -1,5 +1,5 @@
 {
-  "display": {
+    "display": {
     "icon": {
     "id": "minecraft:bone"
     },
@@ -9,16 +9,16 @@
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
-  },
-  "parent": "core:defense/mobs/zombie",
-  "criteria": {
+    },
+    "parent": "core:defense/mobs/zombie",
+    "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"
     }
-  },
-  "requirements": [
+    },
+    "requirements": [
     [
     "impossible"
     ]
-  ]
-  }
+    ]
+    }

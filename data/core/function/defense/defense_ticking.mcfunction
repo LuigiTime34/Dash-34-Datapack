@@ -52,11 +52,16 @@ execute as @e[tag=defense-monster] at @s run function core:defense/monsters/move
 # Vindicator
 execute as @e[tag=defense-monster,tag=defense-vindicator] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
 execute as @e[tag=defense-monster,tag=defense-vindicator] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/vindicator
+execute as @e[tag=defense-monster,tag=defense-vindicator] at @s if score @s defense.abilities matches 40 run attribute @s attack_knockback base set 140
 
 # Witch
 execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
 execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/witch
 item replace entity @e[type=witch] weapon with air
+
+# Bogged
+execute as @e[tag=defense-monster,tag=defense-bogged] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense-monster,tag=defense-bogged] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/bogged
 
 # Silverfish
 execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
@@ -75,13 +80,17 @@ execute as @e[tag=defense-monster,tag=defense-enderman,tag=!has_marker] at @s ru
 # Update marker positions to their linked endermen
 execute as @e[tag=defense.enderman-marker] at @s run function core:defense/monsters/abilities/update_enderman_marker
 
-
 # Wither Skeleton
 execute as @e[tag=defense-monster,tag=defense-wither_skeleton] store result score @s defense.abilities run data get entity @s Health
 execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..29 unless score @s defense.speed matches 160 at @s run playsound block.trial_spawner.ominous_activate master @a ~ ~ ~ 1
 execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..29 unless score @s defense.speed matches 160 at @s run particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0.2 0.4 0.2 0 35
 execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..30 unless score @s defense.speed matches 160 run attribute @s attack_knockback base set 160
 execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches 30.. unless score @s defense.speed matches 40 run attribute @s attack_knockback base set 80
+
+# Chicken Jockey (Minecraft movie refrence???)
+execute as @e[tag=defense-baby_zombie,tag=defense-jockey] run tag @s remove defense-jockey
+execute as @e[tag=defense-baby_zombie,tag=!defense-monster] on vehicle on passengers run tag @s add defense-jockey
+execute as @e[tag=defense-baby_zombie,tag=!defense-monster,tag=!defense-jockey] run function core:defense/monsters/abilities/chicken_jockey_dismount
 
 # RAVAGER #
 # Speed ability
