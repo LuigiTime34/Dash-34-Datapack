@@ -58,7 +58,7 @@ Stray
 Health: 50
 Speed: 1.2 BPS
 Gold Reward: 13
-Ability: Frozen: Immune to ice damage
+Ability: Frozen: Gains speed instead of slowness when hit by ice
 bow
 
 Blaze
@@ -107,7 +107,7 @@ Breeze
 Health: 65
 Speed: 1.0 BPS
 Gold Reward: 19
-Ability: {need name idea}: Redirects projectiles targeting itself to nearby allies. Takes reduced damage from Wind attacks.
+Ability: Deflect: Redirects projectiles targeting itself to nearby allies
 breeze_rod
 
 Enderman

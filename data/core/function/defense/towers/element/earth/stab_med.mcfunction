@@ -5,6 +5,6 @@ summon minecraft:block_display ~ ~-1 ~1 {block_state: {Name: "minecraft:pointed_
 summon minecraft:block_display ~ ~-1 ~-1 {block_state: {Name: "minecraft:pointed_dripstone", Properties: {thickness: "tip", vertical_direction: "up", waterlogged: "false"}}, brightness: {block: 0, sky: 15},  transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]},Tags:["elemental-spike"]}
 execute as @e[tag=elemental-spike,limit=5,sort=nearest] at @s run data merge entity @s {start_interpolation: -1, interpolation_duration:10,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, 0.5f, -0.5f]}}
 scoreboard players set @e[tag=elemental-spike,limit=5,sort=nearest] defense.towers 20
-$execute as @e[tag=elemental-spike,limit=5,sort=nearest] at @s as @e[tag=defense-monster,distance=..2] run damage @s $(damage) core:defense/falling_stalactite by @p
+$execute as @e[tag=elemental-spike,limit=5,sort=nearest] at @s as @e[tag=defense-monster,distance=..1] run damage @s $(damage) core:defense/falling_stalactite by @p
 particle block{block_state:"dripstone_block"} ~ ~ ~ 0.3 1 0.3 0 50
 playsound minecraft:entity.wither.break_block master @a ~ ~ ~ 1 1.7

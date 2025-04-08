@@ -4,7 +4,7 @@
     "id": "minecraft:bow"
     },
     "title": "Stray",
-    "description": "Health: 50\nSpeed: 1.2 BPS\nGold: 13\nFrozen: Immune to ice damage",
+    "description": "Health: 50\nSpeed: 1.2 BPS\nGold: 13\nFrozen: Gains speed instead of slowness when hit by ice",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

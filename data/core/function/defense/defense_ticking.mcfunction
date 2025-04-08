@@ -184,10 +184,10 @@ execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 run func
 execute as @e[tag=archer-skellie_pillager1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
 
 # Pillager Upgrade 1
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"60","damage":"10","range":"13.5"}
+execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"60","damage":"7","range":"13.5"}
 
 # Pillager Upgrade 2
-execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"55","damage":"20","range":"18.5"}
+execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"55","damage":"10","range":"18.5"}
 
 # Witch Upgrade 1
 execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}
@@ -256,9 +256,9 @@ execute as @e[tag=element-center-marker,tag=wind1] if score @s defense.towers ma
 execute as @e[tag=element-center-marker,tag=wind2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_wind_high {"wind_damage":"7.5","range":"23.5","blow_power":"1.5","cooldown":"100"}
 
 # Earth 1
-execute as @e[tag=element-center-marker,tag=earth1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_med {"fire_damage":"2","range":"11.5","ice_damage":"2","earth_damage":"7.5","wind_damage":"0","ignite_time":"20","freeze_time":"20","freeze_power":"5","cooldown":"110","blow_power":"0.2"}
+execute as @e[tag=element-center-marker,tag=earth1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_med {"fire_damage":"2","range":"11.5","ice_damage":"2","earth_damage":"2","wind_damage":"0","ignite_time":"20","freeze_time":"20","freeze_power":"5","cooldown":"110","blow_power":"0.2"}
 # Earth 2
-execute as @e[tag=element-center-marker,tag=earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_high {"earth_damage":"10","range":"12.5","cooldown":"80"}
+execute as @e[tag=element-center-marker,tag=earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_high {"earth_damage":"3","range":"12.5","cooldown":"80"}
 # Earth Ticking
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}

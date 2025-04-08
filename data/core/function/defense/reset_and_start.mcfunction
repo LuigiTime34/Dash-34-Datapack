@@ -1,3 +1,4 @@
+clone -77 -30 116 -77 -30 116 -77 -39 116
 scoreboard players set $wave_level defense.wave 0
 scoreboard players set $money defense.money 10
 scoreboard players set $defense.health defense.damage 500
