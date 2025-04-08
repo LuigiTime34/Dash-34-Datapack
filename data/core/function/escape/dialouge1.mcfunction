@@ -1,3 +1,3 @@
-execute at @a run playsound minecraft:sound.custom.1stpuzzle_greeting voice @a ~ ~ ~ 10000000000000000000000000000
+execute at @a run playsound minecraft:sound.custom.dialouge.1stpuzzle_greeting voice @a ~ ~ ~ 10000000000000000000000000000
 tellraw @a ["",{"text":"Welcome to the first test! You find yourself in a rather... enclosed space. Your objective is to escape this room. And, just to add a bit of pressure, we'll be timing you. The faster you escape, the better. So, take a look around, think carefully, and get to work. Good luck!","color":"green"}]
 schedule function core:escape/music_reset 340t

@@ -1,0 +1,2 @@
+tellraw @a {"text":"Please note that the entities are choosing variable paths to reach the castle. While some routes are shorter, they’re also less likely to be taken. Blockades are currently diverting most movement through longer paths. These blockades will not last for long. Adapt your defenses as conditions change.","color":"green"}
+execute as @a at @s run playsound minecraft:sound.custom.dialouge.defense_warning voice @s ~ ~ ~ 10000000000000000

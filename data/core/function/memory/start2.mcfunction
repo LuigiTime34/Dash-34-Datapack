@@ -1,2 +1,2 @@
 tellraw @a ["",{"text":"Time for the next test! This one is all about memory. You will have 10 seconds to memorize the order of the blocks in front of you, and then you will have to place them in the correct position. If you have to go back to look at the blocks again, or guess incorrectly, you will get points. Your test results will relate to how little points you got. Good luck!","color":"green"}]
-playsound minecraft:sound.custom.2ndpuzzle_greeting voice @a ~ ~ ~ 100000000000000
+playsound minecraft:sound.custom.dialouge.2ndpuzzle_greeting voice @a ~ ~ ~ 100000000000000
