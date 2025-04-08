@@ -1,7 +1,12 @@
 {
     "display": {
     "icon": {
-    "id": "minecraft:tipped_arrow"
+    "id": "minecraft:tipped_arrow",
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "minecraft:poison"
+      }
+    }
     },
     "title": "Bogged",
     "description": "Health: 60\nSpeed: 1.2 BPS\nGold: 12\nRegrowth: Passively heals every second",
