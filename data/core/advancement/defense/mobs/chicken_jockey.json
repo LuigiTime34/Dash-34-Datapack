@@ -10,7 +10,7 @@
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/blaze",
+    "parent": "core:defense/mobs/stray",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

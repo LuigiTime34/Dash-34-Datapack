@@ -91,6 +91,8 @@ execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defen
 execute as @e[tag=defense-baby_zombie,tag=defense-jockey] run tag @s remove defense-jockey
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster] on vehicle on passengers run tag @s add defense-jockey
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster,tag=!defense-jockey] run function core:defense/monsters/abilities/chicken_jockey_dismount
+# Rotate snap
+execute as @e[tag=defense-baby_zombie,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-chicken] Rotation
 
 # RAVAGER #
 # Speed ability
@@ -149,6 +151,8 @@ execute as @e[tag=defense.tower_marker] if score @s defense.towers matches 1.. r
 # Glowing barrels
 execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt=!{Glowing:1b},distance=..10] run data modify entity @s Glowing set value 1b
 execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt={Glowing:1b},distance=10..] run data modify entity @s Glowing set value 0b
+# Failsafe to make sure they are always on the barrel
+execute as @e[tag=tower-barrel-display] at @s unless entity @n[tag=tower-barrel-marker,distance=..1] run tp @s @n[tag=tower-barrel-marker]
 # ====================================================================================================================
 #                  _               
 #                 | |              

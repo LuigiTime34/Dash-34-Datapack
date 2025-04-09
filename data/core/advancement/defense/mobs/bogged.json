@@ -15,7 +15,7 @@
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/piglin",
+    "parent": "core:defense/mobs/wither_skeleton",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

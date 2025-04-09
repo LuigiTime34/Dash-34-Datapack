@@ -2,7 +2,7 @@ item replace entity @p[gamemode=adventure] weapon.mainhand from block -1 -43 0 c
 execute unless score $money defense.money matches 20.. run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 2 1
 execute unless score $money defense.money matches 20.. run return run tellraw @a {"text": "Not enough gold!","color": "gold"}
 
-scoreboard players remove $money defense.money 30
+scoreboard players remove $money defense.money 20
 
 function core:defense/scoreboard/get_highest
 execute as @p[gamemode=adventure] if score @s defense.rotation matches -45..45 run function core:defense/towers/element/placement/init_placement {"rotation":"none","x_offset":"-3","z_offset":"-3","sell_cost":"30"}

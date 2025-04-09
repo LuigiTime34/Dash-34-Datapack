@@ -10,7 +10,7 @@
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/chicken_jockey",
+    "parent": "core:defense/mobs/blaze",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

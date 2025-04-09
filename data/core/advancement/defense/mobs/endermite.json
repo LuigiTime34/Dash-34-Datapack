@@ -10,7 +10,7 @@
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/enderman",
+    "parent": "core:defense/mobs/breeze",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

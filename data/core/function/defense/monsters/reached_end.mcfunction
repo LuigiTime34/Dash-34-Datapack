@@ -1,5 +1,3 @@
-scoreboard players remove $mobs_left defense.wave 1
-
 playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 100000000000 0.8
 # playsound minecraft:entity.wither.break_block master @a ~ ~ ~ 100000000000 0.8
 
@@ -12,7 +10,7 @@ scoreboard players set $recent_hit defense.damage 20
 scoreboard players operation $recent_damage defense.damage += @s defense.damage
 scoreboard players operation $defense.health defense.damage -= @s defense.damage
 
-kill @s
+damage @s 9999 generic by @p
 
 function core:defense/scoreboard/get_highest
 

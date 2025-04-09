@@ -25,6 +25,7 @@ execute as @a[tag=!started,gamemode=adventure] if score $menumusic music matches
 execute as @p[tag=escape-started,tag=!escape-done] if score $1stmusic music matches 1.. run scoreboard players remove $1stmusic music 1
 execute as @p[tag=memory-started,tag=!memory-done] if score $2ndmusic music matches 1.. run scoreboard players remove $2ndmusic music 1
 execute as @p[tag=parkour-started,tag=!parkour-done] if score $3rdmusic music matches 1.. run scoreboard players remove $3rdmusic music 1
+execute as @p[tag=defense-started,tag=!defense-done] if score $4thmusic music matches 1.. run scoreboard players remove $4thmusic music 1
 execute if score #timerticks2 timer matches 20 run function core:timer/second2
 execute if score #timerseconds2 timer matches 60 run function core:timer/minute2
 
