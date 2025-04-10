@@ -1,0 +1,2 @@
+$execute as @e[tag=defense-monster,distance=..$(range)] run scoreboard players set @s defense.bee.honey_slowness $(slow_power)
+$execute as @e[tag=defense-monster,distance=$(range)..] run scoreboard players set @s defense.bee.honey_slowness 0

@@ -143,11 +143,11 @@ execute as @e[tag=defense-monster] run scoreboard players operation @s defense.d
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
 execute as @e[tag=defense-monster,tag=defense-iron_golem] run scoreboard players operation @s defense.distance += $iron_golem defense.distance
 # Display Ranges
-execute as @e[tag=defense.tower_marker] at @s run rotate @s ~6 ~
-execute as @e[tag=defense.tower_marker] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
+execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s run rotate @s ~6 ~
+execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
 # Cooldown
-execute as @e[tag=defense.tower_marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
-execute as @e[tag=defense.tower_marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+execute as @e[tag=defense.tower_marker,tag=!defense.off] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
+execute as @e[tag=defense.tower_marker,tag=!.off] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 # Glowing barrels
 execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt=!{Glowing:1b},distance=..10] run data modify entity @s Glowing set value 1b
 execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt={Glowing:1b},distance=10..] run data modify entity @s Glowing set value 0b
@@ -275,10 +275,17 @@ execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill
 #  | |_) |  __/  __/
 #  |_.__/ \___|\___|
 # ====================================================================================================================
-# Base
-execute as @e[tag=bee-center-marker,tag=!upgrade1] if score @s defense.towers matches 1 at @s positioned ~ ~2 ~ run function core:defense/towers/bee/launch_bees {"cooldown":"160","damage":"3","range":"7","bee_count":"2"}
-# First Upgrade
+# Global bee slowness
+execute as @e[tag=bee-center-marker,tag=!defense.off] at @s run function core:defense/towers/bee/get_range
+# Give particles to slowed monsters
+execute as @e[tag=defense-monster] if score @s defense.bee.honey_slowness matches 1.. at @s run particle minecraft:falling_honey ~ ~ ~ 0.2 0.3 0.2 0 1
+# Base (2 bees)
+execute as @e[tag=bee-center-marker,tag=!upgrade1] if score @s defense.towers matches 10 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"10","damage":"5","speed":20}
+execute as @e[tag=bee-center-marker,tag=!upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"100","damage":"5","speed":20}
+# First Upgrade (3 Bees)
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 15 run function core:defense/towers/archer/shoot {"cooldown":"15","damage":"5","range":"11.5"}
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 10 run function core:defense/towers/archer/shoot {"cooldown":"10","damage":"5","range":"11.5"}
 execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
 
 # Bee ticking
-execute as @n[tag=defense.bee_display] at @s run function core:defense/towers/bee/bee_ticking
+execute as @e[tag=defense.bee_display] at @s run function core:defense/towers/bee/bee_ticking

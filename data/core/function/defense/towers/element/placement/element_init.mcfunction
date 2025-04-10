@@ -5,8 +5,18 @@ execute unless score $money defense.money matches 20.. run return run tellraw @a
 scoreboard players remove $money defense.money 20
 
 function core:defense/scoreboard/get_highest
-execute as @p[gamemode=adventure] if score @s defense.rotation matches -45..45 run function core:defense/towers/element/placement/init_placement {"rotation":"none","x_offset":"-3","z_offset":"-3","sell_cost":"30"}
-execute as @p[gamemode=adventure] if score @s defense.rotation matches 46..135 run function core:defense/towers/element/placement/init_placement {"rotation":"clockwise_90","x_offset":"3","z_offset":"-3","sell_cost":"30"}
-execute as @p[gamemode=adventure] if score @s defense.rotation matches 136..180 run function core:defense/towers/element/placement/init_placement {"rotation":"180","x_offset":"3","z_offset":"3","sell_cost":"30"}
-execute as @p[gamemode=adventure] if score @s defense.rotation matches -180..-135 run function core:defense/towers/element/placement/init_placement {"rotation":"180","x_offset":"3","z_offset":"3","sell_cost":"30"}
-execute as @p[gamemode=adventure] if score @s defense.rotation matches -136..-44 run function core:defense/towers/element/placement/init_placement {"rotation":"counterclockwise_90","x_offset":"-3","z_offset":"3","sell_cost":"30"}
+
+execute if block ~ -60 ~-5 #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 1
+execute if block ~5 -60 ~ #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 2
+execute if block ~ -60 ~5 #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 3
+execute if block ~-5 -60 ~ #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 4
+
+execute as @p[gamemode=adventure] if score @s defense.rotation matches -45..45 if block ~ -60 ~-5 #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 1
+execute as @p[gamemode=adventure] if score @s defense.rotation matches 46..135 if block ~5 -60 ~ #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 2
+execute as @p[gamemode=adventure] if score @s defense.rotation matches 136..180 if block ~ -60 ~5 #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 3
+execute as @p[gamemode=adventure] if score @s defense.rotation matches -180..-135 if block ~ -60 ~5 #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 3
+execute as @p[gamemode=adventure] if score @s defense.rotation matches -136..-44 if block ~-5 -60 ~ #mineable/pickaxe run scoreboard players set $tower_rotation defense.rotation 4
+execute if score $tower_rotation defense.rotation matches 1 as @p[gamemode=adventure] run function core:defense/towers/element/placement/init_placement {"rotation":"none","x_offset":"-3","z_offset":"-3","sell_cost":"20"}
+execute if score $tower_rotation defense.rotation matches 2 as @p[gamemode=adventure] run function core:defense/towers/element/placement/init_placement {"rotation":"clockwise_90","x_offset":"3","z_offset":"-3","sell_cost":"20"}
+execute if score $tower_rotation defense.rotation matches 3 as @p[gamemode=adventure] run function core:defense/towers/element/placement/init_placement {"rotation":"180","x_offset":"3","z_offset":"3","sell_cost":"20"}
+execute if score $tower_rotation defense.rotation matches 4 as @p[gamemode=adventure] run function core:defense/towers/element/placement/init_placement {"rotation":"counterclockwise_90","x_offset":"-3","z_offset":"3","sell_cost":"20"}

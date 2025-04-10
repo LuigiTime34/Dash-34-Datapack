@@ -23,7 +23,7 @@ $execute if items entity @s $(slot) *[custom_data~{element_sell:1b}] as @n[tag=t
 
 
 # beeEEE UPGRADES
-$execute if items entity @s $(slot) *[custom_data~{bee_upgrade1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"1","cost":"60","item_slot":"13","slot_to_replace":"13"}
+$execute if items entity @s $(slot) *[custom_data~{bee_upgrade1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"1","cost":"100","item_slot":"13","slot_to_replace":"13"}
 $execute if items entity @s $(slot) *[custom_data~{bee_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/sell
 
 # TENT UPGRADES

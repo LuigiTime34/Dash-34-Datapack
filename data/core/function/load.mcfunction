@@ -43,6 +43,7 @@ scoreboard objectives add defense.marker_id dummy
 scoreboard objectives add defense.ravager_speed dummy
 scoreboard objectives add defense.boss_animation dummy
 scoreboard objectives add defense.health dummy
+scoreboard objectives add defense.bee_tower dummy
 
 team add defense_enemies
 bossbar add defense.mobs_left ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]

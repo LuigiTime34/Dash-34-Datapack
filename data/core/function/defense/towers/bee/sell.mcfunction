@@ -6,8 +6,7 @@ scoreboard players reset $sell.cost defense.money
 fill ~-3 ~ ~-3 ~3 ~10 ~3 air destroy
 kill @s
 kill @n[tag=bee-center-marker]
-tag @n[tag=bee-villager] add dead-villager
-execute as @n[tag=dead-villager] at @s run tp @s ~ ~-300 ~
-execute as @n[tag=dead-villager] at @s run kill @s
+kill @n[tag=tower-barrel-display]
+kill @n[tag=defense.bee_deployer]
 clear @a *[custom_data~{tower_upgrade:1b}]
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{tower_upgrade:1b}}}}]
