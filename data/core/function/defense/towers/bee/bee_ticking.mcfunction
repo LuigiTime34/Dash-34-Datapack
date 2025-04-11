@@ -7,7 +7,9 @@ execute if score $mobs_left defense.wave matches 0 run return run kill @s
 
 # rotate @s facing entity @n[tag=defense-monster] eyes
 function core:defense/towers/bee/get_speed
-execute as @n[tag=defense.bee] run rotate @s facing entity @n[tag=defense-monster]
+execute as @n[tag=defense.bee] run data modify entity @s Rotation set from entity @n[tag=defense.bee_display] Rotation
 
 execute on passengers at @s positioned ~ -59 ~ if entity @n[tag=defense-monster,distance=..1.4] run rotate @s ~-180 ~
 execute positioned ~-0.5 ~ ~-0.5 if entity @n[tag=defense-monster,dx=0] run function core:defense/towers/bee/get_damage
+execute as @s[tag=defense.queen-bee_attacked] if score @s defense.bee_tower matches 1.. run scoreboard players remove @s defense.bee_tower 1
+execute as @s[tag=defense.queen-bee_attacked] if score @s defense.bee_tower matches 1 run tag @s remove defense.queen-bee_attacked

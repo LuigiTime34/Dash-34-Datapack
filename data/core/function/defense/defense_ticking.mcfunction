@@ -36,6 +36,8 @@ execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"
 # Display mobs left in the bossbar
 # execute if score $mobs_left defense.wave matches 1.. run title @a[gamemode=adventure] actionbar [{"text":"Mobs Left: ","color":"yellow"},{"score":{"name":"$mobs_left","objective":"defense.wave"},"color":"gold","bold":true}]
 execute store result bossbar minecraft:defense.mobs_left value run scoreboard players get $mobs_left defense.wave
+# Give all mobs glowing when theres 5 left
+execute if score $mobs_left defense.wave matches ..5 if score $wave_level defense.wave matches 9.. run effect give @e[tag=defense-monster] glowing infinite 0 true
 # ====================================================================================================================
 #   __  __  ____  _   _  _____ _______ ______ _____   _____ 
 #  |  \/  |/ __ \| \ | |/ ____|__   __|  ____|  __ \ / ____|
@@ -147,12 +149,12 @@ execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s run rotate @s ~6 
 execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
 # Cooldown
 execute as @e[tag=defense.tower_marker,tag=!defense.off] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
-execute as @e[tag=defense.tower_marker,tag=!.off] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+execute as @e[tag=defense.tower_marker,tag=!defense.off] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 # Glowing barrels
 execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt=!{Glowing:1b},distance=..10] run data modify entity @s Glowing set value 1b
 execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt={Glowing:1b},distance=10..] run data modify entity @s Glowing set value 0b
 # Failsafe to make sure they are always on the barrel
-execute as @e[tag=tower-barrel-display] at @s unless entity @n[tag=tower-barrel-marker,distance=..1] run tp @s @n[tag=tower-barrel-marker]
+execute as @e[tag=tower-barrel-display] at @s unless entity @n[tag=tower-barrel-marker,distance=..0.1] run tp @s @n[tag=tower-barrel-marker,distance=..3]
 # ====================================================================================================================
 #                  _               
 #                 | |              
@@ -280,12 +282,37 @@ execute as @e[tag=bee-center-marker,tag=!defense.off] at @s run function core:de
 # Give particles to slowed monsters
 execute as @e[tag=defense-monster] if score @s defense.bee.honey_slowness matches 1.. at @s run particle minecraft:falling_honey ~ ~ ~ 0.2 0.3 0.2 0 1
 # Base (2 bees)
-execute as @e[tag=bee-center-marker,tag=!upgrade1] if score @s defense.towers matches 10 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"10","damage":"5","speed":20}
-execute as @e[tag=bee-center-marker,tag=!upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"100","damage":"5","speed":20}
+execute as @e[tag=bee-center-marker,tag=!upgrade1,tag=!upgrade_attack1,tag=!upgrade_attack2,tag=!upgrade_money1,tag=!upgrade_money2] if score @s defense.towers matches 20 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"20","damage":"3","speed":20}
+execute as @e[tag=bee-center-marker,tag=!upgrade1,tag=!upgrade_attack1,tag=!upgrade_attack2,tag=!upgrade_money1,tag=!upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"120","damage":"3","speed":20}
 # First Upgrade (3 Bees)
-execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 15 run function core:defense/towers/archer/shoot {"cooldown":"15","damage":"5","range":"11.5"}
-execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 10 run function core:defense/towers/archer/shoot {"cooldown":"10","damage":"5","range":"11.5"}
-execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 40 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"40","damage":"6","speed":"25"}
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 20 run function core:defense/towers/bee/launch_bee {"cooldown":"20","damage":"6","speed":"25"}
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 run function core:defense/towers/bee/launch_bee {"cooldown":"80","damage":"6","speed":"25"}
+# Attack upgrade 1 (5 Bees)
+execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 80 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"80","damage":"5","speed":"30"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 60 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"60","damage":"5","speed":"30"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 40 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"40","damage":"5","speed":"30"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 20 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"20","damage":"5","speed":"30"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"100","damage":"5","speed":"30"}
+
+# Attack upgrade 2 (6 Bees)
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 100 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"100","damage":"6","speed":"40"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 80 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"80","damage":"6","speed":"40"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 60 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"60","damage":"6","speed":"40"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 40 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"40","damage":"6","speed":"40"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 20 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"20","damage":"6","speed":"40"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_queen_bee {"cooldown":"200","damage":"5","speed":"35"}
+
+# Money Upgrade 1 (2 Bees)
+execute as @e[tag=bee-center-marker,tag=upgrade_money1] if score @s defense.towers matches 20 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"20","damage":"4","speed":"30","money":"1"}
+execute as @e[tag=bee-center-marker,tag=upgrade_money1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"80","damage":"4","speed":"30","money":"1"}
+
+# Money Upgrade 2 (2 Bees)
+execute as @e[tag=bee-center-marker,tag=upgrade_money2] if score @s defense.towers matches 20 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"20","damage":"5","speed":"30","money":"3"}
+execute as @e[tag=bee-center-marker,tag=upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"70","damage":"5","speed":"30","money":"3"}
+
+# MONEY RAIN
+execute as @e[tag=bee-center-marker,tag=upgrade_money2] at @s if entity @p[gamemode=adventure,distance=..15] run function core:defense/towers/bee/money_rain
 
 # Bee ticking
 execute as @e[tag=defense.bee_display] at @s run function core:defense/towers/bee/bee_ticking

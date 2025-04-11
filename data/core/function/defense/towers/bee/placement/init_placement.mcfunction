@@ -11,5 +11,5 @@ execute as @n[tag=tower-barrel-marker] at @s positioned ^ ^ ^2 run summon minecr
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ cyan_wool run rotate @s 0 0
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ blue_wool run rotate @s -90 0
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ light_blue_wool run rotate @s -180 0
-playsound block.anvil.use master @a ~ ~2 ~ 10 0.7
+playsound minecraft:block.smithing_table.use master @a ~ ~2 ~ 1 0.7
 particle minecraft:end_rod ~ ~2 ~ .2 .1 .2 0.5 50
