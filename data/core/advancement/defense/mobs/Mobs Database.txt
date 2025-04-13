@@ -3,6 +3,7 @@ Health: 5
 Speed: 0.4 BPS
 Gold Reward: 3
 Ability: 
+Category: Basic
 rotten_flesh
 
 Skeleton
@@ -10,6 +11,7 @@ Health: 10
 Speed: 0.8 BPS
 Gold Reward: 5
 Ability: 
+Category: Basic
 bone
 
 Spider
@@ -17,6 +19,7 @@ Health: 25
 Speed: 1.2 BPS
 Gold Reward: 6
 Ability: 
+Category: Small
 spider_eye
 
 Creeper
@@ -24,6 +27,7 @@ Health: 40
 Speed: 1 BPS
 Gold Reward: 9
 Ability: Explosive: Deals 10 extra damage to your base
+Category: Agressive
 gunpowder
 
 Silverfish
@@ -31,6 +35,7 @@ Health: 20
 Speed: 1.8 BPS
 Gold Reward: 7
 Ability: Burrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration
+Category: Small
 infested_stone
 
 Husk
@@ -38,6 +43,7 @@ Health: 50
 Speed: 1 BPS
 Gold Reward: 12
 Ability: Destructive: Deals 20 extra damage to your base
+Category: Agressive
 sand
 
 Witch
@@ -45,6 +51,7 @@ Health: 40
 Speed: 0.7 BPS
 Gold Reward: 10
 Ability: Brewer: Heals nearby monsters in a small radius over time
+Category: Healer
 blaze_powder
 
 Zombie_Villager
@@ -52,6 +59,7 @@ Health: 40
 Speed: 1 BPS
 Gold Reward: 0
 Ability:
+Category: Disruptor
 emerald
 
 Stray
@@ -59,6 +67,7 @@ Health: 50
 Speed: 1.2 BPS
 Gold Reward: 13
 Ability: Frozen: Gains speed instead of slowness when hit by ice
+Category: Disruptor
 bow
 
 Chicken_Jockey
@@ -66,6 +75,7 @@ Health: 40
 Speed: 0.6 BPS
 Gold Reward: 7
 Ability: Dismount: A fast Baby Zombie (25 Health, 2 BPS) rides this Chicken. When the Chicken dies, the Baby Zombie continues alone.
+Category: Small
 feather
 
 Blaze
@@ -73,6 +83,7 @@ Health: 60
 Speed: 1.4 BPS
 Gold Reward: 18
 Ability: Firey: Deals 30 extra damage to your base; Immune to fire, but takes more ice damage
+Category: Agressive
 blaze_rod
 
 Iron_Golem
@@ -80,6 +91,7 @@ Health: 200
 Speed: 0.8 BPS
 Gold Reward: 35
 Ability: Tank: Has permanent armor that reduces incoming damage. Causes towers to focus on itself
+Category: Boss
 carved_pumpkin
 
 Piglin
@@ -87,6 +99,7 @@ Health: 70
 Speed: 1.1 BPS
 Gold Reward: 15
 Ability:
+Category: Basic
 crossbow
 
 Wither_Skeleton
@@ -94,6 +107,7 @@ Health: 60
 Speed: 0.8 BPS
 Gold Reward: 20
 Ability: Beserk: When below half health, doubles in Speed
+Category: Agressive
 stone_sword
 
 Bogged
@@ -101,6 +115,7 @@ Health: 60
 Speed: 1.2 BPS
 Gold Reward: 12
 Ability: Regrowth: Passively heals every second
+Category: Healer
 tipped_arrow
 
 Enderman
@@ -108,6 +123,7 @@ Health: 50
 Speed: 0.9 BPS
 Gold Reward: 22
 Ability: Blink: Every 10 seconds, teleports forward
+Category: Disruptor
 ender_pearl
 
 Breeze
@@ -115,6 +131,7 @@ Health: 65
 Speed: 1.0 BPS
 Gold Reward: 19
 Ability: Deflect: Redirects projectiles targeting itself to nearby allies
+Category: Disruptor
 breeze_rod
 
 Endermite
@@ -122,6 +139,7 @@ Health: 20
 Speed: 2 BPS
 Gold Reward: 8
 Ability: Parasitic: Has a %50 chance of spawning every time an enderman teleports
+Category: Small
 purpur_block
 
 Pillager
@@ -129,6 +147,7 @@ Health: 70
 Speed: 1.2 BPS
 Gold Reward: 24
 Ability: Loyal: Pillager towers cannot deal damage to any pillagers
+Category: Disruptor
 crossbow
 
 Vindicator
@@ -136,6 +155,7 @@ Health: 80
 Speed: 1.4 BPS
 Gold Reward: 27
 Ability: Reckless: Every 5 seconds, has a chance to hurt itself to gain a boost of speed
+Category: Agressive
 iron_axe
 
 Piglin_Brute
@@ -143,6 +163,7 @@ Health: 100
 Speed: 1.6 BPS
 Gold Reward: 30
 Ability: Devastating: Deals 50 extra damage to your base
+Category: Agressive
 golden_axe
 
 Ravager
@@ -150,4 +171,5 @@ Health: 1000
 Speed: 1.25 BPS
 Gold Reward: 0
 Ability: Deals 100 extra base damage. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.
+Category: Boss
 saddle

@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:zombie_head"
+    },
+    "title": {
+      "text": "Bestiary",
+      "bold": true
+    },
+    "description": "View all the mobs you've discovered so far",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "impossible"
+    ]
+  ],
+  "parent": "core:defense/root"
+}

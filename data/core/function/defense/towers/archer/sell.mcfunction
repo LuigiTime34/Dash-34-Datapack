@@ -11,3 +11,4 @@ execute as @n[tag=dead-skellie] at @s run tp @s ~ ~-300 ~
 execute as @n[tag=dead-skellie] at @s run kill @s
 clear @a *[custom_data~{tower_upgrade:1b}]
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{tower_upgrade:1b}}}}]
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{tower_stat:1b}}}}]

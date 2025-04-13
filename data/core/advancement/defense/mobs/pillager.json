@@ -4,13 +4,13 @@
     "id": "minecraft:crossbow"
     },
     "title": "Pillager",
-    "description": "Health: 70\nSpeed: 1.2 BPS\nGold: 24\nLoyal: Pillager towers cannot deal damage to any pillagers",
+    "description": "Health: 70\nSpeed: 1.2 BPS\nGold: 24\nCategory: Disruptor\nLoyal: Pillager towers cannot deal damage to any pillagers",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/endermite",
+    "parent": "core:defense/mobs/breeze",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

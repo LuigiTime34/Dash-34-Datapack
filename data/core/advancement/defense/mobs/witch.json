@@ -4,13 +4,13 @@
     "id": "minecraft:blaze_powder"
     },
     "title": "Witch",
-    "description": "Health: 40\nSpeed: 0.7 BPS\nGold: 10\nBrewer: Heals nearby monsters in a small radius over time",
+    "description": "Health: 40\nSpeed: 0.7 BPS\nGold: 10\nCategory: Healer\nBrewer: Heals nearby monsters in a small radius over time",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/husk",
+    "parent": "core:defense/mobs/category_healer",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

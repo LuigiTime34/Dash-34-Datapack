@@ -1,16 +1,16 @@
-    {
+{
     "display": {
     "icon": {
     "id": "minecraft:spider_eye"
     },
-    "title": "Spider",
-    "description": "Health: 25\nSpeed: 1.2 BPS\nGold: 6\nCategory: Small\n",
+    "title": "Small Mobs",
+    "description": "Small mobs that crawl under bees",
     "frame": "task",
-    "show_toast": true,
+    "show_toast": false,
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/category_small",
+    "parent": "core:defense/mobs_root",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

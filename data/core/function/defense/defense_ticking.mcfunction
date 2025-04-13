@@ -94,7 +94,7 @@ execute as @e[tag=defense-baby_zombie,tag=defense-jockey] run tag @s remove defe
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster] on vehicle on passengers run tag @s add defense-jockey
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster,tag=!defense-jockey] run function core:defense/monsters/abilities/chicken_jockey_dismount
 # Rotate snap
-execute as @e[tag=defense-baby_zombie,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-chicken] Rotation
+execute as @e[tag=defense-baby_zombie,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-chicken,distance=..1] Rotation
 
 # RAVAGER #
 # Speed ability
@@ -184,22 +184,22 @@ execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run sc
 
 
 # Base
-execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"100","damage":"5","range":"9.5"}
+execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot {"cooldown":"100","damage":"5","range":"9.5"}
 
 # First Upgrade
-execute as @e[tag=archer-skellie_pillager1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
+execute as @e[tag=archer-skellie_pillager1] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
 
 # Pillager Upgrade 1
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"60","damage":"7","range":"13.5"}
+execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot_multishot {"cooldown":"60","damage":"7","range":"13.5"}
 
 # Pillager Upgrade 2
-execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"55","damage":"10","range":"18.5"}
+execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot_multishot {"cooldown":"55","damage":"10","range":"18.5"}
 
 # Witch Upgrade 1
-execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}
+execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}
 
 # Witch Upgrade 2
-execute as @e[tag=archer-skellie_witch_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"50","damage":"12","range":"23.5"}
+execute as @e[tag=archer-skellie_witch_final] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/potion {"cooldown":"50","damage":"12","range":"23.5"}
 
 # Witch/Wizard ticking
 execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players set @s defense.archer_slowness 15

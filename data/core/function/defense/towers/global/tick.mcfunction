@@ -1,3 +1,7 @@
-execute if items entity @s container.* *[minecraft:custom_data~{tower_upgrade:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/tick2 {slot:"container.*"}
-execute if items entity @s weapon.* *[minecraft:custom_data~{tower_upgrade:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/tick2 {slot:"weapon.*"}
-execute if items entity @s player.cursor *[minecraft:custom_data~{tower_upgrade:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/tick2 {slot:"player.cursor"}
+execute if items entity @s container.* *[minecraft:custom_data~{tower_upgrade:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/upgrade_ticking {slot:"container.*"}
+execute if items entity @s weapon.* *[minecraft:custom_data~{tower_upgrade:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/upgrade_ticking {slot:"weapon.*"}
+execute if items entity @s player.cursor *[minecraft:custom_data~{tower_upgrade:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/upgrade_ticking {slot:"player.cursor"}
+
+execute if items entity @s container.* *[minecraft:custom_data~{tower_stat:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/stat_ticking {slot:"container.*"}
+execute if items entity @s weapon.* *[minecraft:custom_data~{tower_stat:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/stat_ticking {slot:"weapon.*"}
+execute if items entity @s player.cursor *[minecraft:custom_data~{tower_stat:1b}] at @s at @n[type=minecraft:marker,tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/stat_ticking {slot:"player.cursor"}

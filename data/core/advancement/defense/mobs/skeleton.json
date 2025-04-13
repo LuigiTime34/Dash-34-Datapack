@@ -4,7 +4,7 @@
     "id": "minecraft:bone"
     },
     "title": "Skeleton",
-    "description": "Health: 10\nSpeed: 0.8 BPS\nGold: 5\n",
+    "description": "Health: 10\nSpeed: 0.8 BPS\nGold: 5\nCategory: Basic\n",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

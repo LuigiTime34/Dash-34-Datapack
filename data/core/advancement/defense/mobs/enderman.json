@@ -4,13 +4,13 @@
     "id": "minecraft:ender_pearl"
     },
     "title": "Enderman",
-    "description": "Health: 50\nSpeed: 0.9 BPS\nGold: 22\nBlink: Every 10 seconds, teleports forward",
+    "description": "Health: 50\nSpeed: 0.9 BPS\nGold: 22\nCategory: Disruptor\nBlink: Every 10 seconds, teleports forward",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/bogged",
+    "parent": "core:defense/mobs/stray",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

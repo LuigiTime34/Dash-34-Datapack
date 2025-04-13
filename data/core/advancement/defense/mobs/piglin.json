@@ -4,13 +4,13 @@
     "id": "minecraft:crossbow"
     },
     "title": "Piglin",
-    "description": "Health: 70\nSpeed: 1.1 BPS\nGold: 15\n",
+    "description": "Health: 70\nSpeed: 1.1 BPS\nGold: 15\nCategory: Basic\n",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/iron_golem",
+    "parent": "core:defense/mobs/skeleton",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"

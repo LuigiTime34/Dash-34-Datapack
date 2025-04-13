@@ -1,21 +1,21 @@
 {
     "display": {
     "icon": {
-    "id": "minecraft:tipped_arrow",
+    "id": "minecraft:potion",
     "components": {
       "minecraft:potion_contents": {
-        "potion": "minecraft:poison"
+        "potion": "minecraft:healing"
       }
     }
     },
-    "title": "Bogged",
-    "description": "Health: 60\nSpeed: 1.2 BPS\nGold: 12\nCategory: Healer\nRegrowth: Passively heals every second",
+    "title": "Healer Mobs",
+    "description": "Mobs that heal themselves or others",
     "frame": "task",
-    "show_toast": true,
+    "show_toast": false,
     "announce_to_chat": false,
     "hidden": true
     },
-    "parent": "core:defense/mobs/witch",
+    "parent": "core:defense/mobs_root",
     "criteria": {
     "impossible": {
     "trigger": "minecraft:impossible"
