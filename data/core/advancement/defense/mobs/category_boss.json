@@ -4,7 +4,7 @@
     "id": "minecraft:nether_star"
     },
     "title": "Boss Mobs",
-    "description": "Extremely powerful mobs that can deal massive amounts of damage",
+    "description": "Has more health than your patience. Good luck, have fun (dying)!",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

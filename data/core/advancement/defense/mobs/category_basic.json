@@ -4,7 +4,7 @@
     "id": "minecraft:iron_sword"
     },
     "title": "Basic Mobs",
-    "description": "You're typical mobs, nothing special",
+    "description": "The bread and butter of bad guys. Mostly harmless, unless they bring friends.",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

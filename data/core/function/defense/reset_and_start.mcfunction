@@ -6,6 +6,7 @@ scoreboard players set $wave_timer defense.wave 30
 bossbar set minecraft:defense.mobs_left name ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]
 bossbar set minecraft:defense.mobs_left players @a
 bossbar set minecraft:defense.mobs_left visible true
+scoreboard objectives modify defense.display displayname ""
 scoreboard objectives setdisplay sidebar defense.display
 effect give @p[gamemode=adventure] minecraft:weakness infinite 0 true
 effect give @p[gamemode=adventure] minecraft:speed infinite 1 true

@@ -4,7 +4,7 @@
     "id": "minecraft:ender_pearl"
     },
     "title": "Disruptor Mobs",
-    "description": "Mobs that disrrupt your gameplay flow",
+    "description": "Plays by its own rules. Usually involves messing up your rules. Jerks.",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

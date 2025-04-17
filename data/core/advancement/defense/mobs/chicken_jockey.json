@@ -1,24 +1,34 @@
 {
     "display": {
-    "icon": {
-    "id": "minecraft:feather"
-    },
-    "title": "Chicken Jockey",
-    "description": "Health: 40\nSpeed: 0.6 BPS\nGold: 7\nCategory: Small\nDismount: A fast Baby Zombie (25 Health, 2 BPS) rides this Chicken. When the Chicken dies, the Baby Zombie continues alone.",
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": false,
-    "hidden": true
+        "icon": {
+            "id": "minecraft:player_head",
+            "components": {
+                "minecraft:profile": {
+                    "properties": [
+                        {
+                            "name": "textures",
+                            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2FkM2RkMDA4M2ZhYTY5YTA2MmY5YWQ4MTQxOGY1YTU5NjE4MGJmMTU5MmU0YjhkMTMwM2IyMzBiNjRiYzc5ZSJ9fX0="
+                        }
+                    ]
+                }
+            }
+        },
+        "title": "Chicken Jockey",
+        "description": "Health: 40\nSpeed: 0.6 BPS\nGold: 7\nDismount: A fast Baby Zombie (25 Health, 2 BPS) rides this Chicken. When the Chicken dies, the Baby Zombie continues alone.",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
     },
     "parent": "core:defense/mobs/silverfish",
     "criteria": {
-    "impossible": {
-    "trigger": "minecraft:impossible"
-    }
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
     },
     "requirements": [
-    [
-    "impossible"
+        [
+            "impossible"
+        ]
     ]
-    ]
-    }
+}

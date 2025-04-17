@@ -4,7 +4,7 @@
     "id": "minecraft:iron_axe"
     },
     "title": "Agressive Mobs",
-    "description": "Mobs that are focused on dealing as much damage as possible",
+    "description":"These guys skipped 'defense' day. Aimed straight for 'offense' or your base's front door.",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

@@ -96,6 +96,16 @@ execute as @e[tag=defense-baby_zombie,tag=!defense-monster,tag=!defense-jockey] 
 # Rotate snap
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-chicken,distance=..1] Rotation
 
+# Skeleton Horse
+execute as @e[tag=defense-skeleton_rider,tag=defense-rider] run tag @s remove defense-rider
+execute as @e[tag=defense-skeleton_rider,tag=!defense-monster] on vehicle on passengers run tag @s add defense-rider
+execute as @e[tag=defense-skeleton_rider,tag=!defense-monster,tag=!defense-rider] run function core:defense/monsters/abilities/skeleton_dismount
+# Rotate snap
+execute as @e[tag=defense-skeleton_rider,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-skeleton_horse,distance=..1] Rotation
+
+# Zombified Piglin
+execute as @e[tag=defense-zombified_piglin] if data entity @s {HurtTime:10s} at @s run function core:defense/monsters/abilities/zombified_piglin_reinforcements
+
 # RAVAGER #
 # Speed ability
 execute as @e[tag=defense-ravager,limit=1] if data entity @s {HurtTime:10s} run function core:defense/monsters/boss/ravager/attacked
@@ -239,12 +249,12 @@ execute at @e[tag=element-blaze] run particle minecraft:lava ~ ~ ~ 0.4 0.6 0.4 0
 # execute at @e[tag=element-blaze] run particle dust{color:[1.0,0.3,0.0],scale:2} ~ ~ ~ 0.3 0.6 0.3 0 3
 
 # Ice 1
-execute as @e[tag=element-center-marker,tag=ice1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_ice_med {"fire_damage":"2","range":"10.5","ice_damage":"5","earth_damage":"3","wind_damage":"0","ignite_time":"20","freeze_time":"60","freeze_power":"15","cooldown":"120","blow_power":"0.2"}
+execute as @e[tag=element-center-marker,tag=ice1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_ice_med {"fire_damage":"2","range":"10.5","ice_damage":"5","earth_damage":"3","wind_damage":"0","ignite_time":"20","freeze_time":"60","freeze_power":"25","cooldown":"120","blow_power":"0.2"}
 # Ice 2
 execute as @e[tag=element-center-marker,tag=ice2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_ice_high {"ice_damage":"7.5","range":"15.5","cooldown":"100"}
 # Ice Ticking
 execute at @e[tag=element-snowstorm] run particle snowflake ~ ~ ~ 0.5 1 0.5 0 30
-execute as @e[tag=defense-monster,tag=!defense-stray] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.ice_power 30
+execute as @e[tag=defense-monster,tag=!defense-stray] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.ice_power 50
 execute as @e[tag=defense-monster] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.freeze_timer 50
 execute as @e[tag=defense-monster,tag=defense-stray] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.ice_power -30
 

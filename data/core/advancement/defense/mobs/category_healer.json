@@ -9,7 +9,7 @@
     }
     },
     "title": "Healer Mobs",
-    "description": "Mobs that heal themselves or others",
+    "description": "The reason that other mob just won't die. Focus fire recommended.",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

@@ -1,24 +1,24 @@
 {
     "display": {
-    "icon": {
-    "id": "minecraft:bone"
-    },
-    "title": "Skeleton",
-    "description": "Health: 10\nSpeed: 0.8 BPS\nGold: 5\nCategory: Basic\n",
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": false,
-    "hidden": true
+        "icon": {
+            "id": "minecraft:skeleton_skull"
+        },
+        "title": "Skeleton",
+        "description": "Health: 10\nSpeed: 0.8 BPS\nGold: 5\nAbility:",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
     },
     "parent": "core:defense/mobs/zombie",
     "criteria": {
-    "impossible": {
-    "trigger": "minecraft:impossible"
-    }
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
     },
     "requirements": [
-    [
-    "impossible"
+        [
+            "impossible"
+        ]
     ]
-    ]
-    }
+}

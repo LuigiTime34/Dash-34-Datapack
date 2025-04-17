@@ -1,24 +1,24 @@
 {
     "display": {
-    "icon": {
-    "id": "minecraft:gunpowder"
-    },
-    "title": "Creeper",
-    "description": "Health: 40\nSpeed: 1 BPS\nGold: 9\nCategory: Agressive\nExplosive: Deals 10 extra damage to your base",
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": false,
-    "hidden": true
+        "icon": {
+            "id": "minecraft:creeper_head"
+        },
+        "title": "Creeper",
+        "description": "Health: 40\nSpeed: 1 BPS\nGold: 9\nExplosive: Deals 10 extra damage to your base",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
     },
     "parent": "core:defense/mobs/category_agressive",
     "criteria": {
-    "impossible": {
-    "trigger": "minecraft:impossible"
-    }
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
     },
     "requirements": [
-    [
-    "impossible"
+        [
+            "impossible"
+        ]
     ]
-    ]
-    }
+}
