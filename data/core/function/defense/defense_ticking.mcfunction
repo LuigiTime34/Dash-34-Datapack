@@ -104,7 +104,20 @@ execute as @e[tag=defense-skeleton_rider,tag=!defense-monster,tag=!defense-rider
 execute as @e[tag=defense-skeleton_rider,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-skeleton_horse,distance=..1] Rotation
 
 # Zombified Piglin
-execute as @e[tag=defense-zombified_piglin] if data entity @s {HurtTime:10s} at @s run function core:defense/monsters/abilities/zombified_piglin_reinforcements
+execute as @e[tag=defense-zombified_piglin] if data entity @s {HurtTime:9s} at @s rotated ~ 0 positioned ^ ^ ^-1 run function core:defense/monsters/abilities/zombified_piglin_reinforcements
+
+# Charged Creeper
+execute as @e[tag=defense.creeper-death,tag=defense.not_dead] run tag @s remove defense.not_dead
+execute as @e[tag=defense.creeper-death] on vehicle on passengers run tag @s add defense.not_dead
+execute as @e[tag=defense.creeper-death,tag=!defense.not_dead] unless score @s defense.abilities matches 1.. run function core:defense/monsters/abilities/charged_creeper_explode
+execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1 at @s positioned ~ -59 ~ run tag @e[tag=defense.creeper_disabled,distance=..7] remove defense.creeper_disabled
+execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1 run kill @s
+execute as @e[tag=defense.creeper_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
+execute as @e[tag=defense.creeper_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
+execute as @e[tag=defense.creeper_disabled] at @s run particle electric_spark ~ ~ ~ 1 3 1 0 30
+execute as @e[tag=defense.creeper_disabled] at @s run particle flash ~ ~ ~ 1 3 1 0 1
+
 
 # RAVAGER #
 # Speed ability

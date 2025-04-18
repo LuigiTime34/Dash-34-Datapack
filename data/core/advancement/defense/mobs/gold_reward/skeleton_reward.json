@@ -8,7 +8,7 @@
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "nbt": "{Tags:[\"defense-skeleton_rider\"]}"
+                            "nbt": "{Tags:[\"defense-skeleton\"]}"
                         }
                     }
                 ]
@@ -21,6 +21,6 @@
         ]
     ],
     "rewards": {
-        "function": "core:defense/monsters/gold_reward/skeleton_rider_gold"
+        "function": "core:defense/monsters/gold_reward/skeleton_gold"
     }
 }

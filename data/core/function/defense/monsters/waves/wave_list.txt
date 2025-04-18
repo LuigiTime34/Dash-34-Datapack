@@ -103,12 +103,13 @@ Chicken_Jockey
 
 Wave 15
 Witch
-Skeleton
-Skeleton
-Skeleton
-Skeleton
+Creeper
+Spider
+Stray
+Stray
 Chicken_Jockey
 Chicken_Jockey
+Iron Golem
 
 Wave 16
 Blaze
@@ -117,8 +118,8 @@ Piglin
 Piglin
 Piglin
 Stray
-Zombie_Villager
-Zombie_Villager
+Zombified_Piglin
+Zombified_Piglin
 
 Wave 17
 Piglin
@@ -128,7 +129,7 @@ Wither_Skeleton
 Wither_Skeleton
 Bogged
 Bogged
-Husk
+Zombified_Piglin
 
 Wave 18
 Wither_Skeleton
@@ -136,9 +137,9 @@ Enderman
 Enderman
 Stray
 Piglin
-Piglin
+Zombified_Piglin
 Breeze
-Breeze
+Skeleton_Horse
 
 Wave 19
 Enderman
@@ -147,8 +148,9 @@ Pillager
 Pillager
 Witch
 Bogged
-Bogged
 Breeze
+Skeleton_Horse
+Skeleton_Horse
 
 Wave 20
 Enderman
@@ -161,8 +163,8 @@ Vindicator
 Vindicator
 Blaze
 Blaze
-Silverfish
-Silverfish
+Skeleton_Horse
+Zombified_Piglin
 Breeze
 
 Wave 21
@@ -172,53 +174,44 @@ Vindicator
 Pillager
 Pillager
 Pillager
-Pillager
-Piglin_Brute
-Piglin_Brute
 Wither_Skeleton
 Wither_Skeleton
 Bogged
+Breeze
+Skeleton_Horse
+Zombified_Piglin
 
 Wave 22
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
 Enderman
 Enderman
 Enderman
-Silverfish
-Silverfish
-Silverfish
-Silverfish
-Chicken_Jockey
-Chicken_Jockey
 Chicken_Jockey
 Chicken_Jockey
 Pillager
 Pillager
+Vindicator
+Vindicator
 
 Wave 23
-Piglin_Brute
-Piglin_Brute
 Vindicator
 Vindicator
 Vindicator
 Vindicator
-Pillager
-Pillager
 Pillager
 Pillager
 Breeze
 Breeze
+Skeleton_Horse
+Skeleton_Horse
+Zombified_Piglin
 
 Wave 24
 Blaze
 Blaze
 Blaze
-Blaze
-Stray
 Stray
 Stray
 Stray
@@ -227,28 +220,25 @@ Witch
 Husk
 Husk
 Wither_Skeleton
-Wither_Skeleton
 Bogged
 Bogged
+Charged_Creeper
 
 Wave 25
 Enderman
 Enderman
 Enderman
-Enderman
-Witch
 Witch
 Witch
 Zombie_Villager
 Zombie_Villager
-Zombie_Villager
-Vindicator
 Vindicator
 Vindicator
 Breeze
 Breeze
-Chicken_Jockey
-Chicken_Jockey
+Skeleton_Horse
+Charged_Creeper
+Charged_Creeper
 
 Wave 26
 Piglin_Brute
@@ -257,15 +247,13 @@ Piglin_Brute
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
-Wither_Skeleton
-Pillager
-Pillager
 Pillager
 Pillager
 Blaze
 Blaze
 Bogged
-Bogged
+Charged_Creeper
+Charged_Creeper
 
 Wave 27
 Piglin_Brute
@@ -274,16 +262,15 @@ Piglin_Brute
 Vindicator
 Vindicator
 Vindicator
-Vindicator
 Enderman
 Enderman
-Enderman
-Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Breeze
 Breeze
-Bogged
+Hoglin
+Hoglin
+Charged_Creeper
 
 Wave 28
 Piglin_Brute
@@ -293,39 +280,35 @@ Piglin_Brute
 Blaze
 Blaze
 Blaze
-Blaze
-Creeper
-Creeper
-Creeper
 Creeper
 Creeper
 Husk
 Husk
-Husk
-Chicken_Jockey
-Chicken_Jockey
-Chicken_Jockey
+Hoglin
+Hoglin
+Charged_Creeper
+Charged_Creeper
+Skeleton_Horse
 
 Wave 29
 Piglin_Brute
 Piglin_Brute
-Wither_Skeleton
+Piglin_Brute
 Wither_Skeleton
 Wither_Skeleton
 Wither_Skeleton
 Pillager
 Pillager
-Pillager
-Pillager
-Vindicator
 Vindicator
 Vindicator
 Enderman
 Enderman
-Witch
 Witch
 Bogged
 Breeze
+Hoglin
+Hoglin
+Charged_Creeper
 
 Wave 30
 Piglin_Brute
@@ -338,3 +321,6 @@ Witch
 Witch
 Breeze
 Breeze
+Hoglin
+Charged_Creeper
+Ravager
