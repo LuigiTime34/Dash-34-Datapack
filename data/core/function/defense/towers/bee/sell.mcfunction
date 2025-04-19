@@ -1,8 +1,7 @@
-execute store result score $sell.cost defense.money run data get entity @s data.sell_cost 0.5
-execute at @s run playsound minecraft:block.anvil.destroy master @a ~ ~ ~ 0.6 0.9
-execute store result storage core:tower_sell sell_cost int 1 run scoreboard players get $sell.cost defense.money
+execute store result storage core:tower_sell sell_cost int 0.5 run scoreboard players get @s defense.money
 function core:defense/towers/bee/sell_macro with storage core:tower_sell
 scoreboard players reset $sell.cost defense.money
+execute at @s run playsound minecraft:block.anvil.destroy master @a ~ ~ ~ 0.6 0.9
 fill ~-3 ~ ~-3 ~3 ~10 ~3 light[level=8] destroy
 kill @s
 kill @n[tag=bee-center-marker]

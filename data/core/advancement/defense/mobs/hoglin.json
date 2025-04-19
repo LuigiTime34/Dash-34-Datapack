@@ -20,7 +20,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/piglin_brute",
+    "parent": "core:defense/mobs/endermite",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

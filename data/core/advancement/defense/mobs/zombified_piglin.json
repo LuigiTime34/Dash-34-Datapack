@@ -14,7 +14,7 @@
             }
         },
         "title": "Zombified Piglin",
-        "description": "Health: 30\nSpeed: 0.9 BPS\nGold: 3\nReinforcements: 75% chance when damaged to summon another Zombie Piglin nearby with the same current health. Immune being set on fire.",
+        "description": "Health: 20\nSpeed: 0.9 BPS\nGold: 3\nReinforcements: 75% chance when damaged to summon another Zombie Piglin nearby with the same current health. Immune being set on fire.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

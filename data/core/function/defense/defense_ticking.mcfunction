@@ -19,9 +19,9 @@ execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-up] inte
 #   _| |_   | |  | |____| |  | |____) |
 #  |_____|  |_|  |______|_|  |_|_____/ 
 # ====================================================================================================================
-execute as @e[tag=defense.boulder-marker] at @s as @n[type=tnt,distance=..1] unless score @s defense.items matches 1.. run function core:defense/items/boulders/tnt_init
+execute as @e[type=tnt] unless score @s defense.items matches 1.. run function core:defense/items/tnt/tnt_init
 execute as @e[type=tnt] at @s if score @s defense.items matches 1.. run scoreboard players remove @s defense.items 1
-execute as @e[type=tnt] at @s if score @s defense.items matches 1 run function core:defense/items/boulders/tnt_explode
+execute as @e[type=tnt] at @s if score @s defense.items matches 1 run function core:defense/items/tnt/tnt_explode
 # ====================================================================================================================
 #  __          ____      ________  _____ 
 #  \ \        / /\ \    / /  ____|/ ____|
@@ -32,7 +32,9 @@ execute as @e[type=tnt] at @s if score @s defense.items matches 1 run function c
 # ====================================================================================================================
 # Wave end
 execute if score $mobs_left defense.wave matches 0 unless score $wave_timer defense.wave matches 1.. run function core:defense/monsters/waves/end_of_wave
-execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"head":{"items":"minecraft:iron_helmet","predicates":{"minecraft:custom_data":{"defense.start_wave":true}}}}}} run function core:defense/monsters/waves/get_wave
+execute if score $wave_timer defense.wave matches 0 run schedule clear core:defense/scoreboard/wave_timer
+execute if score $wave_timer defense.wave matches 0 run clear @a[gamemode=adventure] iron_helmet
+execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"head":{"items":"minecraft:iron_helmet","predicates":{"minecraft:custom_data":{"defense.start_wave":true}}}}}} run function core:defense/monsters/waves/start_next_wave_early
 # Display mobs left in the bossbar
 # execute if score $mobs_left defense.wave matches 1.. run title @a[gamemode=adventure] actionbar [{"text":"Mobs Left: ","color":"yellow"},{"score":{"name":"$mobs_left","objective":"defense.wave"},"color":"gold","bold":true}]
 execute store result bossbar minecraft:defense.mobs_left value run scoreboard players get $mobs_left defense.wave
@@ -111,7 +113,7 @@ execute as @e[tag=defense.creeper-death,tag=defense.not_dead] run tag @s remove 
 execute as @e[tag=defense.creeper-death] on vehicle on passengers run tag @s add defense.not_dead
 execute as @e[tag=defense.creeper-death,tag=!defense.not_dead] unless score @s defense.abilities matches 1.. run function core:defense/monsters/abilities/charged_creeper_explode
 execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1 at @s positioned ~ -59 ~ run tag @e[tag=defense.creeper_disabled,distance=..7] remove defense.creeper_disabled
+execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1 at @s positioned ~ -59 ~ run tag @e[tag=defense.creeper_disabled,distance=..9] remove defense.creeper_disabled
 execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1 run kill @s
 execute as @e[tag=defense.creeper_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
 execute as @e[tag=defense.creeper_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
@@ -285,9 +287,9 @@ execute as @e[tag=element-center-marker,tag=wind1] if score @s defense.towers ma
 execute as @e[tag=element-center-marker,tag=wind2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_wind_high {"wind_damage":"7.5","range":"23.5","blow_power":"1.5","cooldown":"100"}
 
 # Earth 1
-execute as @e[tag=element-center-marker,tag=earth1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_med {"fire_damage":"2","range":"11.5","ice_damage":"2","earth_damage":"2","wind_damage":"0","ignite_time":"20","freeze_time":"20","freeze_power":"5","cooldown":"110","blow_power":"0.2"}
+execute as @e[tag=element-center-marker,tag=earth1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_med {"fire_damage":"2","range":"11.5","ice_damage":"2","earth_damage":"7.5","wind_damage":"0","ignite_time":"20","freeze_time":"20","freeze_power":"5","cooldown":"110","blow_power":"0.2"}
 # Earth 2
-execute as @e[tag=element-center-marker,tag=earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_high {"earth_damage":"3","range":"12.5","cooldown":"80"}
+execute as @e[tag=element-center-marker,tag=earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_high {"earth_damage":"10","range":"12.5","cooldown":"80"}
 # Earth Ticking
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}

@@ -2,5 +2,5 @@ tellraw @a {"text":"Welcome to your next test. This assessment focuses on defens
 execute as @a at @s run playsound minecraft:sound.custom.dialouge.4thpuzzle_greeting voice @s ~ ~ ~ 10000000000000000
 
 function core:defense/monsters/castle/reset
-function core:defense/items/boulders/reset_position
+function core:defense/items/tnt/reset_position
 function core:defense/monsters/waves/reset_towers
