@@ -1,4 +1,4 @@
-item replace entity @p[gamemode=adventure] weapon.mainhand from block -1 -43 0 container.0
+function core:defense/towers/archer/placement/replace_items
 execute unless score $money defense.money matches 10.. run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 2 1
 execute unless score $money defense.money matches 10.. run return run tellraw @a {"text": "Not enough gold!","color": "gold"}
 

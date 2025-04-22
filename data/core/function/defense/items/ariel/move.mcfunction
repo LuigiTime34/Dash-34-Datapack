@@ -1,0 +1,2 @@
+$execute positioned ~ -60 ~ positioned ~ ~ ~ unless block $(offset) #core:ariel_blocker_blocks positioned ~ -41 ~ run return run tp @s $(offset)
+# playsound block.note_block.didgeridoo master @a ~ ~ ~ 1 1

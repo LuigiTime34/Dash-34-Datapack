@@ -1,3 +1,7 @@
+say test
+# Replace item they mave have been holding already
+$execute as @p[gamemode=adventure] run item replace entity @s $(slot) from entity @s container.$(slot_to_replace)
+
 # Check to see if they have enough money first
 $execute unless score $money defense.money matches $(cost).. run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 2 1
 $execute unless score $money defense.money matches $(cost).. run tellraw @a[gamemode=adventure] {"text": "Not enough gold!","color": "gold"}
