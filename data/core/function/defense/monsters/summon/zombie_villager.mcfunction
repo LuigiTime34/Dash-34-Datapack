@@ -20,6 +20,10 @@ execute positioned 4 -59 146 run summon zombie_villager ~ ~ ~ { \
     { \
         id:"minecraft:attack_knockback", \
         base:100 \
+    }, \
+    { \
+        id:"minecraft:armor", \
+        base:0 \
     }], \
     PersistenceRequired:1b \
 }

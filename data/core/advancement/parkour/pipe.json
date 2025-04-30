@@ -6,7 +6,7 @@
     "title": "It's Getting Hot In Here",
     "description": "Find the hidden emerald",
     "frame": "task",
-    "show_toast": true,
+    "show_toast": false,
     "announce_to_chat": true,
     "hidden": true
   },

@@ -18,6 +18,7 @@ execute as @p[gamemode=adventure] at @s if block ~ ~ ~ polished_blackstone_press
 # Fail detect
 execute as @p[gamemode=adventure] at @s if block ~ ~-1.1 ~ minecraft:orange_stained_glass run function core:parkour/fail
 execute as @p[gamemode=adventure] at @s if block ~ ~ ~ minecraft:lava run function core:parkour/fail
+execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_on_fire":true}}} run function core:parkour/fail
 execute as @a[tag=parkour-started,tag=!parkour-done] at @s unless predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:gray_terracotta"}}}} unless predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:light_gray_terracotta"}}}} unless predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:black_terracotta"}}}} run title @s actionbar ["",{"text":"☠ ","color":"gold"},{"score":{"name":"$deaths","objective":"parkour"},"color":"gold"},{"text":" | 🔧 ","color":"gold"},{"score":{"name":"$gears","objective":"parkour"},"color":"gold"},{"text":" | ⌛ ","color":"gold"},{"score":{"name":"#timerminutes2","objective":"timer"},"color":"gold"},{"text":":","color":"gold"},{"score":{"name":"#timerseconds2","objective":"timer"},"color":"gold"}]
 # execute at @a run kill @e[type=minecraft:wind_charge,distance=50..]
 # Give night vision after first checkpoint
@@ -25,8 +26,8 @@ effect give @a[tag=parkour-started,tag=!parkour-done,tag=!parkour.entered_darkne
 # Smoke particles around the pipes
 execute as @e[tag=pipe-marker] at @s run particle minecraft:smoke ~ ~ ~ 0.4 1 0.4 0 10 force
 # Gear particles
-execute at @e[type=item,nbt={Item:{id:"minecraft:chain",components:{"minecraft:custom_data":{gear:1b}}}}] run particle minecraft:enchanted_hit ~ ~ ~ 0.125 0.2 0.125 0 1
+execute at @e[type=item,nbt={Item:{id:"minecraft:chain",components:{"minecraft:custom_data":{gear:1b}}}}] run particle minecraft:end_rod ~ ~ ~ 0.4 0.7 0.4 0 1
 # Gear pickup detect
 execute as @a if items entity @s hotbar.* *[custom_data~{gear:1b}] run function core:parkour/gears/collected
 # Give darkness effect when entering the section
-execute as @e[tag=parkour-started,tag=parkour.entered_darkness] run effect give @s darkness infinite 0 true
+execute as @a[tag=parkour-started,tag=parkour.entered_darkness] run effect give @s darkness infinite 0 true

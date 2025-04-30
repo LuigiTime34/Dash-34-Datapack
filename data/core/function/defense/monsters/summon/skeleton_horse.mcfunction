@@ -67,7 +67,6 @@ execute positioned 4 -59 146 run summon skeleton_horse ~ ~ ~ { \
         }], \
         PersistenceRequired:1b \
     }], \
-    Invulnerable:true, \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/skeleton_horseman=false}] run advancement grant @s only core:defense/mobs/skeleton_horseman

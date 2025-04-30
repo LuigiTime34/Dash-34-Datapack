@@ -1,6 +1,6 @@
 # particle ring
-$particle $(particle_type) ^ ^ ^$(range) ^ ^ ^ 0 0 normal
-#@a[tag=defense.viewing-range]
+$particle $(particle_type) ^ ^ ^$(range) ^ ^ ^ 0 0 normal @a[distance=..$(range)]
+$particle $(particle_type) ^ ^ ^$(range) ^ ^ ^ 0 0 normal @a[tag=defense.aerial_view]
 scoreboard players add @s defense.range_indicator 1
 
 # get range and particle type again

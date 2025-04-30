@@ -1,4 +1,5 @@
 function core:parkour/door/door_reset
+clone -153 -45 -6 -153 -45 -6 -153 -55 -6
 tp @a[gamemode=adventure] -143 -53 -34 -90 0
 spawnpoint @a[gamemode=adventure] -143 -53 -34
 function core:parkour/dev/place_checkpoint

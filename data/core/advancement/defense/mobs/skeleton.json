@@ -20,5 +20,8 @@
         [
             "impossible"
         ]
-    ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/info/skeleton"
+    }
 }

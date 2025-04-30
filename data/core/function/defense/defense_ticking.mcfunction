@@ -22,24 +22,24 @@ execute as @a[gamemode=adventure] if data entity @n[tag=atm-interaction-up] inte
 execute as @e[type=tnt] unless score @s defense.items matches 1.. run function core:defense/items/tnt/tnt_init
 execute as @e[type=tnt] at @s if score @s defense.items matches 1.. run scoreboard players remove @s defense.items 1
 execute as @e[type=tnt] at @s if score @s defense.items matches 1 run function core:defense/items/tnt/tnt_explode
-# Ariel view
+# aerial view
 # Change location of the marker
-# execute at @p[gamemode=adventure,tag=!ariel_view] as @e[tag=defense.ariel_view_marker,limit=1] positioned ~ ~ ~ run tp @s ~ -41 ~
+execute at @p[gamemode=adventure,tag=!aerial_view] as @e[tag=defense.aerial_view_marker,limit=1] unless block ~ -61 ~ purple_wool run tp @s ~ -41 ~
 # Init enter
-execute as @a at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"chest":{"items":"minecraft:iron_chestplate","predicates":{"minecraft:custom_data":{"defense.ariel_view":true}}}}}} run function core:defense/items/ariel/enter
+execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"chest":{"items":"minecraft:iron_chestplate","predicates":{"minecraft:custom_data":{"defense.aerial_view":true}}}}}} run function core:defense/items/aerial/enter
 # Info
-execute as @a[tag=defense.ariel_view] run title @s actionbar ["",{"text":"Press ","color":"green"},{"keybind":"key.sneak","color":"green"},{"text":" to exit, and ","color":"green"},{"keybind":"key.sprint","color":"green"},{"text":" to move faster.","color":"green"}]
+execute as @a[tag=defense.aerial_view] run title @s actionbar ["",{"text":"Press ","color":"green"},{"keybind":"key.sneak","color":"green"},{"text":" to exit, and ","color":"green"},{"keybind":"key.sprint","color":"green"},{"text":" to move faster.","color":"green"}]
 # Moving
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"forward":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~-0.5 ~ ~"}
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"backward":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~0.5 ~ ~"}
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"left":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~ ~ ~0.5"}
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"right":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~ ~ ~-0.5"}
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"forward":true,"sprint":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~-1 ~ ~"}
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"backward":true,"sprint":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~1 ~ ~"}
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"left":true,"sprint":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~ ~ ~1"}
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"right":true,"sprint":true}}}} as @n[tag=defense.ariel_view_marker] at @s run function core:defense/items/ariel/move {"offset":"~ ~ ~-1"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"forward":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~-0.5 ~ ~"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"backward":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~0.5 ~ ~"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"left":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~ ~ ~0.5"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"right":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~ ~ ~-0.5"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"forward":true,"sprint":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~-1 ~ ~"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"backward":true,"sprint":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~1 ~ ~"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"left":true,"sprint":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~ ~ ~1"}
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"right":true,"sprint":true}}}} as @n[tag=defense.aerial_view_marker] at @s run function core:defense/items/aerial/move {"offset":"~ ~ ~-1"}
 # Return back
-execute as @a[tag=defense.ariel_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"sneak":true}}}} run function core:defense/items/ariel/return
+execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"sneak":true}}}} run function core:defense/items/aerial/return
 # ====================================================================================================================
 #  __          ____      ________  _____ 
 #  \ \        / /\ \    / /  ____|/ ____|
@@ -189,7 +189,7 @@ execute as @e[tag=defense-monster] run scoreboard players operation @s defense.d
 execute as @e[tag=defense-monster,tag=defense-iron_golem] run scoreboard players operation @s defense.distance += $iron_golem defense.distance
 # Display Ranges
 execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s run rotate @s ~6 ~
-execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s positioned ~ -58.5 ~ if entity @p[gamemode=adventure,distance=..10] run function core:defense/towers/global/get_range
+execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s positioned ~ -58.5 ~ run function core:defense/towers/global/get_range
 # Cooldown
 execute as @e[tag=defense.tower_marker,tag=!defense.off] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=defense.tower_marker,tag=!defense.off] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
