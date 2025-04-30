@@ -11,3 +11,4 @@ execute at @s if block ~ ~-2 ~ blue_wool run rotate @s -90 0
 execute at @s if block ~ ~-2 ~ light_blue_wool run rotate @s 90 0
 execute at @s if block ~ ~-2 ~ purple_wool run rotate @s 180 0
 execute at @s if block ~ ~-2 ~ black_wool run rotate @s 180 0
+execute at @s if block ~ ~-2 ~ magenta_wool run rotate @s -90 0
