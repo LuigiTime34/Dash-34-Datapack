@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:zombie_head"
+        },
+        "title": "Giant",
+        "description": "Health: 400\nSpeed: 0.8\nGold: 50\nDeals 50 extra base damage. Every 12s, jumps into the air and sends a shockwave in all directions, disabling nearby towers.",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "core:defense/mobs/iron_golem",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/info/giant"
+    }
+}

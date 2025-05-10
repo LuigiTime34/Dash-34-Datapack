@@ -1,4 +1,4 @@
-execute as @s[tag=parkour-checkpoint] at @s run function core:parkour/first_checkpoint
+execute as @s[tag=!parkour-started] at @s run function core:parkour/first_checkpoint
 tag @e[tag=parkour-checkpoint] remove current_checkpoint
 tag @n[tag=parkour-checkpoint] add current_checkpoint
 # particle minecraft:totem_of_undying ~ ~1 ~ 0.4 2 0.4 0.1 150

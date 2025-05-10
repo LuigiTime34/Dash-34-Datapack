@@ -1,0 +1,1 @@
+execute at @e[tag=parkour.lava_marker] run setblock ~ ~ ~ chiseled_deepslate

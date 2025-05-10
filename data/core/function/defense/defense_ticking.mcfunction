@@ -49,7 +49,7 @@ execute as @a[tag=defense.aerial_view] if predicate {"condition":"minecraft:enti
 #      \/  \/_/    \_\/   |______|_____/ 
 # ====================================================================================================================
 # Wave end
-execute if score $mobs_left defense.wave matches 0 unless score $wave_timer defense.wave matches 1.. run function core:defense/monsters/waves/end_of_wave
+execute if score $mobs_left defense.wave matches 0 unless score $wave_timer defense.wave matches 1.. unless score $dead defense matches 1 run function core:defense/monsters/waves/end_of_wave
 execute if score $wave_timer defense.wave matches 0 run schedule clear core:defense/scoreboard/wave_timer
 execute if score $wave_timer defense.wave matches 0 run clear @a[gamemode=adventure] iron_helmet
 execute as @a if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"head":{"items":"minecraft:iron_helmet","predicates":{"minecraft:custom_data":{"defense.start_wave":true}}}}}} run function core:defense/monsters/waves/start_next_wave_early
@@ -138,6 +138,17 @@ execute as @e[tag=defense.creeper_disabled,tag=tower-center-marker] at @s run sc
 execute as @e[tag=defense.creeper_disabled] at @s run particle electric_spark ~ ~ ~ 1 3 1 0 30
 execute as @e[tag=defense.creeper_disabled] at @s run particle flash ~ ~ ~ 1 3 1 0 1
 
+# GIANT
+execute as @e[tag=defense-giant] at @s unless score @s defense.abilities matches 6.. run tp @s ~ ~-0.8 ~
+execute as @e[tag=defense-giant] if score @s defense.abilities matches 1 run scoreboard players set @s defense.abilities 250
+execute as @e[tag=defense-giant] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense-giant] if score @s defense.abilities matches 10 at @s run function core:defense/monsters/boss/giant/shockwave_jump
+execute as @e[tag=defense-giant] if score @s defense.abilities matches 249 at @s run function core:defense/monsters/boss/giant/shockwave_land
+execute as @e[tag=defense-giant,type=giant] if score @s defense.abilities matches 190 run tag @e[tag=defense.giant_disabled] remove defense.giant_disabled
+execute as @e[tag=defense.giant_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
+execute as @e[tag=defense.giant_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
+execute as @e[tag=defense.giant_disabled] at @s run particle minecraft:block_crumble{block_state:{Name:dirt}} ~ ~ ~ 2 0.1 2 0 100
+execute as @e[tag=defense.giant_disabled] unless entity @n[tag=defense-giant] run tag @s remove defense.giant_disabled
 
 # RAVAGER #
 # Speed ability
@@ -145,18 +156,48 @@ execute as @e[tag=defense-ravager,limit=1] if data entity @s {HurtTime:10s} run 
 execute at @n[tag=defense-ravager,tag=defense.ravager_speed] run particle entity_effect{color:[0.18,0.85,0.93,1.0]} ~ ~1 ~ 1 0.5 1 0 1
 execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense.ravager_speed matches 1.. run scoreboard players remove @s defense.ravager_speed 1
 execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense.ravager_speed matches 1 run function core:defense/monsters/boss/ravager/remove_speed
-# Ram Ability
-execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/disable_tower/init
-# Animation timer
-execute if score $ravager_idx defense.boss_animation matches 1.. run scoreboard players remove $ravager_idx defense.boss_animation 1
-execute if score $ravager_idx defense.boss_animation matches 1.. as @e[tag=defense-ravager] run function core:defense/monsters/boss/ravager/disable_tower/animation
-# Disable timer
-execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 200 run tag @e[tag=defense.ravager_disabled,limit=1] remove defense.ravager_disabled
-execute as @e[tag=defense.ravager_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
-execute as @e[tag=defense.ravager_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
-execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ ~ 1 3 1 0 30
-execute as @e[tag=defense.ravager_disabled] unless entity @e[tag=defense-ravager,limit=1] run tag @s remove defense.ravager_disabled
+# Ram Ability UNUSED
+# execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+# execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/disable_tower/init
+# # Animation timer
+# execute if score $ravager_idx defense.boss_animation matches 1.. run scoreboard players remove $ravager_idx defense.boss_animation 1
+# execute if score $ravager_idx defense.boss_animation matches 1.. as @e[tag=defense-ravager] run function core:defense/monsters/boss/ravager/disable_tower/animation
+# # Disable timer
+# execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 200 run tag @e[tag=defense.ravager_disabled,limit=1] remove defense.ravager_disabled
+# execute as @e[tag=defense.ravager_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
+# execute as @e[tag=defense.ravager_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
+# execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ ~ 1 3 1 0 30
+# execute as @e[tag=defense.ravager_disabled] unless entity @e[tag=defense-ravager,limit=1] run tag @s remove defense.ravager_disabled
+# Damage self to speed
+execute as @e[tag=defense-ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense-ravager] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/damage_self
+execute as @e[tag=defense-ravager] at @s if score @s defense.abilities matches 150 run attribute @s attack_knockback base set 125
+
+# ILLUSIONER
+# Detect dismount
+execute as @e[tag=defense-illusioner,tag=defense-illusioner_rider] run tag @s remove defense-illusioner_rider
+execute as @e[tag=defense-illusioner,tag=!defense-monster] on vehicle on passengers run tag @s add defense-illusioner_rider
+execute as @e[tag=defense-illusioner,tag=!defense-monster,tag=!defense-illusioner_rider] run function core:defense/monsters/boss/ravager/dismount
+# Rotate snap
+execute as @e[tag=defense-illusioner,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-ravager] Rotation
+
+# Summons
+execute as @e[tag=defense-illusioner] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense-illusioner] if score @s defense.abilities matches 1 at @s run function core:defense/monsters/boss/ravager/summon_mob
+# Decoys
+execute as @e[tag=defense-illusioner] if score $illusioner_decoy defense.abilities matches 1.. run scoreboard players remove $illusioner_decoy defense.abilities 1
+execute as @e[tag=defense-illusioner] if score $illusioner_decoy defense.abilities matches 1 at @s run function core:defense/monsters/boss/ravager/prepare_decoys
+execute unless entity @e[tag=defense-illusioner] run scoreboard players reset $illusioner_decoy defense.abilities
+
+# Warden
+execute as @e[tag=defense-warden,type=warden] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense-warden,type=warden] if score @s defense.abilities matches 1 at @s run function core:defense/monsters/boss/warden/sonic_boom
+
+execute as @e[tag=defense-warden] if score @s defense.abilities matches 75 run tag @e[tag=defense.warden_disabled] remove defense.warden_disabled
+execute as @e[tag=defense.warden_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
+execute as @e[tag=defense.warden_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
+execute as @e[tag=defense.warden_disabled] at @s run particle minecraft:sculk_charge_pop ~ ~ ~ 1.5 2 1.5 0 200
+execute as @e[tag=defense.warden_disabled] unless entity @n[tag=defense-warden] run tag @s remove defense.warden_disabled
 
 #  Display extra gold recently gotten
 execute if score $recent_kill defense.money matches 1.. run scoreboard players remove $recent_kill defense.money 1
@@ -187,6 +228,7 @@ execute as @e[tag=defense-monster] run scoreboard players operation @s defense.t
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance = @s defense.targetx
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
 execute as @e[tag=defense-monster,tag=defense-iron_golem] run scoreboard players operation @s defense.distance += $iron_golem defense.distance
+execute as @e[tag=defense-monster,tag=defense-illusioner_decoy] run scoreboard players operation @s defense.distance += $illusioner_decoy defense.distance
 # Display Ranges
 execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s run rotate @s ~6 ~
 execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s positioned ~ -58.5 ~ run function core:defense/towers/global/get_range
@@ -359,3 +401,8 @@ execute as @e[tag=bee-center-marker,tag=upgrade_money2] at @s if entity @p[gamem
 
 # Bee ticking
 execute as @e[tag=defense.bee_display] at @s run function core:defense/towers/bee/bee_ticking
+
+
+# End stuff
+execute as @p[gamemode=spectator] if score $dead defense matches 1 run spectate @n[tag=defense.failure_view]
+execute if score $dead defense matches 1 run function core:defense/end/clear_all_waves

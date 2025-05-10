@@ -1,7 +1,7 @@
 clone -77 -30 116 -77 -30 116 -77 -39 116
 scoreboard players set $wave_level defense.wave 0
 scoreboard players set $money defense.money 10
-scoreboard players set $defense.health defense.damage 500
+scoreboard players set $defense.health defense.damage 1000
 scoreboard players set $wave_timer defense.wave 30
 bossbar set minecraft:defense.mobs_left name ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]
 bossbar set minecraft:defense.mobs_left players @a

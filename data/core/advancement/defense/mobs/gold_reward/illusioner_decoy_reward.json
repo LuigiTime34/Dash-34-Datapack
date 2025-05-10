@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "hit_illusioner": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"defense-illusioner_decoy\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "hit_illusioner"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/monsters/gold_reward/illusioner_decoy_gold"
+    }
+}

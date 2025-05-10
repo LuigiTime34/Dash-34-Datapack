@@ -146,7 +146,7 @@ Endermite
 Health: 20
 Speed: 2 BPS
 Gold Reward: 8
-Ability: Parasitic: Has a %50 chance of spawning every time an enderman teleports
+Ability: Parasitic: Has a 50% chance of spawning every time an enderman teleports
 Category: Small
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJjN2I5ZDM2ZmI5MmI2YmYyOTJiZTczZDMyYzZjNWIwZWNjMjViNDQzMjNhNTQxZmFlMWYxZTY3ZTM5M2EzZSJ9fX0=
 
@@ -154,7 +154,7 @@ Breeze
 Health: 65
 Speed: 1.0 BPS
 Gold Reward: 19
-Ability: Deflect: Redirects projectiles targeting itself to nearby allies
+Ability: Deflect: Redirects projectiles targeting itself to nearby allies, if theres no one nearby, ignores the damage all together
 Category: Disruptor
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI3NTcyOGFmN2U2YTI5Yzg4MTI1YjY3NWEzOWQ4OGFlOTkxOWJiNjFmZGMyMDAzMzdmZWQ2YWIwYzQ5ZDY1YyJ9fX0=
 
@@ -198,10 +198,33 @@ Ability: Unstoppable: Deals 40 extra damage to your base. Immune to all forms of
 Category: Agressive
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWJiOWJjMGYwMWRiZDc2MmEwOGQ5ZTc3YzA4MDY5ZWQ3Yzk1MzY0YWEzMGNhMTA3MjIwODU2MWI3MzBlOGQ3NSJ9fX0=
 
+Giant
+Health: 400
+Speed: 0.8
+Gold Reward: 50
+Ability: Deals 50 extra base damage. Every 12s, jumps into the air and sends a shockwave in all directions, disabling nearby towers.
+Category: Boss
+zombie_head
+
 Ravager
-Health: 1000
+Health: 750
 Speed: 1.25 BPS
-Gold Reward: 0
-Ability: Deals 100 extra base damage. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.
+Gold Reward: 75
+Ability: Carries Illusioner. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.
 Category: Boss
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWM3M2UxNmZhMjkyNjg5OWNmMTg0MzQzNjBlMjE0NGY4NGVmMWViOTgxZjk5NjE0ODkxMjE0OGRkODdlMGIyYSJ9fX0=
+
+Illusioner
+Health: 250
+Speed: 0.9 BPS
+Gold Reward: 0
+Ability: Every 15s, summons a random mob from the list of: Husk, Stray, Chicken Jockey, Zombified Piglin TODO: Summons decoys
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDYzOWQzMjVmNDQ5NDI1OGE0NzNhOTNhM2I0N2YzNGEwYzUxYjNmY2VhZjU5ZmVlODcyMDVhNWU3ZmYzMWY2OCJ9fX0=
+
+Warden
+Health: 1000
+Speed: 1.5
+Gold Reward: 0
+Ability: Has permanent armor. Whenever a mob dies nearby, creates sculk that causes mobs to move faster. Every 5s, sends a sonic boom that disables a nearby tower.
+Category: Boss
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM5Yzg0MzQ5NzQyMTY0YTIyOTcxZWU1NDUxNmZmZjkxZDg2OGRhNzJjZGNjZTYyMDY5ZGIxMjhjNDIxNTRiMiJ9fX0=

@@ -14,13 +14,13 @@
             }
         },
         "title": "Ravager",
-        "description": "Health: 1000\nSpeed: 1.25 BPS\nGold: 0\nDeals 100 extra base damage. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.",
+        "description": "Health: 500\nSpeed: 1.25 BPS\nGold: 30\nDeals 100 extra base damage. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged. Carries Illusioner.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/iron_golem",
+    "parent": "core:defense/mobs/giant",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

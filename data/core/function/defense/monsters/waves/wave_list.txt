@@ -1,3 +1,5 @@
+--- START OF FILE wave_list.txt ---
+
 Wave 1
 Zombie
 
@@ -8,319 +10,425 @@ Zombie
 Wave 3
 Zombie
 Zombie
-Zombie
+Skeleton
 
 Wave 4
-Zombie
-Zombie
-Zombie
 Skeleton
+Skeleton
+Zombie
 
 Wave 5
-Zombie
-Zombie
-Skeleton
-Skeleton
-
-Wave 6
-Zombie
-Zombie
 Skeleton
 Skeleton
 Spider
 
+Wave 6
+Spider
+Spider
+Skeleton
+Skeleton
+
 Wave 7
 Zombie
-Skeleton
 Skeleton
 Spider
 Spider
 
 Wave 8
-Skeleton
-Skeleton
+Spider
 Spider
 Spider
 Creeper
 
 Wave 9
+Creeper
+Creeper
 Skeleton
 Skeleton
 Spider
-Creeper
-Creeper
-Silverfish
-Silverfish
 
 Wave 10
 Creeper
 Creeper
-Husk
-Skeleton
-Skeleton
-Skeleton
-Chicken_Jockey
-Chicken_Jockey
+Creeper
+Silverfish
 
 Wave 11
-Husk
-Husk
-Skeleton
+Silverfish
+Silverfish
+Silverfish
+Creeper
 Spider
-Spider
-Witch
-Chicken_Jockey
 
 Wave 12
-Creeper
-Creeper
+Silverfish
 Husk
-Witch
-Zombie_Villager
-Zombie_Villager
-Zombie_Villager
-Chicken_Jockey
+Husk
+Creeper
 
 Wave 13
-Spider
-Spider
-Spider
 Husk
 Husk
-Stray
-Stray
-Zombie_Villager
+Husk
+Silverfish
+Skeleton
 
 Wave 14
 Husk
 Husk
-Stray
-Stray
-Blaze
-Blaze
 Creeper
-Chicken_Jockey
+Spider
+Witch
 
 Wave 15
 Witch
-Creeper
-Spider
-Stray
-Stray
-Chicken_Jockey
-Chicken_Jockey
-Iron Golem
+Witch
+Husk
+Husk
+Silverfish
 
 Wave 16
-Blaze
-Blaze
-Piglin
-Piglin
-Piglin
-Stray
-Zombified_Piglin
-Zombified_Piglin
+Witch
+Zombie_Villager
+Zombie_Villager
+Husk
+Creeper
 
 Wave 17
-Piglin
-Piglin
-Blaze
-Wither_Skeleton
-Wither_Skeleton
-Bogged
-Bogged
-Zombified_Piglin
+Zombie_Villager
+Zombie_Villager
+Stray
+Stray
+Husk
+Witch
 
 Wave 18
-Wither_Skeleton
-Enderman
-Enderman
 Stray
-Piglin
-Zombified_Piglin
-Breeze
-Skeleton_Horse
+Stray
+Stray
+Chicken_Jockey
+Chicken_Jockey
+Witch
 
 Wave 19
-Enderman
-Pillager
-Pillager
-Pillager
+Chicken_Jockey
+Chicken_Jockey
+Chicken_Jockey
+Stray
+Stray
+Husk
+Creeper
 Witch
-Bogged
-Breeze
-Skeleton_Horse
-Skeleton_Horse
 
 Wave 20
-Enderman
-Enderman
-Pillager
-Pillager
-Pillager
-Vindicator
-Vindicator
-Vindicator
-Blaze
-Blaze
-Skeleton_Horse
-Zombified_Piglin
-Breeze
+Stray
+Stray
+Witch
+Witch
+Skeleton
+Skeleton
+Skeleton
+IRON_GOLEM
 
 Wave 21
-Vindicator
-Vindicator
-Vindicator
-Pillager
-Pillager
-Pillager
-Wither_Skeleton
-Wither_Skeleton
-Bogged
-Breeze
-Skeleton_Horse
-Zombified_Piglin
+Blaze
+Blaze
+Chicken_Jockey
+Stray
 
 Wave 22
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Enderman
-Enderman
-Enderman
-Chicken_Jockey
-Chicken_Jockey
-Pillager
-Pillager
-Vindicator
-Vindicator
+Blaze
+Blaze
+Blaze
+Zombie_Villager
+Witch
 
 Wave 23
-Vindicator
-Vindicator
-Vindicator
-Vindicator
-Pillager
-Pillager
-Breeze
-Breeze
-Skeleton_Horse
-Skeleton_Horse
-Zombified_Piglin
+Blaze
+Blaze
+Piglin
+Piglin
+Creeper
 
 Wave 24
+Piglin
+Piglin
+Piglin
 Blaze
 Blaze
-Blaze
-Stray
-Stray
-Stray
-Witch
-Witch
 Husk
-Husk
-Wither_Skeleton
-Bogged
-Bogged
-Charged_Creeper
 
 Wave 25
-Enderman
-Enderman
-Enderman
-Witch
-Witch
-Zombie_Villager
-Zombie_Villager
-Vindicator
-Vindicator
-Breeze
-Breeze
-Skeleton_Horse
-Charged_Creeper
-Charged_Creeper
+Piglin
+Piglin
+Zombified_Piglin
+Zombified_Piglin
+Blaze
+Stray
 
 Wave 26
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-Pillager
-Pillager
+Zombified_Piglin
+Zombified_Piglin
+Zombified_Piglin
+Piglin
 Blaze
-Blaze
-Bogged
-Charged_Creeper
-Charged_Creeper
+Witch
 
 Wave 27
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Vindicator
-Vindicator
-Vindicator
-Enderman
-Enderman
-Wither_Skeleton
-Wither_Skeleton
-Breeze
-Breeze
-Hoglin
-Hoglin
-Charged_Creeper
+Zombified_Piglin
+Zombified_Piglin
+skeleton_horse
+skeleton_horse
+Blaze
+Piglin
 
 Wave 28
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
+skeleton_horse
+skeleton_horse
+skeleton_horse
+Zombified_Piglin
+Zombified_Piglin
 Blaze
 Blaze
-Blaze
-Creeper
-Creeper
-Husk
-Husk
-Hoglin
-Hoglin
-Charged_Creeper
-Charged_Creeper
-Skeleton_Horse
 
 Wave 29
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
+skeleton_horse
+skeleton_horse
 Wither_Skeleton
 Wither_Skeleton
-Wither_Skeleton
-Pillager
-Pillager
-Vindicator
-Vindicator
-Enderman
-Enderman
+Piglin
+Piglin
+Zombified_Piglin
+Blaze
 Witch
-Bogged
-Breeze
-Hoglin
-Hoglin
-Charged_Creeper
 
 Wave 30
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Vindicator
-Vindicator
-Vindicator
+Wither_Skeleton
+Wither_Skeleton
+Wither_Skeleton
+skeleton_horse
+skeleton_horse
+Blaze
+Blaze
+Piglin
+GIANT
+
+Wave 31
+Wither_Skeleton
+Bogged
+Bogged
+skeleton_horse
+Zombified_Piglin
+
+Wave 32
+Bogged
+Bogged
+Bogged
+Wither_Skeleton
+Wither_Skeleton
+Blaze
 Witch
-Witch
+
+Wave 33
+Bogged
+Bogged
+Enderman
+Enderman
+Wither_Skeleton
+Wither_Skeleton
+skeleton_horse
+
+Wave 34
+Enderman
+Enderman
+Enderman
+Bogged
+Bogged
+Wither_Skeleton
+Wither_Skeleton
+Piglin
+
+Wave 35
+Enderman
+Enderman
 Breeze
 Breeze
+Wither_Skeleton
+Wither_Skeleton
+Bogged
+Blaze
+
+Wave 36
+Breeze
+Breeze
+Breeze
+Enderman
+Enderman
+Wither_Skeleton
+Bogged
+skeleton_horse
+
+Wave 37
+Breeze
+Breeze
+Pillager
+Pillager
+Enderman
+Enderman
+Wither_Skeleton
+Bogged
+
+Wave 38
+Pillager
+Pillager
+Pillager
+Pillager
+Breeze
+Breeze
+Wither_Skeleton
+Wither_Skeleton
+Witch
+
+Wave 39
+Pillager
+Pillager
+Vindicator
+Vindicator
+Breeze
+Breeze
+Enderman
+Enderman
+Bogged
+Wither_Skeleton
+
+Wave 40
+Vindicator
+Vindicator
+Vindicator
+Pillager
+Pillager
+Pillager
+Breeze
+Breeze
+Wither_Skeleton
+Wither_Skeleton
+RAVAGER
+
+Wave 41
+Vindicator
+Vindicator
+Charged_Creeper
+Charged_Creeper
+Pillager
+Enderman
+Breeze
+
+Wave 42
+Charged_Creeper
+Charged_Creeper
+Charged_Creeper
+Vindicator
+Vindicator
+Vindicator
+Pillager
+Breeze
+Witch
+
+Wave 43
+Charged_Creeper
+Piglin_Brute
+Piglin_Brute
+Vindicator
+Vindicator
+Pillager
+Pillager
+Breeze
+
+Wave 44
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Charged_Creeper
+Charged_Creeper
+Vindicator
+Vindicator
+Vindicator
+Pillager
+
+Wave 45
+Piglin_Brute
+Piglin_Brute
+Hoglin
 Hoglin
 Charged_Creeper
-Ravager
+Vindicator
+Vindicator
+Breeze
+Witch
+
+Wave 46
+Hoglin
+Hoglin
+Hoglin
+Piglin_Brute
+Piglin_Brute
+Charged_Creeper
+Charged_Creeper
+Vindicator
+Vindicator
+
+Wave 47
+Hoglin
+Hoglin
+Hoglin
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Charged_Creeper
+Charged_Creeper
+Vindicator
+Witch
+Breeze
+
+Wave 48
+Hoglin
+Hoglin
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Charged_Creeper
+Vindicator
+Vindicator
+Breeze
+Enderman
+
+Wave 49
+Hoglin
+Hoglin
+Hoglin
+Hoglin
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Charged_Creeper
+Charged_Creeper
+Vindicator
+Vindicator
+Breeze
+Witch
+
+Wave 50
+Piglin_Brute
+Piglin_Brute
+Piglin_Brute
+Hoglin
+Hoglin
+Charged_Creeper
+Charged_Creeper
+Breeze
+Breeze
+Vindicator
+Vindicator
+Witch
+WARDEN

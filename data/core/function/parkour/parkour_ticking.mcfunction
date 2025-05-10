@@ -31,3 +31,5 @@ execute at @e[type=item,nbt={Item:{id:"minecraft:chain",components:{"minecraft:c
 execute as @a if items entity @s hotbar.* *[custom_data~{gear:1b}] run function core:parkour/gears/collected
 # Give darkness effect when entering the section
 execute as @a[tag=parkour-started,tag=parkour.entered_darkness] run effect give @s darkness infinite 0 true
+# Lava pipe activation
+execute at @a[gamemode=adventure] if block ~ ~ ~ light[level=0] as @n[type=marker,tag=parkour.lava_marker] at @s unless block ~ ~ ~ lava run function core:parkour/lava/pipe_activate

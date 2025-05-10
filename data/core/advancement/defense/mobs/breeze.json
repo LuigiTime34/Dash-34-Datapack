@@ -14,7 +14,7 @@
             }
         },
         "title": "Breeze",
-        "description": "Health: 65\nSpeed: 1.0 BPS\nGold: 19\nDeflect: Redirects projectiles targeting itself to nearby allies",
+        "description": "Health: 65\nSpeed: 1.0 BPS\nGold: 19\nDeflect: Redirects projectiles targeting itself to nearby allies, if theres no one nearby, ignores the damage all together",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
