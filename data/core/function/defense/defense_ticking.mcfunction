@@ -24,7 +24,7 @@ execute as @e[type=tnt] at @s if score @s defense.items matches 1.. run scoreboa
 execute as @e[type=tnt] at @s if score @s defense.items matches 1 run function core:defense/items/tnt/tnt_explode
 # aerial view
 # Change location of the marker
-execute at @p[gamemode=adventure,tag=!aerial_view] as @e[tag=defense.aerial_view_marker,limit=1] unless block ~ -61 ~ purple_wool run tp @s ~ -41 ~
+execute at @p[gamemode=adventure,tag=!aerial_view] as @e[tag=defense.aerial_view_marker,limit=1] unless block ~ -61 ~ purple_wool run tp @s ~ -38 ~
 # Init enter
 execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"chest":{"items":"minecraft:iron_chestplate","predicates":{"minecraft:custom_data":{"defense.aerial_view":true}}}}}} run function core:defense/items/aerial/enter
 # Info
@@ -229,6 +229,7 @@ execute as @e[tag=defense-monster] run scoreboard players operation @s defense.d
 execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
 execute as @e[tag=defense-monster,tag=defense-iron_golem] run scoreboard players operation @s defense.distance += $iron_golem defense.distance
 execute as @e[tag=defense-monster,tag=defense-illusioner_decoy] run scoreboard players operation @s defense.distance += $illusioner_decoy defense.distance
+execute as @e[tag=defense-monster,tag=defense-illusioner,tag=defense.illusioner_invisible] run scoreboard players operation @s defense.distance -= $illusioner_invis defense.distance
 # Display Ranges
 execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s run rotate @s ~6 ~
 execute as @e[tag=defense.tower_marker,tag=!defense.off] at @s positioned ~ -58.5 ~ run function core:defense/towers/global/get_range
@@ -401,6 +402,42 @@ execute as @e[tag=bee-center-marker,tag=upgrade_money2] at @s if entity @p[gamem
 
 # Bee ticking
 execute as @e[tag=defense.bee_display] at @s run function core:defense/towers/bee/bee_ticking
+# ====================================================================================================================
+#       _                       
+#      | |                      
+#   ___| |_ ___  _ __ _ __ ___  
+#  / __| __/ _ \| '__| '_ ` _ \ 
+#  \__ \ || (_) | |  | | | | | |
+#  |___/\__\___/|_|  |_| |_| |_|
+# ====================================================================================================================
+# Base
+execute as @e[tag=storm-center-marker,tag=!upgrade1,tag=!upgrade_snow1,tag=!upgrade_snow2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity {"cooldown":"100","damage":"9","blow_power":"1","range":"11.5"}
+# First Upgrade
+execute as @e[tag=storm-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity {"cooldown":"100","damage":"12","blow_power":"1.2","range":"12.5"}
+# Snow 1
+execute as @e[tag=storm-center-marker,tag=upgrade_snow1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow {"cooldown":"120","damage":"12","blow_power":"1.2","range":"16.5","slow_duration":"80","slow_power":"40","type":"freeze"}
+# Snow 2
+execute as @e[tag=storm-center-marker,tag=upgrade_snow2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow {"cooldown":"120","damage":"15","blow_power":"1.5","range":"16.5","slow_duration":"100","slow_power":"60","type":"freeze_storm"}
+# Particles
+# execute as @e[tag=!defense.off,tag=upgrade_snow2] at @s run particle minecraft:snowflake ~ ~7 ~ 0.5 0 0.5 0 1
+# execute as @e[tag=!defense.off,tag=upgrade_snow2] at @s run particle minecraft:snowflake ~1 ~7 ~ 0.5 0 0.5 0 1
+# execute as @e[tag=!defense.off,tag=upgrade_snow2] at @s run particle minecraft:snowflake ~-1 ~7 ~ 0.5 0 0.5 0 1
+
+# Freeze timer
+execute as @e[tag=defense-monster] if score @s defense.storm.freeze_timer matches 1.. run scoreboard players remove @s defense.storm.freeze_timer 1
+execute as @e[tag=defense-monster] if score @s defense.storm.freeze_timer matches 1.. at @s run particle snowflake ~ ~ ~ 0.2 1 0.2 0 5
+execute as @e[tag=defense-monster] if score @s defense.storm.freeze_timer matches 1 run scoreboard players set @s defense.storm.freeze_power 0
+# Freeze storm logic
+execute at @e[tag=storm.freeze_storm] run particle snowflake ~ ~ ~ 0.5 1 0.5 0 30
+execute as @e[tag=defense-monster,tag=!defense-stray] at @s if entity @n[tag=storm.freeze_storm,distance=..3] run scoreboard players set @s defense.storm.freeze_power 60
+execute as @e[tag=defense-monster] at @s if entity @n[tag=storm.freeze_storm,distance=..3] run scoreboard players set @s defense.storm.freeze_timer 100
+execute as @e[tag=defense-monster,tag=defense-stray] at @s if entity @n[tag=storm.freeze_storm,distance=..3] run scoreboard players set @s defense.storm.freeze_power -60
+
+execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/kill_freezestorm
+
+
+
 
 
 # End stuff

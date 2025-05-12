@@ -151,5 +151,5 @@ summon chicken ~ ~ ~ { \
 data modify entity @n[tag=defense.illusioner_summon] Rotation set from entity @s Rotation
 execute at @n[tag=defense.illusioner_summon] run particle minecraft:soul_fire_flame ~ ~ ~ 0.2 0.6 0.2 0.5 100
 tag @n[tag=defense.illusioner_summon] remove defense-illusioner_summon
-scoreboard players add @s defense.abilities 300
+scoreboard players add @s defense.abilities 240
 playsound minecraft:entity.illusioner.cast_spell master @a ~ ~ ~ 10 1

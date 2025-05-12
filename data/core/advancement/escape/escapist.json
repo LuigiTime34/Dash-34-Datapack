@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:netherite_sword"
+      "id": "minecraft:chiseled_tuff"
     },
-    "title": "Stayin' Alive",
-    "description": "Complete the tower defense with more than 900 health remaining",
+    "title": "Escapist",
+    "description": "Complete the escape room in under 5 minutes",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "core:defense/root",
+  "parent": "core:escape/root",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

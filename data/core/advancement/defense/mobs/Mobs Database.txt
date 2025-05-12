@@ -207,7 +207,7 @@ Category: Boss
 zombie_head
 
 Ravager
-Health: 750
+Health: 500
 Speed: 1.25 BPS
 Gold Reward: 75
 Ability: Carries Illusioner. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.
@@ -218,7 +218,7 @@ Illusioner
 Health: 250
 Speed: 0.9 BPS
 Gold Reward: 0
-Ability: Every 15s, summons a random mob from the list of: Husk, Stray, Chicken Jockey, Zombified Piglin TODO: Summons decoys
+Ability: Every 12s, summons a random mob from the list of: Husk, Stray, Chicken Jockey, Zombified Piglin. Every 7.5s, Summons decoy clones of itself to distract towers.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDYzOWQzMjVmNDQ5NDI1OGE0NzNhOTNhM2I0N2YzNGEwYzUxYjNmY2VhZjU5ZmVlODcyMDVhNWU3ZmYzMWY2OCJ9fX0=
 
 Warden

@@ -9,7 +9,7 @@ summon illusioner ~ ~ ~ {\
     Tags:["defense-illusioner_decoy", \
     "defense-monster",\
     "cw_hp_disp",\
-    "defense-illusioner_decoy_summon",\
+    "defense.illusioner_decoy_summon",\
     "Entity-Dummy"], \
     Team:defense_enemies, \
     attributes:[{ \

@@ -9,4 +9,4 @@ scoreboard players add $recent_money defense.money 0
 
 function core:defense/scoreboard/get_highest
 
-function core:defense/end
+function core:defense/end/end {"outcome":"win"}
