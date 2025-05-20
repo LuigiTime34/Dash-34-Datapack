@@ -14,13 +14,13 @@
             }
         },
         "title": "Zombified Piglin",
-        "description": "Health: 25\nSpeed: 0.9 BPS\nGold: 3\nReinforcements: 75% chance when damaged to summon another Zombie Piglin nearby with the same current health. Immune being set on fire.",
+        "description": "Health: 25\nSpeed: 0.9 BPS\nGold: 3\nHas a 75% chance to clone itself when damaged, with the clone having the same health as the original; cannot be healed.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/stray",
+    "parent": "core:defense/mobs/witch",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

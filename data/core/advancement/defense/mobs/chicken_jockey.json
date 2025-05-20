@@ -14,13 +14,13 @@
             }
         },
         "title": "Chicken Jockey",
-        "description": "Health: 40\nSpeed: 0.6 BPS\nGold: 7\nDismount: A fast Baby Zombie (25 Health, 2 BPS) rides this Chicken. When the Chicken dies, the Baby Zombie continues alone.",
+        "description": "Health: 65 (Chicken: 40, Tiny Zombie: 25)\nSpeed: 0.6 BPS\nGold: 8\nA slow chicken carrying a fast tiny zombie; when the chicken dies, tiny zombie continues at higher speed. Both are immune to bees.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/silverfish",
+    "parent": "core:defense/mobs/spider",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

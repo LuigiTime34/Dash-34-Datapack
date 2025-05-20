@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon zombie ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:5, \
+    Health:10, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon zombie ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:5 \
+        base:10 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -28,4 +28,3 @@ execute positioned 4 -59 146 run summon zombie ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/zombie=false}] run advancement grant @s only core:defense/mobs/zombie
-execute as @a[advancements={core:defense/mobs/category_basic=false}] run advancement grant @s only core:defense/mobs/category_basic

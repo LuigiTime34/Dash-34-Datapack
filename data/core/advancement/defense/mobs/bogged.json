@@ -14,13 +14,13 @@
             }
         },
         "title": "Bogged",
-        "description": "Health: 60\nSpeed: 1.2 BPS\nGold: 12\nRegrowth: Passively heals every second",
+        "description": "Health: 60\nSpeed: 1.2 BPS\nGold: 12\nRegenerates 2 health per second; doubles movement speed when below half health, returns to normal speed if healed above half.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/witch",
+    "parent": "core:defense/mobs_root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

@@ -5,6 +5,7 @@ $execute unless score $money defense.money matches $(cost).. run clear @a[gamemo
 $execute unless score $money defense.money matches $(cost).. at @n[tag=tower-barrel-marker,tag=open] run return run item replace block ~ ~ ~ container.$(slot_to_replace) from block 0 -43 0 container.$(item_slot)
 
 $scoreboard players remove $money defense.money $(cost)
+$title @a actionbar {"text":"You upgraded your tower for $(cost) gold!","color":"gold"}
 
 function core:defense/scoreboard/get_highest
 data modify storage core:tower_rotation x_offset set from entity @s data.x_offset

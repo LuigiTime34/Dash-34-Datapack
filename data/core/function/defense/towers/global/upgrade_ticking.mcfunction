@@ -34,6 +34,8 @@ $execute if items entity @s $(slot) *[custom_data~{bee_sell:1b}] as @n[tag=tower
 $execute if items entity @s $(slot) *[custom_data~{storm_upgrade1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/placement/get_rotation {"building":"1","cost":"75","item_slot":"18","slot_to_replace":"13"}
 $execute if items entity @s $(slot) *[custom_data~{storm_upgrade_snow1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/placement/get_rotation {"building":"_snow1","cost":"150","item_slot":"19","slot_to_replace":"15"}
 $execute if items entity @s $(slot) *[custom_data~{storm_upgrade_snow2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/placement/get_rotation {"building":"_snow2","cost":"300","item_slot":"20","slot_to_replace":"13"}
+$execute if items entity @s $(slot) *[custom_data~{storm_upgrade_surge1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/placement/get_rotation {"building":"_surge1","cost":"150","item_slot":"21","slot_to_replace":"11"}
+$execute if items entity @s $(slot) *[custom_data~{storm_upgrade_surge2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/placement/get_rotation {"building":"_surge2","cost":"300","item_slot":"22","slot_to_replace":"13"}
 $execute if items entity @s $(slot) *[custom_data~{storm_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/sell
 
 # TENT UPGRADES

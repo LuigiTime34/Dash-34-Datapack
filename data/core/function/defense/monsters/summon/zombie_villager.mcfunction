@@ -27,5 +27,4 @@ execute positioned 4 -59 146 run summon zombie_villager ~ ~ ~ { \
     }], \
     PersistenceRequired:1b \
 }
-execute as @a[advancements={core:defense/mobs/zombie_villager=false}] run advancement grant @s only core:defense/mobs/zombie_villager
-execute as @a[advancements={core:defense/mobs/category_disruptor=false}] run advancement grant @s only core:defense/mobs/category_disruptor
+# execute as @a[advancements={core:defense/mobs/zombie_villager=false}] run advancement grant @s

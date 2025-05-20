@@ -14,13 +14,13 @@
             }
         },
         "title": "Iron Golem",
-        "description": "Health: 200\nSpeed: 0.8 BPS\nGold: 35\nTank: Has permanent armor that reduces incoming damage. Causes towers to focus on itself",
+        "description": "Health: 200\nSpeed: 0.8 BPS\nGold: 40\nMakes all towers focus fire on itself, with permanent armor to reduce incoming attacks.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/category_boss",
+    "parent": "core:defense/mobs_root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

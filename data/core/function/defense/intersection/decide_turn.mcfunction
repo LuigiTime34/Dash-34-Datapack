@@ -1,3 +1,4 @@
+execute as @s[tag=defense-skeleton] on vehicle on passengers run return fail
 scoreboard players reset @s defense
 scoreboard players reset @s defense.intersection
 execute if block ~ ~-2 ~ green_glazed_terracotta run function core:defense/intersection/basic_turn

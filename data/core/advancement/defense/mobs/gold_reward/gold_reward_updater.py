@@ -11,7 +11,7 @@ def read_mobs_database(filename):
     current_mob = None
     gold_reward = None
     line_num = 0
-    expected_lines_per_mob = 7 # Name + 6 data lines
+    expected_lines_per_mob = 6 # Name + 6 data lines
 
     try:
         with open(filename, 'r', encoding='utf-8') as file:

@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:40, \
+    Health:65, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:40 \
+        base:65 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -24,4 +24,3 @@ execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/creeper=false}] run advancement grant @s only core:defense/mobs/creeper
-execute as @a[advancements={core:defense/mobs/category_agressive=false}] run advancement grant @s only core:defense/mobs/category_agressive

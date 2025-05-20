@@ -1,3 +1,4 @@
+$title @s actionbar {"text":"You placed a tower for $(sell_cost) gold!","color":"gold"}
 $place template core:defense/towers/archer/base ~$(x_offset) ~ ~$(z_offset) $(rotation)
 $data modify entity @n[tag=tower-barrel-marker] data.x_offset set value $(x_offset)
 $data modify entity @n[tag=tower-barrel-marker] data.z_offset set value $(z_offset)

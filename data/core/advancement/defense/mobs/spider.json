@@ -14,13 +14,13 @@
             }
         },
         "title": "Spider",
-        "description": "Health: 25\nSpeed: 1.2 BPS\nGold: 6\nAbility:",
+        "description": "Health: 20\nSpeed: 1.2 BPS\nGold: 6\nMoves fast; its short height makes it immune to bee towers. Carries skeleton.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/category_small",
+    "parent": "core:defense/mobs/silverfish",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

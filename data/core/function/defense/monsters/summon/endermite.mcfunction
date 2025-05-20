@@ -1,6 +1,6 @@
 summon endermite ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:10, \
+    Health:20, \
     NoAI:1b, \
     Tags:["defense-monster", \
     "cw_hp_disp", \
@@ -9,7 +9,7 @@ summon endermite ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:10 \
+        base:20 \
     }, \
     { \
         id:"minecraft:attack_damage", \

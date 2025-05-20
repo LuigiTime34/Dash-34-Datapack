@@ -46,6 +46,8 @@ scoreboard objectives add defense.health dummy
 scoreboard objectives add defense.bee_tower dummy
 scoreboard objectives add defense.storm.freeze_timer dummy
 scoreboard objectives add defense.storm.freeze_power dummy
+scoreboard objectives add defense.storm dummy
+scoreboard objectives add defense.bogged_health dummy
 
 team add defense_enemies
 bossbar add defense.mobs_left ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]

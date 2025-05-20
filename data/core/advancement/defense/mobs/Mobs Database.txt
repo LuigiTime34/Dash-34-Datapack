@@ -1,230 +1,139 @@
 Zombie
-Health: 5
+Health: 10
 Speed: 0.4 BPS
-Gold Reward: 3
-Ability: 
-Category: Basic
-rotten_flesh
+Gold Reward: 5
+Ability: Your basic, standard mob.
+zombie_head
 
 Skeleton
-Health: 10
+Health: 15
 Speed: 0.8 BPS
-Gold Reward: 5
-Ability: 
-Category: Basic
-bone
-
-Spider
-Health: 25
-Speed: 1.2 BPS
-Gold Reward: 6
-Ability: 
-Category: Small
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzVlMjQ4ZGEyZTEwOGYwOTgxM2E2Yjg0OGEwZmNlZjExMTMwMDk3ODE4MGVkYTQxZDNkMWE3YThlNGRiYTNjMyJ9fX0=
-
-Creeper
-Health: 40
-Speed: 1 BPS
-Gold Reward: 9
-Ability: Explosive: Deals 10 extra damage to your base
-Category: Agressive
-gunpowder
+Gold Reward: 10
+Ability: Wears armor, taking reduced damage from all attacks.
+skeleton_skull
 
 Silverfish
 Health: 20
 Speed: 1.8 BPS
-Gold Reward: 7
-Ability: Burrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration
-Category: Small
+Gold Reward: 8
+Ability: Burrows underground every 5 seconds, regenerating 5 health and becoming immune to damage while burrowed. Immune to bees.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGE5MWRhYjgzOTFhZjVmZGE1NGFjZDJjMGIxOGZiZDgxOWI4NjVlMWE4ZjFkNjIzODEzZmE3NjFlOTI0NTQwIn19fQ==
 
-Husk
-Health: 50
-Speed: 1 BPS
-Gold Reward: 12
-Ability: Destructive: Deals 20 extra damage to your base
-Category: Agressive
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWI5ZGE2YjhkMDZjZDI4ZDQ0MTM5OGI5Njc2NmMzYjRmMzcwZGU4NWM3ODk4MjA1ZTVjNDI5ZjE3OGEyNDU5NyJ9fX0=
-
-Witch
-Health: 40
-Speed: 0.7 BPS
-Gold Reward: 10
-Ability: Brewer: Heals nearby monsters in a small radius over time
-Category: Healer
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmNlNjYwNDE1N2ZjNGFiNTU5MWU0YmNmNTA3YTc0OTkxOGVlOWM0MWUzNTdkNDczNzZlMGVlNzM0MjA3NGM5MCJ9fX0=
-
-Zombie_Villager
-Health: 40
-Speed: 1 BPS
-Gold Reward: 0
-Ability:
-Category: Disruptor
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzAyZWQ0NGZkMGNjOTU5ZjhiNjU0ZmZmN2EyN2IyZGU2ZGViN2EwY2NmOTQ0NWFkMjVlZDBjN2RmMzY5MGZmYiJ9fX0=
-
-Stray
-Health: 50
+Spider
+Health: 20
 Speed: 1.2 BPS
-Gold Reward: 13
-Ability: Frozen: Gains speed instead of slowness when hit by ice
-Category: Disruptor
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWUzOTFjNmU1MzVmN2FhNWEyYjZlZTZkMTM3ZjU5ZjJkN2M2MGRlZjg4ODUzYmE2MTFjZWIyZDE2YTdlN2M3MyJ9fX0=
+Gold Reward: 6
+Ability: Moves fast; its short height makes it immune to bee towers. Carries skeleton.
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzVlMjQ4ZGEyZTEwOGYwOTgxM2E2Yjg0OGEwZmNlZjExMTMwMDk3ODE4MGVkYTQxZDNkMWE3YThlNGRiYTNjMyJ9fX0=
 
 Chicken_Jockey
-Health: 40
+Health: 65 (Chicken: 40, Tiny Zombie: 25)
 Speed: 0.6 BPS
-Gold Reward: 7
-Ability: Dismount: A fast Baby Zombie (25 Health, 2 BPS) rides this Chicken. When the Chicken dies, the Baby Zombie continues alone.
-Category: Small
+Gold Reward: 8
+Ability: A slow chicken carrying a fast tiny zombie; when the chicken dies, tiny zombie continues at higher speed. Both are immune to bees.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2FkM2RkMDA4M2ZhYTY5YTA2MmY5YWQ4MTQxOGY1YTU5NjE4MGJmMTU5MmU0YjhkMTMwM2IyMzBiNjRiYzc5ZSJ9fX0=
 
-Blaze
+Creeper
 Health: 60
-Speed: 1.4 BPS
-Gold Reward: 18
-Ability: Firey: Deals 30 extra damage to your base; Immune to fire, but takes more ice damage
-Category: Agressive
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjIwNjU3ZTI0YjU2ZTFiMmY4ZmMyMTlkYTFkZTc4OGMwYzI0ZjM2Mzg4YjFhNDA5ZDBjZDJkOGRiYTQ0YWEzYiJ9fX0=
+Speed: 1 BPS
+Gold Reward: 10
+Ability: Deals bonus damage to player's base if it reaches the end; transforms into Charged Creeper if struck by lightning.
+creeper_head
 
-Iron_Golem
-Health: 200
-Speed: 0.8 BPS
-Gold Reward: 35
-Ability: Tank: Has permanent armor that reduces incoming damage. Causes towers to focus on itself
-Category: Boss
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI3MTkxM2EzZmM4ZjU2YmRmNmI5MGE0YjRlZDZhMDVjNTYyY2UwMDc2YjUzNDRkNDQ0ZmIyYjA0MGFlNTdkIn19fQ==
+Charged_Creeper
+Health: 60
+Speed: 0.9 BPS
+Gold Reward: 0
+Ability: Created when a Creeper is struck by lightning; disables nearby towers temporarily upon death.
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjJjZWIzOWRkNGRlMjRhN2FkZmUyOTFhM2EwY2ZjN2NmNGY2NDVkZTU5YjYwM2ZjZmUwNmM2YjVhMDZlMjYifX19
 
-Piglin
+Witch
 Health: 70
-Speed: 1.1 BPS
-Gold Reward: 15
-Ability:
-Category: Basic
-crossbow
+Speed: 0.7 BPS
+Gold Reward: 10
+Ability: Regenerates 8 health and heals nearby enemies for 4 health every four seconds.
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmNlNjYwNDE1N2ZjNGFiNTU5MWU0YmNmNTA3YTc0OTkxOGVlOWM0MWUzNTdkNDczNzZlMGVlNzM0MjA3NGM5MCJ9fX0=
 
 Zombified_Piglin
-Health: 40
+Health: 25
 Speed: 0.9 BPS
 Gold Reward: 3
-Ability: Reinforcements: 75% chance when damaged to summon another Zombie Piglin nearby with the same current health. Immune being set on fire.
-Category: Disruptor
+Ability: Has a 75% chance to clone itself when damaged, with the clone having the same health as the original; cannot be healed.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VhYmFlY2M1ZmFlNWE4YTQ5Yzg4NjNmZjQ4MzFhYWEyODQxOThmMWEyMzk4ODkwYzc2NWUwYThkZTE4ZGE4YyJ9fX0=
 
-Skeleton_Horseman
+Stray
 Health: 60
-Speed: 1.8 BPS
-Gold Reward: 16
-Ability: Armored Dismount: A fast Skeleton Horse (50 Health, 1.8 BPS) carries an armored Skeleton. When the horse dies, the Skeleton (10 Health, 0.8 BPS, 5 Armor) continues alone.
-Category: Agressive
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWM3ZDhhMTZkM2YwZjk4YjU5OGRmOTNmMmMyZDM0ZTc1MTcxY2Q1MmRiZjRhMTIxMWQ3Yjg0YzAxOTQxNmE0MCJ9fX0=
-
-Wither_Skeleton
-Health: 60
-Speed: 0.8 BPS
-Gold Reward: 20
-Ability: Beserk: When below half health, doubles in Speed
-Category: Agressive
-stone_sword
+Speed: 1.2 BPS
+Gold Reward: 12
+Ability: Speeds up when hit by ice rather then being slowed down.
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWUzOTFjNmU1MzVmN2FhNWEyYjZlZTZkMTM3ZjU5ZjJkN2M2MGRlZjg4ODUzYmE2MTFjZWIyZDE2YTdlN2M3MyJ9fX0=
 
 Bogged
 Health: 60
 Speed: 1.2 BPS
 Gold Reward: 12
-Ability: Regrowth: Passively heals every second
-Category: Healer
+Ability: Regenerates 2 health per second; doubles movement speed when below half health, returns to normal speed if healed above half.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNiOTAwM2JhMmQwNTU2MmM3NTExOWI4YTYyMTg1YzY3MTMwZTkyODJmN2FjYmFjNGJjMjgyNGMyMWViOTVkOSJ9fX0=
 
 Enderman
-Health: 50
+Health: 70
 Speed: 0.9 BPS
-Gold Reward: 22
-Ability: Blink: Every 10 seconds, teleports forward
-Category: Disruptor
+Gold Reward: 16
+Ability: Periodically teleports 6 blocks ahead on the path; Has a 50% chance to summon an Endermite when teleporting.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGExMDhhMGE3YTM4Nzg1OWYyYzQ0ZmI5NzAyY2Y3M2RiYWZlZTNlY2ZkYzRmNWRlZjQ2YzBkNjUxYjdhNDlmNyJ9fX0=
 
 Endermite
 Health: 20
 Speed: 2 BPS
-Gold Reward: 8
-Ability: Parasitic: Has a 50% chance of spawning every time an enderman teleports
-Category: Small
+Gold Reward: 0
+Ability: Moves fast; its short height makes it immune to bee towers.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJjN2I5ZDM2ZmI5MmI2YmYyOTJiZTczZDMyYzZjNWIwZWNjMjViNDQzMjNhNTQxZmFlMWYxZTY3ZTM5M2EzZSJ9fX0=
 
 Breeze
 Health: 65
 Speed: 1.0 BPS
-Gold Reward: 19
-Ability: Deflect: Redirects projectiles targeting itself to nearby allies, if theres no one nearby, ignores the damage all together
-Category: Disruptor
+Gold Reward: 20
+Ability: Deflects projectiles from non-witch archer towers, potentially hitting nearby enemies.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI3NTcyOGFmN2U2YTI5Yzg4MTI1YjY3NWEzOWQ4OGFlOTkxOWJiNjFmZGMyMDAzMzdmZWQ2YWIwYzQ5ZDY1YyJ9fX0=
 
-Pillager
-Health: 70
-Speed: 1.2 BPS
-Gold Reward: 24
-Ability: Loyal: Pillager towers cannot deal damage to any pillagers
-Category: Disruptor
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMThlNTc4NDE2MDdmNDQ5ZTc2YjdjODIwZmNiZDE5MTNlYzFiODBjNGFjODE3Mjg4NzRkYjIzMGY1ZGYyYjNiIn19fQ==
-
-Vindicator
-Health: 80
-Speed: 1.4 BPS
-Gold Reward: 27
-Ability: Reckless: Every 5 seconds, has a chance to hurt itself to gain a boost of speed
-Category: Agressive
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWUxY2FiMzgyNDU4ZTg0M2FjNDM1NmUzZTAwZTFkMzVjMzZmNDQ5ZmExYTg0NDg4YWIyYzY1NTdiMzkyZCJ9fX0=
-
-Charged_Creeper
-Health: 70
-Speed: 0.9 BPS
-Gold Reward: 25
-Ability: EMP Burst: Deals 35 extra damage to your base. Upon death, disables nearby towers for 3 seconds.
-Category: Disruptor
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjJjZWIzOWRkNGRlMjRhN2FkZmUyOTFhM2EwY2ZjN2NmNGY2NDVkZTU5YjYwM2ZjZmUwNmM2YjVhMDZlMjYifX19
-
-Piglin_Brute
-Health: 100
-Speed: 1.6 BPS
-Gold Reward: 30
-Ability: Devastating: Deals 50 extra damage to your base
-Category: Agressive
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UzMDBlOTAyNzM0OWM0OTA3NDk3NDM4YmFjMjllM2E0Yzg3YTg0OGM1MGIzNGMyMTI0MjcyN2I1N2Y0ZTFjZiJ9fX0=
-
-Hoglin
+Zoglin
 Health: 120
 Speed: 1.1 BPS
-Gold Reward: 26
-Ability: Unstoppable: Deals 40 extra damage to your base. Immune to all forms of knockback.
-Category: Agressive
-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWJiOWJjMGYwMWRiZDc2MmEwOGQ5ZTc3YzA4MDY5ZWQ3Yzk1MzY0YWEzMGNhMTA3MjIwODU2MWI3MzBlOGQ3NSJ9fX0=
+Gold Reward: 25
+Ability: Short height makes it immune to bee towers; deals 50 extra damage to your base and is immune to knockback.
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2M4YzdjNWQwNTU2Y2Q2NjI5NzE2ZTM5MTg4YjIxZTdjMDQ3NzQ3OWYyNDI1ODdiZjE5ZTBiYzc2YjMyMjU1MSJ9fX0=
+
+Iron_Golem
+Health: 200
+Speed: 0.8 BPS
+Gold Reward: 40
+Ability: Makes all towers focus fire on itself, with permanent armor to reduce incoming attacks.
+eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI3MTkxM2EzZmM4ZjU2YmRmNmI5MGE0YjRlZDZhMDVjNTYyY2UwMDc2YjUzNDRkNDQ0ZmIyYjA0MGFlNTdkIn19fQ==
 
 Giant
 Health: 400
 Speed: 0.8
 Gold Reward: 50
 Ability: Deals 50 extra base damage. Every 12s, jumps into the air and sends a shockwave in all directions, disabling nearby towers.
-Category: Boss
 zombie_head
 
 Ravager
-Health: 500
+Health: 400
 Speed: 1.25 BPS
-Gold Reward: 75
-Ability: Carries Illusioner. Every 15s, rams the nearest tower, disabling it for 5s. 10% chance to speed up when damaged.
-Category: Boss
+Gold Reward: 30
+Ability: Carries Illusioner. Can damage itself to speed up for a short period of time. Has a 10% chance to speed up when damaged.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWM3M2UxNmZhMjkyNjg5OWNmMTg0MzQzNjBlMjE0NGY4NGVmMWViOTgxZjk5NjE0ODkxMjE0OGRkODdlMGIyYSJ9fX0=
 
 Illusioner
 Health: 250
 Speed: 0.9 BPS
-Gold Reward: 0
-Ability: Every 12s, summons a random mob from the list of: Husk, Stray, Chicken Jockey, Zombified Piglin. Every 7.5s, Summons decoy clones of itself to distract towers.
+Gold Reward: 30
+Ability: Every 7.5s, Summons decoy clones of itself. Decoys make towers target itself but can't deal damage to your base.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDYzOWQzMjVmNDQ5NDI1OGE0NzNhOTNhM2I0N2YzNGEwYzUxYjNmY2VhZjU5ZmVlODcyMDVhNWU3ZmYzMWY2OCJ9fX0=
 
 Warden
 Health: 1000
-Speed: 1.5
-Gold Reward: 0
-Ability: Has permanent armor. Whenever a mob dies nearby, creates sculk that causes mobs to move faster. Every 5s, sends a sonic boom that disables a nearby tower.
-Category: Boss
+Speed: 1.5 BPS
+Gold Reward: 1
+Ability: Has permanent armor. Every 5s, sends a sonic boom that disables a nearby tower.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM5Yzg0MzQ5NzQyMTY0YTIyOTcxZWU1NDUxNmZmZjkxZDg2OGRhNzJjZGNjZTYyMDY5ZGIxMjhjNDIxNTRiMiJ9fX0=

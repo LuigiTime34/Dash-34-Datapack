@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:25, \
+    Health:20, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:25 \
+        base:20 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -21,7 +21,35 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
         id:"minecraft:attack_knockback", \
         base:120 \
     }], \
-    PersistenceRequired:1b \
+    PersistenceRequired:1b, \
+    Passengers:[ \ 
+        {id:skeleton, \
+        CustomNameVisible:1b, \
+        Health:15, \
+        NoAI:1b, \
+        Rotation:[90f, \
+        0.0f], \
+        Tags:["defense-monster", \
+        "cw_hp_disp", \
+        "defense-skeleton", \
+        "Entity-Dummy"], \
+        Team:defense_enemies, \
+        attributes:[{ \
+            id:"max_health", \
+            base:15 \
+        }, \
+        { \
+            id:"minecraft:attack_damage", \
+            base:0 \
+        }, \
+        { \
+            id:"minecraft:attack_knockback", \
+            base:-5000 \
+        }], \
+        PersistenceRequired:1b, \
+        ArmorItems:[{id:"minecraft:iron_boots"},{id:"minecraft:iron_leggings"},{id:"minecraft:iron_chestplate"},{id:"minecraft:iron_helmet"}] \
+        }]\
 }
 execute as @a[advancements={core:defense/mobs/spider=false}] run advancement grant @s only core:defense/mobs/spider
-execute as @a[advancements={core:defense/mobs/category_small=false}] run advancement grant @s only core:defense/mobs/category_small
+
+scoreboard players add $mobs_left defense.wave 1

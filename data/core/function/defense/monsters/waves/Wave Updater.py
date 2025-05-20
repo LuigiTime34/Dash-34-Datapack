@@ -17,10 +17,23 @@ def create_wave_function(wave_number, mobs):
         f.write(f"execute if score $wave_track defense.wave matches 1 store result bossbar minecraft:defense.mobs_left max run scoreboard players get $mobs_left defense.wave\n")
         # Write mob summoning commands
         for i, mob in enumerate(mobs):
-            f.write(f"execute if score $wave_track defense.wave matches {i+1} run function core:defense/monsters/summon/{mob.lower()}\n")
+            if mob.lower() in ['iron_golem_boss', 'giant', 'ravager', 'warden']:
+                function_path = f"boss/{mob.lower()}/summon"
+            else:
+                function_path = f"summon/{mob.lower()}"
+            f.write(f"execute if score $wave_track defense.wave matches {i+1} run function core:defense/monsters/{function_path}\n")
         
         # Schedule next wave and increment wave tracker
-        f.write(f'execute if score $wave_track defense.wave matches 1..{len(mobs)} run schedule function core:defense/monsters/waves/wave{wave_number} 3s\n')
+        # First get the delay depending on which wave it is
+        delay = '3s'  # default value
+        wave_num = int(wave_number)
+        if wave_num in range(1, 21):
+            delay = '3s'
+        elif wave_num in range(21, 41):
+            delay = '30t'
+        elif wave_num in range(41, 51):
+            delay = '15t'
+        f.write(f'execute if score $wave_track defense.wave matches 1..{len(mobs)} run schedule function core:defense/monsters/waves/wave{wave_number} {delay}\n')
         f.write(f'execute if score $wave_track defense.wave matches 1..{len(mobs)} run scoreboard players add $wave_track defense.wave 1\n')
     
     print(f"Wave {wave_number} function created successfully!")

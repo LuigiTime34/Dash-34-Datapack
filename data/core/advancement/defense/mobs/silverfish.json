@@ -14,13 +14,13 @@
             }
         },
         "title": "Silverfish",
-        "description": "Health: 20\nSpeed: 1.8 BPS\nGold: 7\nBurrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration",
+        "description": "Health: 20\nSpeed: 1.8 BPS\nGold: 8\nBurrows underground every 5 seconds, regenerating 5 health and becoming immune to damage while burrowed. Immune to bees.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/spider",
+    "parent": "core:defense/mobs/skeleton",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

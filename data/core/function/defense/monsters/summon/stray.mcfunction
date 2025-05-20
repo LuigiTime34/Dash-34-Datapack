@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon stray ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:50, \
+    Health:60, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon stray ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:50 \
+        base:60 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon stray ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:120 \
+        base:140 \
     }], \
     PersistenceRequired:1b \
 }

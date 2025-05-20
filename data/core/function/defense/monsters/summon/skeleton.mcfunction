@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon skeleton ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:10, \
+    Health:15, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon skeleton ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:10 \
+        base:15 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -22,5 +22,7 @@ execute positioned 4 -59 146 run summon skeleton ~ ~ ~ { \
         base:80 \
     }], \
     PersistenceRequired:1b \
+    ,ArmorItems:[{id:"minecraft:iron_boots"},{id:"minecraft:iron_leggings"},{id:"minecraft:iron_chestplate"},{id:"minecraft:iron_helmet"}] \
 }
 execute as @a[advancements={core:defense/mobs/skeleton=false}] run advancement grant @s only core:defense/mobs/skeleton
+# execute positioned 4 -59 146 run data modify entity @n[tag=defense-skeleton] ArmorItems set value [{id:"minecraft:iron_boots"},{id:"minecraft:iron_leggings"},{id:"minecraft:iron_chestplate"},{id:"minecraft:iron_helmet"}]

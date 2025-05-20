@@ -1,3 +1,5 @@
+execute if entity @s[tag=defense-illusioner_decoy] at @s run return run function core:defense/monsters/boss/ravager/decoy_disappear
+
 playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 100000000000 0.8
 # playsound minecraft:entity.wither.break_block master @a ~ ~ ~ 100000000000 0.8
 

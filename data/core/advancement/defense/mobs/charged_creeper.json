@@ -14,13 +14,13 @@
             }
         },
         "title": "Charged Creeper",
-        "description": "Health: 70\nSpeed: 0.9 BPS\nGold: 25\nEMP Burst: Deals 35 extra damage to your base. Upon death, disables nearby towers for 3 seconds.",
+        "description": "Health: 60\nSpeed: 0.9 BPS\nGold: 0\nCreated when a Creeper is struck by lightning; disables nearby towers temporarily upon death.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/pillager",
+    "parent": "core:defense/mobs/creeper",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

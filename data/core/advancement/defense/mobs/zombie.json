@@ -4,13 +4,13 @@
             "id": "minecraft:zombie_head"
         },
         "title": "Zombie",
-        "description": "Health: 5\nSpeed: 0.4 BPS\nGold: 3\nAbility:",
+        "description": "Health: 10\nSpeed: 0.4 BPS\nGold: 5\nYour basic, standard mob.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/category_basic",
+    "parent": "core:defense/mobs_root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

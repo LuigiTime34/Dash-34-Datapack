@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "hit_breeze": {
+        "hit_bogged": {
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": [
@@ -17,7 +17,7 @@
     },
     "requirements": [
         [
-            "hit_breeze"
+            "hit_bogged"
         ]
     ],
     "rewards": {

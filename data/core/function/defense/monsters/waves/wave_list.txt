@@ -1,5 +1,3 @@
---- START OF FILE wave_list.txt ---
-
 Wave 1
 Zombie
 
@@ -9,426 +7,410 @@ Zombie
 
 Wave 3
 Zombie
-Zombie
 Skeleton
 
 Wave 4
-Skeleton
-Skeleton
-Zombie
+Silverfish
 
 Wave 5
+Zombie
+Zombie
 Skeleton
-Skeleton
-Spider
 
 Wave 6
-Spider
-Spider
-Skeleton
-Skeleton
+Zombie
+Zombie
+Silverfish
 
 Wave 7
 Zombie
 Skeleton
-Spider
-Spider
+Zombie
+Skeleton
 
 Wave 8
+Zombie
+Zombie
 Spider
-Spider
-Spider
-Creeper
 
 Wave 9
-Creeper
-Creeper
+Zombie
+Silverfish
 Skeleton
-Skeleton
-Spider
 
 Wave 10
-Creeper
-Creeper
-Creeper
+Zombie
+Spider
 Silverfish
 
 Wave 11
-Silverfish
-Silverfish
-Silverfish
-Creeper
-Spider
+Zombie
+Zombie
+Zombie
+Skeleton
+Skeleton
 
 Wave 12
-Silverfish
-Husk
-Husk
-Creeper
+Zombie
+Spider
+Zombie
+Skeleton
+Zombie
 
 Wave 13
-Husk
-Husk
-Husk
+Zombie
+Zombie
 Silverfish
+Silverfish
+Zombie
 Skeleton
 
 Wave 14
-Husk
-Husk
-Creeper
-Spider
-Witch
+Zombie
+Skeleton
+Chicken_Jockey
+Zombie
+Zombie
 
 Wave 15
-Witch
-Witch
-Husk
-Husk
-Silverfish
+Zombie
+Zombie
+Skeleton
+Chicken_Jockey
+Zombie
+Skeleton
 
 Wave 16
-Witch
-Zombie_Villager
-Zombie_Villager
-Husk
-Creeper
+Zombie
+Zombie
+Skeleton
+Silverfish
+Zombie
+Silverfish
+Zombie
 
 Wave 17
-Zombie_Villager
-Zombie_Villager
-Stray
-Stray
-Husk
-Witch
+Zombie
+Spider
+Zombie
+Spider
+Zombie
+Skeleton
+Zombie
 
 Wave 18
-Stray
-Stray
-Stray
-Chicken_Jockey
-Chicken_Jockey
-Witch
+Zombie
+Zombie
+Creeper
+Zombie
+Skeleton
+Zombie
 
 Wave 19
-Chicken_Jockey
-Chicken_Jockey
-Chicken_Jockey
-Stray
-Stray
-Husk
+Skeleton
+Skeleton
+Spider
+Zombie
+Silverfish
 Creeper
-Witch
+Creeper
+Skeleton
+Skeleton
+Spider
+Silverfish
+Creeper
+Spider
+Zombie
 
 Wave 20
-Stray
-Stray
-Witch
-Witch
-Skeleton
-Skeleton
-Skeleton
-IRON_GOLEM
+Zombie
+Zombie
+Iron_Golem_Boss
+Zombie
+Zombie
 
 Wave 21
-Blaze
-Blaze
-Chicken_Jockey
-Stray
+Zombie
+Skeleton
+Zombie
+Witch
+Zombie
+Skeleton
 
 Wave 22
-Blaze
-Blaze
-Blaze
-Zombie_Villager
+Zombie
+Zombie
+Skeleton
 Witch
+Zombie
+Zombie
+Skeleton
 
 Wave 23
-Blaze
-Blaze
-Piglin
-Piglin
+Zombie
+Skeleton
 Creeper
+Creeper
+Silverfish
+Zombie
+Skeleton
 
 Wave 24
-Piglin
-Piglin
-Piglin
-Blaze
-Blaze
-Husk
+Zombie
+Skeleton
+Chicken_Jockey
+Witch
+Zombie
+Skeleton
 
 Wave 25
-Piglin
-Piglin
+Zombie
 Zombified_Piglin
+Skeleton
 Zombified_Piglin
-Blaze
-Stray
+Zombie
+Skeleton
 
 Wave 26
-Zombified_Piglin
-Zombified_Piglin
-Zombified_Piglin
-Piglin
-Blaze
+Zombie
+Spider
+Skeleton
 Witch
+Zombie
+Chicken_Jockey
+Zombie
 
 Wave 27
+Zombie
+Skeleton
 Zombified_Piglin
 Zombified_Piglin
-skeleton_horse
-skeleton_horse
-Blaze
-Piglin
+Creeper
+Zombie
+Skeleton
 
 Wave 28
-skeleton_horse
-skeleton_horse
-skeleton_horse
-Zombified_Piglin
-Zombified_Piglin
-Blaze
-Blaze
+Zombie
+Skeleton
+Stray
+Stray
+Zombie
+Skeleton
+Zombie
 
 Wave 29
-skeleton_horse
-skeleton_horse
-Wither_Skeleton
-Wither_Skeleton
-Piglin
-Piglin
-Zombified_Piglin
-Blaze
+Zombie
+Skeleton
+Stray
 Witch
+Zombified_Piglin
+Zombie
+Skeleton
 
 Wave 30
-Wither_Skeleton
-Wither_Skeleton
-Wither_Skeleton
-skeleton_horse
-skeleton_horse
-Blaze
-Blaze
-Piglin
-GIANT
+Zombie
+Zombie
+Giant
+Zombie
+Zombie
 
 Wave 31
-Wither_Skeleton
-Bogged
-Bogged
-skeleton_horse
-Zombified_Piglin
+Zombie
+Skeleton
+Iron_Golem
+Zombie
+Zombie
+Skeleton
+Zombie
 
 Wave 32
+Zombie
+Skeleton
 Bogged
 Bogged
-Bogged
-Wither_Skeleton
-Wither_Skeleton
-Blaze
-Witch
+Zombie
+Zombie
+Skeleton
 
 Wave 33
-Bogged
-Bogged
+Zombie
+Skeleton
 Enderman
-Enderman
-Wither_Skeleton
-Wither_Skeleton
-skeleton_horse
+Zombie
+Skeleton
+Zombie
+Zombie
 
 Wave 34
-Enderman
-Enderman
-Enderman
+Zombie
+Skeleton
 Bogged
-Bogged
-Wither_Skeleton
-Wither_Skeleton
-Piglin
+Stray
+Creeper
+Zombie
+Skeleton
 
 Wave 35
-Enderman
-Enderman
+Zombie
+Skeleton
 Breeze
 Breeze
-Wither_Skeleton
-Wither_Skeleton
-Bogged
-Blaze
+Zombie
+Zombie
+Skeleton
 
 Wave 36
-Breeze
-Breeze
-Breeze
-Enderman
-Enderman
-Wither_Skeleton
-Bogged
-skeleton_horse
+Zombie
+Skeleton
+Charged_Creeper
+Zombified_Piglin
+Zombie
+Skeleton
+Zombie
 
 Wave 37
-Breeze
-Breeze
-Pillager
-Pillager
+Zombie
+Skeleton
 Enderman
 Enderman
-Wither_Skeleton
-Bogged
+Witch
+Zombie
+Skeleton
 
 Wave 38
-Pillager
-Pillager
-Pillager
-Pillager
-Breeze
-Breeze
-Wither_Skeleton
-Wither_Skeleton
-Witch
+Zombie
+Skeleton
+Zoglin
+Silverfish
+Silverfish
+Zombie
+Skeleton
 
 Wave 39
-Pillager
-Pillager
-Vindicator
-Vindicator
+Zombie
+Skeleton
+Zoglin
 Breeze
-Breeze
-Enderman
-Enderman
-Bogged
-Wither_Skeleton
+Witch
+Zombie
+Skeleton
 
 Wave 40
-Vindicator
-Vindicator
-Vindicator
-Pillager
-Pillager
-Pillager
-Breeze
-Breeze
-Wither_Skeleton
-Wither_Skeleton
-RAVAGER
+Zombie
+Zombie
+Ravager
+Zombie
+Zombie
 
 Wave 41
-Vindicator
-Vindicator
-Charged_Creeper
-Charged_Creeper
-Pillager
-Enderman
-Breeze
+Zombie
+Skeleton
+Zoglin
+Zoglin
+Iron_Golem
+Zombie
+Zombie
+Skeleton
 
 Wave 42
-Charged_Creeper
-Charged_Creeper
-Charged_Creeper
-Vindicator
-Vindicator
-Vindicator
-Pillager
+Zombie
+Zombie
+Skeleton
 Breeze
+Stray
+Enderman
 Witch
+Zombie
+Skeleton
 
 Wave 43
-Charged_Creeper
-Piglin_Brute
-Piglin_Brute
-Vindicator
-Vindicator
-Pillager
-Pillager
-Breeze
+Zombie
+Skeleton
+Iron_Golem
+Bogged
+Bogged
+Zombie
+Zombie
+Skeleton
+Zombie
 
 Wave 44
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
+Zombie
+Skeleton
 Charged_Creeper
 Charged_Creeper
-Vindicator
-Vindicator
-Vindicator
-Pillager
+Enderman
+Zombie
+Zombie
+Skeleton
+Zombie
 
 Wave 45
-Piglin_Brute
-Piglin_Brute
-Hoglin
-Hoglin
-Charged_Creeper
-Vindicator
-Vindicator
+Zombie
+Skeleton
+Zoglin
 Breeze
-Witch
+Breeze
+Zombified_Piglin
+Zombie
+Zombie
+Skeleton
+Zombie
 
 Wave 46
-Hoglin
-Hoglin
-Hoglin
-Piglin_Brute
-Piglin_Brute
-Charged_Creeper
-Charged_Creeper
-Vindicator
-Vindicator
+Zombie
+Skeleton
+Iron_Golem
+Zombie
+Witch
+Enderman
+Zombie
+Zombie
+Skeleton
+Zombie
 
 Wave 47
-Hoglin
-Hoglin
-Hoglin
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Charged_Creeper
-Charged_Creeper
-Vindicator
-Witch
+Zombie
+Skeleton
+Iron_Golem
 Breeze
+Stray
+Zombie
+Zombie
+Skeleton
+Zombie
+Zombie
 
 Wave 48
-Hoglin
-Hoglin
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
+Zombie
+Skeleton
 Charged_Creeper
-Vindicator
-Vindicator
-Breeze
-Enderman
+Zoglin
+Iron_Golem
+Zombie
+Zombie
+Skeleton
+Zombie
+Zombie
 
 Wave 49
-Hoglin
-Hoglin
-Hoglin
-Hoglin
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Charged_Creeper
-Charged_Creeper
-Vindicator
-Vindicator
+Zombie
+Skeleton
 Breeze
-Witch
+Zoglin
+Enderman
+Bogged
+Zombie
+Zombie
+Skeleton
+Zombie
+Zombie
 
 Wave 50
-Piglin_Brute
-Piglin_Brute
-Piglin_Brute
-Hoglin
-Hoglin
-Charged_Creeper
-Charged_Creeper
-Breeze
-Breeze
-Vindicator
-Vindicator
-Witch
-WARDEN
+Zombie
+Zombie
+Zombie
+Warden
+Zombie
+Zombie
+Zombie

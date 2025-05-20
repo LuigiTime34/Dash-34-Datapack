@@ -1,2 +1,2 @@
-tellraw @s {"text": "New mob found!\nSilverfish\nSpeed: 1.8 BPS\nHealth: 20\nBurrower: Every 5-10 seconds, burrows into the ground. When burrowed it can't move and cant be attacked, but gains regeneration", "color": "green"}
+tellraw @s {"text": "New mob found!\nSilverfish\nSpeed: 1.8 BPS\nHealth: 20\nBurrows underground every 5 seconds, regenerating 5 health and becoming immune to damage while burrowed. Immune to bees.", "color": "green"}
 execute as @a at @s run playsound entity.villager.work_cartographer master @s ~ ~ ~ 1

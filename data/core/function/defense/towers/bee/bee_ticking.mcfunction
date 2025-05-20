@@ -2,8 +2,8 @@
 execute if block ~ -62 ~ black_wool on passengers run kill @s
 execute if block ~ -62 ~ black_wool run return run kill @s
 # See if theres any mobs left
-execute if score $mobs_left defense.wave matches 0 on passengers run kill @s
-execute if score $mobs_left defense.wave matches 0 run return run kill @s
+execute if score $mobs_left defense.wave matches ..0 on passengers run kill @s
+execute if score $mobs_left defense.wave matches ..0 run return run kill @s
 
 # rotate @s facing entity @n[tag=defense-monster] eyes
 function core:defense/towers/bee/get_speed
