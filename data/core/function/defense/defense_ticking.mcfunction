@@ -435,11 +435,30 @@ execute as @e[tag=defense-monster,tag=defense-stray] at @s if entity @n[tag=stor
 
 execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/kill_freezestorm
+# ====================================================================================================================
+#                        | |      
+#   _ __   __ _ _ __   __| | __ _ 
+#  | '_ \ / _` | '_ \ / _` |/ _` |
+#  | |_) | (_| | | | | (_| | (_| |
+#  | .__/ \__,_|_| |_|\__,_|\__,_|
+#  | |                            
+#  |_|                            
+# Base activation
+execute as @e[tag=panda-center-marker,tag=!upgrade1,tag=!upgrade_shoot1,tag=!upgrade_shoot2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"100","damage":"5","range":"9.5","age":"0","leaves":"small"}
+execute as @e[tag=panda-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"60","damage":"5","range":"11.5","age":"1","leaves":"large"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_multi {"cooldown":"50","damage":"7","range":"13.5","age":"1","leaves":"large"}
 
+# Bamboo stab display
+execute as @e[tag=defense.panda_boo] if score @s defense.panda_boo_delay matches 1.. run scoreboard players remove @s defense.panda_boo_delay 1
+execute as @e[tag=defense.panda_boo] if score @s defense.panda_boo_delay matches 16 at @s run function core:defense/towers/panda/get_damage
+execute as @e[tag=defense.panda_boo] if score @s defense.panda_boo_delay matches 5 at @s run tp @s ~ ~-2.9 ~
+execute as @e[tag=defense.panda_boo] if score @s defense.panda_boo_delay matches 1 run kill @s
 
+# Rotations
+execute as @e[tag=defense.panda] at @s positioned ~ -59 ~ run function core:defense/towers/panda/get_range
+execute as @e[tag=defense.panda] at @s positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..10] run function core:defense/towers/global/rotate_back
 
-
-
+# ====================================================================================================================
 # End stuff
 execute as @p[gamemode=spectator] if score $dead defense matches 1 run spectate @n[tag=defense.failure_view]
 execute if score $dead defense matches 1 run function core:defense/end/clear_all_waves

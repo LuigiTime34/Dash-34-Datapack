@@ -38,6 +38,15 @@ $execute if items entity @s $(slot) *[custom_data~{storm_upgrade_surge1:1b}] as 
 $execute if items entity @s $(slot) *[custom_data~{storm_upgrade_surge2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/placement/get_rotation {"building":"_surge2","cost":"300","item_slot":"22","slot_to_replace":"13"}
 $execute if items entity @s $(slot) *[custom_data~{storm_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=storm-center-marker] run function core:defense/towers/storm/sell
 
+# PANDA UPGRADES
+$execute if items entity @s $(slot) *[custom_data~{panda_upgrade1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=panda-center-marker] run function core:defense/towers/panda/placement/get_rotation {"building":"1","cost":"20","item_slot":"0","slot_to_replace":"13"}
+$execute if items entity @s $(slot) *[custom_data~{panda_upgrade_shoot1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=panda-center-marker] run function core:defense/towers/panda/placement/get_rotation {"building":"_shoot1","cost":"200","item_slot":"1","slot_to_replace":"11"}
+$execute if items entity @s $(slot) *[custom_data~{panda_upgrade_shoot2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=panda-center-marker] run function core:defense/towers/panda/placement/get_rotation {"building":"_shoot2","cost":"400","item_slot":"2","slot_to_replace":"13"}
+$execute if items entity @s $(slot) *[custom_data~{panda_upgrade_boom1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=panda-center-marker] run function core:defense/towers/panda/placement/get_rotation {"building":"_pillager","cost":"250","item_slot":"3","slot_to_replace":"15"}
+$execute if items entity @s $(slot) *[custom_data~{panda_upgrade_boom2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=panda-center-marker] run function core:defense/towers/panda/placement/get_rotation {"building":"_pillager2","cost":"450","item_slot":"4","slot_to_replace":"13"}
+$execute if items entity @s $(slot) *[custom_data~{panda_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=panda-center-marker] run function core:defense/towers/panda/sell
+
+
 # TENT UPGRADES
 # $execute if items entity @s $(slot) *[custom_data~{tent_upgrade1:1b}] run function core:defense/towers/tent/placement/upgrade {"building":"1"}
 # $execute if items entity @s $(slot) *[custom_data~{tent_upgrade_camp:1b}] run function core:defense/towers/tent/placement/upgrade {"building":"_camp"}

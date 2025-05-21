@@ -1,0 +1,2 @@
+execute store result storage core:panda_damage damage int 1 run scoreboard players get @s defense.panda_boo_damage
+execute as @n[tag=defense-target,tag=defense-monster] run function core:defense/towers/panda/deal_damage with storage core:panda_damage
