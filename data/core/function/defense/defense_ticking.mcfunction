@@ -76,11 +76,6 @@ execute as @e[tag=defense-monster] at @s run function core:defense/monsters/move
 execute as @e[tag=defense-skeleton] on vehicle on passengers at @s run data modify entity @s Rotation set from entity @n[tag=defense-spider,distance=..1] Rotation
 execute as @e[tag=defense-monster,tag=defense-spider] on passengers on vehicle run scoreboard players operation @s defense.distance -= $spider defense.distance
 
-# Vindicator (unused)
-# execute as @e[tag=defense-monster,tag=defense-vindicator] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-# execute as @e[tag=defense-monster,tag=defense-vindicator] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/vindicator
-# execute as @e[tag=defense-monster,tag=defense-vindicator] at @s if score @s defense.abilities matches 40 run attribute @s attack_knockback base set 140
-
 # Witch
 execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
 execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/witch
@@ -114,26 +109,12 @@ execute as @e[tag=defense-monster,tag=defense-enderman,tag=!has_marker] at @s ru
 # Update marker positions to their linked endermen
 execute as @e[tag=defense.enderman-marker] at @s run function core:defense/monsters/abilities/update_enderman_marker
 
-# Wither Skeleton (Unused)
-# execute as @e[tag=defense-monster,tag=defense-wither_skeleton] store result score @s defense.abilities run data get entity @s Health
-# execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..29 unless score @s defense.speed matches 160 at @s run playsound block.trial_spawner.ominous_activate master @a ~ ~ ~ 1
-# execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..29 unless score @s defense.speed matches 160 at @s run particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0.2 0.4 0.2 0 35
-# execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches ..30 unless score @s defense.speed matches 160 run attribute @s attack_knockback base set 160
-# execute as @e[tag=defense-monster,tag=defense-wither_skeleton] if score @s defense.abilities matches 30.. unless score @s defense.speed matches 40 run attribute @s attack_knockback base set 80
-
 # Chicken Jockey (Minecraft movie refrence???)
 execute as @e[tag=defense-baby_zombie,tag=defense-jockey] run tag @s remove defense-jockey
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster] on vehicle on passengers run tag @s add defense-jockey
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster,tag=!defense-jockey] run function core:defense/monsters/abilities/chicken_jockey_dismount
 # Rotate snap
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-chicken,distance=..1] Rotation
-
-# Skeleton Horse (unused)
-# execute as @e[tag=defense-skeleton_rider,tag=defense-rider] run tag @s remove defense-rider
-# execute as @e[tag=defense-skeleton_rider,tag=!defense-monster] on vehicle on passengers run tag @s add defense-rider
-# execute as @e[tag=defense-skeleton_rider,tag=!defense-monster,tag=!defense-rider] run function core:defense/monsters/abilities/skeleton_dismount
-# # Rotate snap
-# execute as @e[tag=defense-skeleton_rider,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-skeleton_horse,distance=..1] Rotation
 
 # Zombified Piglin
 execute as @e[tag=defense-zombified_piglin] if data entity @s {HurtTime:9s} at @s rotated ~ 0 positioned ^ ^ ^-1 run function core:defense/monsters/abilities/zombified_piglin_reinforcements
@@ -162,24 +143,12 @@ execute as @e[tag=defense.giant_disabled,tag=tower-center-marker] at @s run scor
 execute as @e[tag=defense.giant_disabled] at @s run particle minecraft:block_crumble{block_state:{Name:dirt}} ~ ~ ~ 2 0.1 2 0 100
 execute as @e[tag=defense.giant_disabled] unless entity @n[tag=defense-giant] run tag @s remove defense.giant_disabled
 
-# RAVAGER #
+# RAVAGER
 # Speed ability
 execute as @e[tag=defense-ravager,limit=1] if data entity @s {HurtTime:10s} run function core:defense/monsters/boss/ravager/attacked
 execute at @n[tag=defense-ravager,tag=defense.ravager_speed] run particle entity_effect{color:[0.18,0.85,0.93,1.0]} ~ ~1 ~ 1 0.5 1 0 1
 execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense.ravager_speed matches 1.. run scoreboard players remove @s defense.ravager_speed 1
 execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense.ravager_speed matches 1 run function core:defense/monsters/boss/ravager/remove_speed
-# Ram Ability UNUSED
-# execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-# execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/disable_tower/init
-# # Animation timer
-# execute if score $ravager_idx defense.boss_animation matches 1.. run scoreboard players remove $ravager_idx defense.boss_animation 1
-# execute if score $ravager_idx defense.boss_animation matches 1.. as @e[tag=defense-ravager] run function core:defense/monsters/boss/ravager/disable_tower/animation
-# # Disable timer
-# execute as @e[tag=defense-ravager,type=ravager] if score @s defense.abilities matches 200 run tag @e[tag=defense.ravager_disabled,limit=1] remove defense.ravager_disabled
-# execute as @e[tag=defense.ravager_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
-# execute as @e[tag=defense.ravager_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
-# execute as @e[tag=defense.ravager_disabled] at @s run particle sweep_attack ~ ~ ~ 1 3 1 0 30
-# execute as @e[tag=defense.ravager_disabled] unless entity @e[tag=defense-ravager,limit=1] run tag @s remove defense.ravager_disabled
 # Damage self to speed
 execute as @e[tag=defense-ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
 execute as @e[tag=defense-ravager] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/damage_self
@@ -378,10 +347,10 @@ execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill
 # execute as @e[tag=defense-monster] if score @s defense.bee.honey_slowness matches 1.. at @s run particle minecraft:falling_honey ~ ~ ~ 0.2 0.3 0.2 0 1
 
 # Base
-execute as @e[tag=bee-center-marker,tag=!upgrade1,tag=!upgrade_attack1,tag=!upgrade_attack2,tag=!upgrade_money1,tag=!upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"50","damage":"3","speed":20}
+execute as @e[tag=bee-center-marker,tag=!upgrade1,tag=!upgrade_attack1,tag=!upgrade_attack2,tag=!upgrade_money1,tag=!upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"60","damage":"1","speed":20}
 
 # First Upgrade
-execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"40","damage":"4","speed":"25"}
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"50","damage":"3","speed":"25"}
 
 # Attack Upgrade 1
 execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_attack_bee {"cooldown":"35","damage":"5","speed":"30"}
@@ -444,9 +413,42 @@ execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1 at @s
 #  | |                            
 #  |_|                            
 # Base activation
-execute as @e[tag=panda-center-marker,tag=!upgrade1,tag=!upgrade_shoot1,tag=!upgrade_shoot2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"100","damage":"5","range":"9.5","age":"0","leaves":"small"}
-execute as @e[tag=panda-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"60","damage":"5","range":"11.5","age":"1","leaves":"large"}
-execute as @e[tag=panda-center-marker,tag=upgrade_shoot1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_multi {"cooldown":"50","damage":"7","range":"13.5","age":"1","leaves":"large"}
+execute as @e[tag=panda-center-marker,tag=!upgrade1,tag=!upgrade_shoot1,tag=!upgrade_shoot2,tag=!upgrade_bamboom1,tag=!upgrade_bamboom2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"100","damage":"5","range":"9.5","age":"0","leaves":"none","scale":"1.0","translation":"-0.5"}
+# Upgrade 1
+execute as @e[tag=panda-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"60","damage":"5","range":"11.5","age":"0","leaves":"small","scale":"1.0","translation":"-0.5"}
+# Shoot upgrade 1
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot1] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"10","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot1] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"5","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"70","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
+# Shoot upgrade 2
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2] if score @s defense.towers matches 20 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"20","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2] if score @s defense.towers matches 15 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"15","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"10","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"5","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"70","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+
+# BamBOOM upgrade 1
+execute as @e[tag=panda-center-marker,tag=upgrade_bamboom1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"70","damage":"8","range":"12.5","bomb_range":"3"}
+
+# BamBOOM upgrade 2
+execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"10","damage":"8","range":"13.5","bomb_range":"3"}
+execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"5","damage":"8","range":"13.5","bomb_range":"3"}
+execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"80","damage":"8","range":"13.5","bomb_range":"3"}
+
+# TNT ticking
+execute as @e[tag=defense.panda_tnt] at @s run function core:defense/towers/panda/bomb_ticking
+execute as @e[tag=defense.panda_tnt] at @s run function core:defense/towers/panda/bomb_ticking
+# (run twice to move at double speed)
+
+# Display bomb ranges
+execute as @e[tag=defense.panda_landing] at @s run rotate @s ~6 ~
+execute as @e[tag=defense.panda_landing] at @s positioned ~ -58.5 ~ run function core:defense/towers/panda/get_particle_range
+
+# remove tags
+execute as @e[tag=panda-center-marker,tag=!upgrade1,tag=!upgrade_shoot1,tag=!upgrade_shoot2,tag=!upgrade_bamboom1,tag=!upgrade_bamboom2] if score @s defense.towers matches 100 at @s as @e[tag=defense.panda,distance=..3.5] run tag @s remove defense.attacked
+execute as @e[tag=panda-center-marker,tag=upgrade1] if score @s defense.towers matches 60 at @s as @e[tag=defense.panda,distance=..3.5] run tag @s remove defense.attacked 
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot1] if score @s defense.towers matches 70 at @s as @e[tag=defense.panda,distance=..3.5] run tag @s remove defense.attacked 
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2] if score @s defense.towers matches 70 at @s as @e[tag=defense.panda,distance=..3.5] run tag @s remove defense.attacked 
 
 # Bamboo stab display
 execute as @e[tag=defense.panda_boo] if score @s defense.panda_boo_delay matches 1.. run scoreboard players remove @s defense.panda_boo_delay 1
@@ -456,7 +458,6 @@ execute as @e[tag=defense.panda_boo] if score @s defense.panda_boo_delay matches
 
 # Rotations
 execute as @e[tag=defense.panda] at @s positioned ~ -59 ~ run function core:defense/towers/panda/get_range
-execute as @e[tag=defense.panda] at @s positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..10] run function core:defense/towers/global/rotate_back
 
 # ====================================================================================================================
 # End stuff

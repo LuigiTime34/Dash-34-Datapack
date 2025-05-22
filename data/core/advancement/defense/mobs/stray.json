@@ -14,7 +14,7 @@
             }
         },
         "title": "Stray",
-        "description": "Health: 60\nSpeed: 1.2 BPS\nGold: 12\nSpeeds up when hit by ice rather then being slowed down.",
+        "description": "Health: 60\nSpeed: 1.8 BPS\nGold: 12\nSpeeds up when hit by ice rather then being slowed down.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

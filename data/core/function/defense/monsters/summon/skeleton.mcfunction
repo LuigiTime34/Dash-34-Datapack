@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon skeleton ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:80 \
+        base:140 \
     }], \
     PersistenceRequired:1b \
     ,ArmorItems:[{id:"minecraft:iron_boots"},{id:"minecraft:iron_leggings"},{id:"minecraft:iron_chestplate"},{id:"minecraft:iron_helmet"}] \

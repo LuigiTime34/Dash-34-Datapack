@@ -14,7 +14,7 @@
             }
         },
         "title": "Illusioner",
-        "description": "Health: 250\nSpeed: 0.9 BPS\nGold: 30\nEvery 7.5s, Summons decoy clones of itself. Decoys make towers target itself but can't deal damage to your base.",
+        "description": "Health: 250\nSpeed: 1.5 BPS\nGold: 30\nEvery 7.5s, Summons decoy clones of itself. Decoys make towers target itself but can't deal damage to your base.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

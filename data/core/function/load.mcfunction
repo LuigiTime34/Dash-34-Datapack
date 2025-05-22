@@ -50,6 +50,8 @@ scoreboard objectives add defense.storm dummy
 scoreboard objectives add defense.bogged_health dummy
 scoreboard objectives add defense.panda_boo_delay dummy
 scoreboard objectives add defense.panda_boo_damage dummy
+scoreboard objectives add defense.panda_bomb_range dummy
+scoreboard objectives add UUID dummy
 
 team add defense_enemies
 bossbar add defense.mobs_left ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]

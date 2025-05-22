@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon silverfish ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:180 \
+        base:240 \
     }], \
     PersistenceRequired:1b \
 }

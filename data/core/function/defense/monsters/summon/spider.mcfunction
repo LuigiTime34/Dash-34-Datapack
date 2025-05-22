@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:120 \
+        base:180 \
     }], \
     PersistenceRequired:1b, \
     Passengers:[ \ 

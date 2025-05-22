@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon chicken ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:60 \
+        base:120 \
     }], \
     Passengers:[{ \
         id:"minecraft:zombie", \
@@ -46,7 +46,7 @@ execute positioned 4 -59 146 run summon chicken ~ ~ ~ { \
         }, \
         { \
             id:"minecraft:attack_knockback", \
-            base:200 \
+            base:260 \
         }], \
         PersistenceRequired:1b \
     }], \

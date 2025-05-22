@@ -1,4 +1,4 @@
-tag @n[tag=defense.panda,distance=..3.5] add dead-panda
+tag @e[tag=defense.panda,distance=..3.5] add dead-panda
 execute as @e[tag=dead-panda] at @s run tp @s ~ ~-300 ~
 execute as @e[tag=dead-panda] at @s run kill @s
 kill @n[tag=panda-center-marker]

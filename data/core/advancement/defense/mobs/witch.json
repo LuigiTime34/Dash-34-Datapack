@@ -14,7 +14,7 @@
             }
         },
         "title": "Witch",
-        "description": "Health: 70\nSpeed: 0.7 BPS\nGold: 10\nRegenerates 8 health and heals nearby enemies for 4 health every four seconds.",
+        "description": "Health: 70\nSpeed: 1.3 BPS\nGold: 10\nRegenerates 8 health and heals nearby enemies for 4 health every four seconds.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

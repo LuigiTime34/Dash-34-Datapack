@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon zombie ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:40 \
+        base:100 \
     }, \
     { \
         id:"minecraft:armor", \

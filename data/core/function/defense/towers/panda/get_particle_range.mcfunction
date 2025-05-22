@@ -1,0 +1,2 @@
+execute store result storage core:defense.panda_range range int 1 run scoreboard players get @s defense.panda_bomb_range
+function core:defense/towers/panda/bomb_ring with storage core:defense.panda_range

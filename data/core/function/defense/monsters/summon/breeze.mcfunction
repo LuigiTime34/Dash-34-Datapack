@@ -19,7 +19,11 @@ execute positioned 4 -59 146 run summon breeze ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:100 \
+        base:160 \
+    }, \
+    { \
+        id:"minecraft:armor", \
+        base:20 \
     }] \
 }
 execute as @a[advancements={core:defense/mobs/breeze=false}] run advancement grant @s only core:defense/mobs/breeze

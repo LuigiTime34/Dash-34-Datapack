@@ -4,7 +4,7 @@
             "id": "minecraft:creeper_head"
         },
         "title": "Creeper",
-        "description": "Health: 60\nSpeed: 1 BPS\nGold: 10\nDeals bonus damage to player's base if it reaches the end; transforms into Charged Creeper if struck by lightning.",
+        "description": "Health: 60\nSpeed: 1.6 BPS\nGold: 10\nDeals bonus damage to player's base if it reaches the end; transforms into Charged Creeper if struck by lightning.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

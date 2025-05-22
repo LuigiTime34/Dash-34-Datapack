@@ -1,139 +1,139 @@
 Zombie
 Health: 10
-Speed: 0.4 BPS
+Speed: 1.0 BPS
 Gold Reward: 5
 Ability: Your basic, standard mob.
 zombie_head
 
 Skeleton
 Health: 15
-Speed: 0.8 BPS
+Speed: 1.4 BPS
 Gold Reward: 10
 Ability: Wears armor, taking reduced damage from all attacks.
 skeleton_skull
 
 Silverfish
 Health: 20
-Speed: 1.8 BPS
+Speed: 2.4 BPS
 Gold Reward: 8
 Ability: Burrows underground every 5 seconds, regenerating 5 health and becoming immune to damage while burrowed. Immune to bees.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGE5MWRhYjgzOTFhZjVmZGE1NGFjZDJjMGIxOGZiZDgxOWI4NjVlMWE4ZjFkNjIzODEzZmE3NjFlOTI0NTQwIn19fQ==
 
 Spider
 Health: 20
-Speed: 1.2 BPS
+Speed: 1.8 BPS
 Gold Reward: 6
 Ability: Moves fast; its short height makes it immune to bee towers. Carries skeleton.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzVlMjQ4ZGEyZTEwOGYwOTgxM2E2Yjg0OGEwZmNlZjExMTMwMDk3ODE4MGVkYTQxZDNkMWE3YThlNGRiYTNjMyJ9fX0=
 
 Chicken_Jockey
-Health: 65 (Chicken: 40, Tiny Zombie: 25)
-Speed: 0.6 BPS
+Health: 65 (Chicken: 40, Baby Zombie: 25)
+Speed: 1.2 BPS
 Gold Reward: 8
-Ability: A slow chicken carrying a fast tiny zombie; when the chicken dies, tiny zombie continues at higher speed. Both are immune to bees.
+Ability: A slow chicken carrying a fast baby zombie; when the chicken dies, baby zombie continues at higher speed. Both are immune to bees.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2FkM2RkMDA4M2ZhYTY5YTA2MmY5YWQ4MTQxOGY1YTU5NjE4MGJmMTU5MmU0YjhkMTMwM2IyMzBiNjRiYzc5ZSJ9fX0=
 
 Creeper
 Health: 60
-Speed: 1 BPS
+Speed: 1.6 BPS
 Gold Reward: 10
 Ability: Deals bonus damage to player's base if it reaches the end; transforms into Charged Creeper if struck by lightning.
 creeper_head
 
 Charged_Creeper
 Health: 60
-Speed: 0.9 BPS
+Speed: 1.5 BPS
 Gold Reward: 0
 Ability: Created when a Creeper is struck by lightning; disables nearby towers temporarily upon death.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjJjZWIzOWRkNGRlMjRhN2FkZmUyOTFhM2EwY2ZjN2NmNGY2NDVkZTU5YjYwM2ZjZmUwNmM2YjVhMDZlMjYifX19
 
 Witch
 Health: 70
-Speed: 0.7 BPS
+Speed: 1.3 BPS
 Gold Reward: 10
 Ability: Regenerates 8 health and heals nearby enemies for 4 health every four seconds.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmNlNjYwNDE1N2ZjNGFiNTU5MWU0YmNmNTA3YTc0OTkxOGVlOWM0MWUzNTdkNDczNzZlMGVlNzM0MjA3NGM5MCJ9fX0=
 
 Zombified_Piglin
 Health: 25
-Speed: 0.9 BPS
+Speed: 1.5 BPS
 Gold Reward: 3
 Ability: Has a 75% chance to clone itself when damaged, with the clone having the same health as the original; cannot be healed.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VhYmFlY2M1ZmFlNWE4YTQ5Yzg4NjNmZjQ4MzFhYWEyODQxOThmMWEyMzk4ODkwYzc2NWUwYThkZTE4ZGE4YyJ9fX0=
 
 Stray
 Health: 60
-Speed: 1.2 BPS
+Speed: 1.8 BPS
 Gold Reward: 12
 Ability: Speeds up when hit by ice rather then being slowed down.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWUzOTFjNmU1MzVmN2FhNWEyYjZlZTZkMTM3ZjU5ZjJkN2M2MGRlZjg4ODUzYmE2MTFjZWIyZDE2YTdlN2M3MyJ9fX0=
 
 Bogged
 Health: 60
-Speed: 1.2 BPS
+Speed: 1.8 BPS
 Gold Reward: 12
 Ability: Regenerates 2 health per second; doubles movement speed when below half health, returns to normal speed if healed above half.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNiOTAwM2JhMmQwNTU2MmM3NTExOWI4YTYyMTg1YzY3MTMwZTkyODJmN2FjYmFjNGJjMjgyNGMyMWViOTVkOSJ9fX0=
 
 Enderman
 Health: 70
-Speed: 0.9 BPS
+Speed: 1.5 BPS
 Gold Reward: 16
 Ability: Periodically teleports 6 blocks ahead on the path; Has a 50% chance to summon an Endermite when teleporting.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGExMDhhMGE3YTM4Nzg1OWYyYzQ0ZmI5NzAyY2Y3M2RiYWZlZTNlY2ZkYzRmNWRlZjQ2YzBkNjUxYjdhNDlmNyJ9fX0=
 
 Endermite
 Health: 20
-Speed: 2 BPS
+Speed: 2.6 BPS
 Gold Reward: 0
 Ability: Moves fast; its short height makes it immune to bee towers.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJjN2I5ZDM2ZmI5MmI2YmYyOTJiZTczZDMyYzZjNWIwZWNjMjViNDQzMjNhNTQxZmFlMWYxZTY3ZTM5M2EzZSJ9fX0=
 
 Breeze
 Health: 65
-Speed: 1.0 BPS
+Speed: 1.6 BPS
 Gold Reward: 20
-Ability: Deflects projectiles from non-witch archer towers, potentially hitting nearby enemies.
+Ability: Has high armor; immune to all damage from the storm tower.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI3NTcyOGFmN2U2YTI5Yzg4MTI1YjY3NWEzOWQ4OGFlOTkxOWJiNjFmZGMyMDAzMzdmZWQ2YWIwYzQ5ZDY1YyJ9fX0=
 
 Zoglin
 Health: 120
-Speed: 1.1 BPS
+Speed: 1.7 BPS
 Gold Reward: 25
 Ability: Short height makes it immune to bee towers; deals 50 extra damage to your base and is immune to knockback.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2M4YzdjNWQwNTU2Y2Q2NjI5NzE2ZTM5MTg4YjIxZTdjMDQ3NzQ3OWYyNDI1ODdiZjE5ZTBiYzc2YjMyMjU1MSJ9fX0=
 
 Iron_Golem
 Health: 200
-Speed: 0.8 BPS
+Speed: 1.4 BPS
 Gold Reward: 40
 Ability: Makes all towers focus fire on itself, with permanent armor to reduce incoming attacks.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI3MTkxM2EzZmM4ZjU2YmRmNmI5MGE0YjRlZDZhMDVjNTYyY2UwMDc2YjUzNDRkNDQ0ZmIyYjA0MGFlNTdkIn19fQ==
 
 Giant
 Health: 400
-Speed: 0.8
+Speed: 1.4
 Gold Reward: 50
 Ability: Deals 50 extra base damage. Every 12s, jumps into the air and sends a shockwave in all directions, disabling nearby towers.
 zombie_head
 
 Ravager
 Health: 400
-Speed: 1.25 BPS
+Speed: 1.85 BPS
 Gold Reward: 30
 Ability: Carries Illusioner. Can damage itself to speed up for a short period of time. Has a 10% chance to speed up when damaged.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWM3M2UxNmZhMjkyNjg5OWNmMTg0MzQzNjBlMjE0NGY4NGVmMWViOTgxZjk5NjE0ODkxMjE0OGRkODdlMGIyYSJ9fX0=
 
 Illusioner
 Health: 250
-Speed: 0.9 BPS
+Speed: 1.5 BPS
 Gold Reward: 30
 Ability: Every 7.5s, Summons decoy clones of itself. Decoys make towers target itself but can't deal damage to your base.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDYzOWQzMjVmNDQ5NDI1OGE0NzNhOTNhM2I0N2YzNGEwYzUxYjNmY2VhZjU5ZmVlODcyMDVhNWU3ZmYzMWY2OCJ9fX0=
 
 Warden
 Health: 1000
-Speed: 1.5 BPS
+Speed: 2.1 BPS
 Gold Reward: 1
 Ability: Has permanent armor. Every 5s, sends a sonic boom that disables a nearby tower.
 eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM5Yzg0MzQ5NzQyMTY0YTIyOTcxZWU1NDUxNmZmZjkxZDg2OGRhNzJjZGNjZTYyMDY5ZGIxMjhjNDIxNTRiMiJ9fX0=
