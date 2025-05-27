@@ -2,7 +2,7 @@ execute if entity @e[tag=defense-monster,distance=..0.9] positioned as @n[tag=de
 summon illusioner ~ ~ ~ {\
     CustomNameVisible:1b, \
     CustomName:'{"text": "Illusioner Decoy"}', \
-    Health:10, \
+    Health:5, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -14,7 +14,7 @@ summon illusioner ~ ~ ~ {\
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:10 \
+        base:5 \
     }, \
     { \
         id:"minecraft:attack_damage", \
