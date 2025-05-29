@@ -11,6 +11,8 @@ scoreboard objectives modify defense.display displayname ""
 scoreboard objectives setdisplay sidebar defense.display
 effect give @p[gamemode=adventure] minecraft:weakness infinite 0 true
 effect give @p[gamemode=adventure] minecraft:speed infinite 2 true
+attribute @p[gamemode=adventure] entity_interaction_range base set 12
+attribute @p[gamemode=adventure] scale base set 2
 item replace entity @p[gamemode=adventure] hotbar.0 from block -1 -43 0 container.0
 item replace entity @p[gamemode=adventure] hotbar.1 from block -1 -43 0 container.2
 item replace entity @p[gamemode=adventure] hotbar.2 from block -1 -43 0 container.1

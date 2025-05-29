@@ -1,6 +1,6 @@
 # Generate random numbers
-execute as @s store result storage core:defense.storm_raycast x float .01 run random value -20..20
-execute as @s store result storage core:defense.storm_raycast y float .01 run random value -20..20
+execute as @s store result storage core:defense.storm_raycast x float .01 run random value -30..30
+execute as @s store result storage core:defense.storm_raycast y float .01 run random value -30..30
 
 execute as @s run particle electric_spark ~ ~ ~ 0 0 0 0 0
 

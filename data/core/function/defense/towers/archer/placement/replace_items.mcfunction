@@ -1,2 +1,0 @@
-execute as @p[gamemode=adventure] unless items entity @s weapon.mainhand * run return run item replace entity @s weapon.mainhand from block -1 -43 0 container.0
-execute as @p[gamemode=adventure] unless items entity @s weapon.offhand * run item replace entity @s weapon.offhand from block -1 -43 0 container.0

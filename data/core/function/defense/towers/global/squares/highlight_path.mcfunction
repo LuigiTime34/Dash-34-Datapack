@@ -1,0 +1,2 @@
+$execute rotated $(rotation) 0 positioned ^ ^ ^5 positioned ~ -59 ~ run data merge entity @n[tag=defense.path_highlight] {Glowing:1b}
+#$execute rotated $(rotation) 0 positioned ^ ^ ^5 run particle flame ~ -59 ~

@@ -2,6 +2,7 @@ tag @e[tag=defense.panda,distance=..3.5] add dead-panda
 execute as @e[tag=dead-panda] at @s run tp @s ~ ~-300 ~
 execute as @e[tag=dead-panda] at @s run kill @s
 kill @n[tag=panda-center-marker]
+kill @e[tag=defense.panda_interaction,distance=..3.5]
 $place template core:defense/towers/panda/upgrade$(building) ~$(x_offset) ~ ~$(z_offset) $(rotation)
 $data modify entity @n[tag=$(building)] data.x_offset set from entity @s data.x_offset
 $data modify entity @n[tag=$(building)] data.z_offset set from entity @s data.z_offset
@@ -9,7 +10,6 @@ $data modify entity @n[tag=$(building)] data.rotation set from entity @s data.ro
 $scoreboard players set @n[tag=$(building)] defense.money $(cost)
 kill @s
 kill @n[tag=tower-barrel-display]
-kill @e[tag=defense.panda_interaction,distance=..3.5]
 execute as @n[tag=tower-barrel-marker] run function core:defense/towers/global/rotate_back
 execute as @n[tag=defense.panda] run function core:defense/towers/global/rotate_back
 execute as @n[tag=tower-barrel-marker] at @s positioned ^ ^ ^1.5 run tp @p[gamemode=adventure] ~ -59 ~

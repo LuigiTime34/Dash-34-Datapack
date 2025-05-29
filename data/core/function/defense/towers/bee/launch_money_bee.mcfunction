@@ -3,7 +3,7 @@ execute as @n[tag=defense.bee_deployer] at @s anchored eyes positioned ^ ^ ^ pos
 execute if score $bee-target defense.bee_tower matches 0 run return fail
 
 scoreboard players set $bee-target defense.bee_tower 0
-execute as @n[tag=defense.bee_deployer] at @s anchored eyes positioned ^ ^ ^ run particle happy_villager ^-1.5 ^ ^ 0.5 0.75 0.5 0 15
+execute as @n[tag=defense.bee_deployer] at @s run particle wax_on ~ ~ ~ 0.5 0.75 0.5 0 15
 
 $execute at @n[tag=defense.bee_deployer] run summon text_display ~ ~ ~ {Tags:["defense.bee_display","defense.money-bee"],teleport_duration:1,Passengers:[{id:"minecraft:bee",HasNectar:1b,NoAI:1b,Tags:["defense.bee"],Health:$(damage),Invulnerable:1b,attributes:[{id:"attack_knockback",base:$(speed)},{id:"attack_damage",base:$(money)}]},{id:"minecraft:block_display",block_state:{Name:"minecraft:oxeye_daisy"},Tags:["defense.bee_flower"]}]}
 execute as @n[type=block_display,tag=defense.bee_flower] run function core:defense/towers/bee/translate_flower

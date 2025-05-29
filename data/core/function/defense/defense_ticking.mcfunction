@@ -194,6 +194,12 @@ execute if score $recent_hit defense.damage matches 0 run function core:defense/
 # ====================================================================================================================
 # Tower Placement
 execute as @p[gamemode=adventure] store result score @s defense.rotation run data get entity @s Rotation[0]
+execute as @e[tag=defense.tower_placer] if data entity @s interaction at @s unless entity @n[tag=panda-center-marker,distance=..3.5] on target if predicate core:defense/holding_panda positioned ~ -59 ~ run function core:defense/towers/panda/placement/panda_init
+execute as @e[tag=defense.tower_placer] if data entity @s interaction at @s unless entity @n[tag=bee-center-marker,distance=..3.5] on target if predicate core:defense/holding_bee positioned ~ -59 ~ run function core:defense/towers/bee/placement/bee_init
+execute as @e[tag=defense.tower_placer] if data entity @s interaction at @s unless entity @n[tag=storm-center-marker,distance=..3.5] on target if predicate core:defense/holding_storm positioned ~ -59 ~ run function core:defense/towers/storm/placement/storm_init
+# Remove interaction data
+execute as @e[tag=defense.tower_placer] if data entity @s interaction run data remove entity @s interaction
+
 # Tower Upgrade Ticking Commands:
 execute as @p[gamemode=adventure] at @s at @n[tag=tower-barrel-marker,tag=open] run function core:defense/towers/global/tick
 execute as @e[tag=tower-barrel-marker,type=marker,tag=!open] at @s if block ~ ~ ~ minecraft:barrel[open=true] run tag @s add open
@@ -219,120 +225,31 @@ execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt=!{Glowing:1
 execute at @a[gamemode=adventure] as @n[tag=tower-barrel-display,nbt={Glowing:1b},distance=10..] run data modify entity @s Glowing set value 0b
 # Failsafe to make sure they are always on the barrel
 execute as @e[tag=tower-barrel-display] at @s unless entity @n[tag=tower-barrel-marker,distance=..0.1] run tp @s @n[tag=tower-barrel-marker,distance=..3]
-# ====================================================================================================================
-#                  _               
-#                 | |              
-#    __ _ _ __ ___| |__   ___ _ __ 
-#   / _` | '__/ __| '_ \ / _ \ '__|
-#  | (_| | | | (__| | | |  __/ |   
-#   \__,_|_|  \___|_| |_|\___|_|   
-# ====================================================================================================================
-# Rotation for the skeletons (and pillagers and witches for the later ones)
-execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..9.5] feet
-execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..11.5] feet
-execute as @e[tag=archer-skellie_witch2] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
-execute as @e[tag=archer-skellie_witch_final] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..23.5] feet
-execute as @e[tag=archer-skellie_pillager2] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..13.5] feet
-execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
 
-execute as @e[tag=archer-skellie1] at @s positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..9.5] run function core:defense/towers/global/rotate_back
-execute as @e[tag=archer-skellie_pillager1] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..11.5] run function core:defense/towers/global/rotate_back
-execute as @e[tag=archer-skellie_witch2] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..18.5] run function core:defense/towers/global/rotate_back
-execute as @e[tag=archer-skellie_witch_final] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..23.5] run function core:defense/towers/global/rotate_back
-execute as @e[tag=archer-skellie_pillager2] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..13.5] run function core:defense/towers/global/rotate_back
-execute as @e[tag=archer-skellie_pillager_final] at @s positioned ~ -59 ~ unless entity @e[tag=defense-monster,distance=..18.5] run function core:defense/towers/global/rotate_back
+# Range preview
+execute as @p[gamemode=adventure] at @s run tag @e[tag=defense.tower_placer,distance=..10] add defense.tower_placer_looker
+execute as @p[gamemode=adventure] at @s run tag @e[tag=defense.tower_placer,distance=10..] remove defense.tower_placer_looker
+execute as @p[gamemode=adventure,tag=!defense.played_sound] if predicate core:defense/looking_at_placer if predicate core:defense/holding_placer as @a at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 2 1
+execute as @p[gamemode=adventure] if predicate core:defense/looking_at_placer run tag @s add defense.played_sound
+execute as @p[gamemode=adventure] unless predicate core:defense/looking_at_placer run tag @s remove defense.played_sound
 
-# Cooldown (again, since the archer towers are just special like that and I'm too lazy to make it better)
-execute as @e[tag=archer-skeleton] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
-execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+# execute as @p[gamemode=adventure,tag=!defense.played_sound2] unless predicate core:defense/looking_at_placer if predicate core:defense/holding_placer as @a at @s run playsound minecraft:item.lodestone_compass.lock master @s ~ ~ ~ 2 1
+# execute as @p[gamemode=adventure] unless predicate core:defense/looking_at_placer run tag @s add defense.played_sound2
+# execute as @p[gamemode=adventure] if predicate core:defense/looking_at_placer run tag @s remove defense.played_sound2
 
+execute as @p[gamemode=adventure] if predicate core:defense/holding_placer as @e[tag=defense.tower_square,nbt=!{Glowing:1b}] at @s unless entity @n[tag=tower-barrel-marker,distance=..3.5] run data merge entity @s {Glowing:1b}
+execute as @p[gamemode=adventure] unless predicate core:defense/holding_placer as @e[tag=defense.tower_square,nbt={Glowing:1b}] at @s run data merge entity @s {Glowing:0b}
+# Make path higlights back to not glowing for the bees
+execute as @e[tag=defense.path_highlight,nbt={Glowing:1b}] run data merge entity @s {Glowing:0b}
 
-# Base
-execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot {"cooldown":"100","damage":"5","range":"9.5"}
+execute as @e[tag=defense.tower_square,tag=defense.green] run team leave @s
+execute as @e[tag=defense.tower_square,tag=defense.green] run tag @s remove defense.green
+execute unless entity @e[tag=defense.green] as @a[gamemode=adventure] if predicate core:defense/holding_placer at @s anchored eyes positioned ^ ^ ^ anchored feet run function core:defense/towers/global/squares/raycast/start_ray
 
-# First Upgrade
-execute as @e[tag=archer-skellie_pillager1] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
+#execute as @e[tag=defense.tower_square,tag=defense.green] at @s run rotate @s ~6 ~
+#execute as @e[tag=defense.tower_square,tag=!defense.green] run rotate @s 0 0
+execute as @e[tag=defense.tower_square,tag=!defense.green] run data merge entity @s {transformation:{scale:[6.0f,6.0f,0.5f]},interpolation_duration:2,start_interpolation:0,item:{id:"white_stained_glass_pane"}}
 
-# Pillager Upgrade 1
-execute as @e[tag=archer-skellie_pillager2] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot_multishot {"cooldown":"60","damage":"7","range":"13.5"}
-
-# Pillager Upgrade 2
-execute as @e[tag=archer-skellie_pillager_final] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/shoot_multishot {"cooldown":"55","damage":"10","range":"18.5"}
-
-# Witch Upgrade 1
-execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}
-
-# Witch Upgrade 2
-execute as @e[tag=archer-skellie_witch_final] if score @s defense.towers matches 1 at @s run function core:defense/towers/archer/potion {"cooldown":"50","damage":"12","range":"23.5"}
-
-# Witch/Wizard ticking
-execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players set @s defense.archer_slowness 15
-execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness"}]}] run tag @s add defense.slowed
-execute as @e[tag=defense-monster,tag=defense.slowed,nbt=!{active_effects:[{id:"minecraft:slowness"}]}] run scoreboard players set @s defense.archer_slowness 15
-execute as @e[tag=defense-monster,tag=defense.slowed,nbt=!{active_effects:[{id:"minecraft:slowness"}]}] run tag @s remove defense.slowed
-
-execute as @e[tag=defense-monster,tag=!defense.weakened,nbt={active_effects:[{id:"minecraft:weakness"}]}] run tag @s add defense.weakened
-execute as @e[tag=defense-monster,tag=defense.weakened,nbt=!{active_effects:[{id:"minecraft:weakness"}]}] run tag @s remove defense.weakened
-# ====================================================================================================================
-#        _                           _        _ 
-#       | |                         | |      | |
-#    ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |
-#   / _ \ |/ _ \ '_ ` _ \ / _ \ '_ \| __/ _` | |
-#  |  __/ |  __/ | | | | |  __/ | | | || (_| | |
-#   \___|_|\___|_| |_| |_|\___|_| |_|\__\__,_|_|
-# ====================================================================================================================
-# Base
-execute as @e[tag=element-center-marker,tag=!fire1,tag=!fire2,tag=!wind1,tag=!wind2,tag=!ice1,tag=!ice2,tag=!earth1,tag=!earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_base {"fire_damage":"3","range":"9.5","ice_damage":"3","earth_damage":"7","wind_damage":"2","ignite_time":"60","freeze_time":"150","freeze_power":"20","cooldown":"100","blow_power":"0.3"}
-# Base different particles
-execute as @e[tag=element-center-marker,tag=!fire1,tag=!fire2,tag=!wind1,tag=!wind2,tag=!ice1,tag=!ice2,tag=!earth1,tag=!earth2] if score @s defense.towers matches 37 run data modify entity @s data.particle_type set value flame
-execute as @e[tag=element-center-marker,tag=!fire1,tag=!fire2,tag=!wind1,tag=!wind2,tag=!ice1,tag=!ice2,tag=!earth1,tag=!earth2] if score @s defense.towers matches 74 run data modify entity @s data.particle_type set value snowflake
-execute as @e[tag=element-center-marker,tag=!fire1,tag=!fire2,tag=!wind1,tag=!wind2,tag=!ice1,tag=!ice2,tag=!earth1,tag=!earth2] if score @s defense.towers matches 111 run data modify entity @s data.particle_type set value small_gust
-execute as @e[tag=element-center-marker,tag=!fire1,tag=!fire2,tag=!wind1,tag=!wind2,tag=!ice1,tag=!ice2,tag=!earth1,tag=!earth2] if score @s defense.towers matches 148 run data modify entity @s data.particle_type set value happy_villager
-
-# Fire 1
-execute as @e[tag=element-center-marker,tag=fire1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_fire_med {"fire_damage":"10","range":"13.5","ice_damage":"1","earth_damage":"3","wind_damage":"0","ignite_time":"80","freeze_time":"40","freeze_power":"10","cooldown":"100","blow_power":"0.2"}
-# Fire 2
-execute as @e[tag=element-center-marker,tag=fire2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_fire_high {"fire_damage":"15","range":"18.5","cooldown":"80"}
-# Fire ticking
-execute as @e[tag=defense-monster] at @s if entity @n[type=blaze,tag=element-blaze,distance=..1] run data modify entity @s Fire set value 100
-execute as @e[tag=element-blaze] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 60
-execute as @e[tag=element-blaze] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
-execute as @e[tag=element-blaze] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/fire/kill_volcano
-execute at @e[tag=element-blaze] run particle minecraft:lava ~ ~ ~ 0.4 0.6 0.4 0 2
-# execute at @e[tag=element-blaze] run particle dust{color:[1.0,0.48,0.0],scale:2} ~ ~ ~ 0.3 0.6 0.3 0 5
-# execute at @e[tag=element-blaze] run particle dust{color:[1.0,0.3,0.0],scale:2} ~ ~ ~ 0.3 0.6 0.3 0 3
-
-# Ice 1
-execute as @e[tag=element-center-marker,tag=ice1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_ice_med {"fire_damage":"2","range":"10.5","ice_damage":"5","earth_damage":"3","wind_damage":"0","ignite_time":"20","freeze_time":"60","freeze_power":"40","cooldown":"120","blow_power":"0.2"}
-# Ice 2
-execute as @e[tag=element-center-marker,tag=ice2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_ice_high {"ice_damage":"7.5","range":"15.5","cooldown":"100"}
-# Ice Ticking
-execute at @e[tag=element-snowstorm] run particle snowflake ~ ~ ~ 0.5 1 0.5 0 30
-execute as @e[tag=defense-monster,tag=!defense-stray] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.ice_power 60
-execute as @e[tag=defense-monster] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.freeze_timer 60
-execute as @e[tag=defense-monster,tag=defense-stray] at @s if entity @n[tag=element-snowstorm,distance=..3] run scoreboard players set @s defense.element.ice_power -30
-
-execute as @e[tag=element-snowstorm] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 60
-execute as @e[tag=element-snowstorm] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
-execute as @e[tag=element-snowstorm] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/ice/kill_snowstorm
-# Timer
-execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1.. run scoreboard players remove @s defense.element.freeze_timer 1
-execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1.. at @s run particle snowflake ~ ~ ~ 0.2 1 0.2 0 5
-execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1 run scoreboard players set @s defense.element.ice_power 0
-
-# Wind 1
-execute as @e[tag=element-center-marker,tag=wind1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_wind_med {"fire_damage":"2","range":"15.5","ice_damage":"2","earth_damage":"3","wind_damage":"4","ignite_time":"20","freeze_time":"20","freeze_power":"10","cooldown":"125","blow_power":"0.6"}
-# Wind 2
-execute as @e[tag=element-center-marker,tag=wind2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_wind_high {"wind_damage":"7.5","range":"23.5","blow_power":"1.5","cooldown":"100"}
-
-# Earth 1
-execute as @e[tag=element-center-marker,tag=earth1] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_med {"fire_damage":"2","range":"11.5","ice_damage":"2","earth_damage":"7.5","wind_damage":"0","ignite_time":"20","freeze_time":"20","freeze_power":"10","cooldown":"110","blow_power":"0.2"}
-# Earth 2
-execute as @e[tag=element-center-marker,tag=earth2] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_earth_high {"earth_damage":"10","range":"12.5","cooldown":"80"}
-# Earth Ticking
-execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
-execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}
-execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill @s
 # ====================================================================================================================
 #   _               
 #  | |              

@@ -15,8 +15,8 @@ $execute unless entity @n[tag=defense-monster,distance=..$(chain_radius),tag=!de
 # Otherwise, continue the chain by doing raycast towards and them running the function again
 tag @n[tag=defense-monster,tag=!defense.in_chain,tag=!defense.chain_starter] add defense.chain_target
 # Generate random numbers before raycast
-execute as @s store result storage core:defense.storm_raycast x float .01 run random value -20..20
-execute as @s store result storage core:defense.storm_raycast y float .01 run random value -20..20
+execute as @s store result storage core:defense.storm_raycast x float .01 run random value -30..30
+execute as @s store result storage core:defense.storm_raycast y float .01 run random value -30..30
 execute anchored eyes run function core:defense/towers/storm/chain/raycast with storage core:defense.storm_raycast
 
 execute as @n[tag=defense-monster,tag=!defense.in_chain,tag=!defense.chain_starter] at @s run function core:defense/towers/storm/chain/chain_loop with storage core:defense.storm_raycast

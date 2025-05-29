@@ -1,0 +1,1 @@
+execute as @e[tag=defense.panda] run data modify entity @s NoAI set value 1b

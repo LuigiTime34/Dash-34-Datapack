@@ -1,6 +1,8 @@
-function core:defense/towers/storm/placement/replace_items
+#function core:defense/towers/storm/placement/replace_items
 execute unless score $money defense.money matches 50.. run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 2 1
 execute unless score $money defense.money matches 50.. run return run tellraw @a {"text": "Not enough gold!","color": "gold"}
+
+tag @n[tag=defense.tower_square] add defense.has_tower
 
 scoreboard players remove $money defense.money 50
 
