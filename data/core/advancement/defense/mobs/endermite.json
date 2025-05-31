@@ -14,7 +14,7 @@
             }
         },
         "title": "Endermite",
-        "description": "Health: 20\nSpeed: 2.6 BPS\nGold: 0\nMoves fast; its short height makes it immune to bee towers.",
+        "description": "Health: 20\nSpeed: 3.0 BPS\nGold: 0\nMoves fast; its short height makes it immune to bee towers.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

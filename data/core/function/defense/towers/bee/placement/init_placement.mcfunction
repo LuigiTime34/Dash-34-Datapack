@@ -12,5 +12,6 @@ execute as @n[tag=tower-barrel-marker] at @s positioned ^ ^ ^1.8 run summon mine
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ cyan_wool run rotate @s 0 0
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ blue_wool run rotate @s -90 0
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ light_blue_wool run rotate @s -180 0
+execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ purple_wool run rotate @s 90 0
 playsound minecraft:block.smithing_table.use master @a ~ ~2 ~ 1 0.7
 particle minecraft:end_rod ~ ~2 ~ .2 .1 .2 0.5 50

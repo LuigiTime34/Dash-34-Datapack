@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon zoglin ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:170 \
+        base:250 \
     }], \
     PersistenceRequired:1b \
 }

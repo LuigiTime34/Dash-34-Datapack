@@ -4,7 +4,7 @@
             "id": "minecraft:zombie_head"
         },
         "title": "Zombie",
-        "description": "Health: 10\nSpeed: 1.0 BPS\nGold: 5\nYour basic, standard mob.",
+        "description": "Health: 10\nSpeed: 1.4 BPS\nGold: 5\nYour basic, standard mob.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

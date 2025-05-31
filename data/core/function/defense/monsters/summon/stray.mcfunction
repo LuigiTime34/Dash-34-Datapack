@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon stray ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:200 \
+        base:280 \
     }], \
     PersistenceRequired:1b \
 }

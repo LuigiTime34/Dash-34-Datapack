@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon enderman ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:150 \
+        base:230 \
     }], \
     PersistenceRequired:1b \
 }

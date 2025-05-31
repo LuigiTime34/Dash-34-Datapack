@@ -15,7 +15,7 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:140 \
+        base:220 \
     }, \
     { \
         id:"minecraft:armor", \

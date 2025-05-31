@@ -17,7 +17,7 @@ summon endermite ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:260 \
+        base:340 \
     }], \
     PersistenceRequired:1b \
 }

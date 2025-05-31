@@ -94,8 +94,8 @@ execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged
 
 # Silverfish
 execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/silverfish
-execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 100 run function core:defense/monsters/abilities/silverfish2
+execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/silverfish2
+execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 41 run function core:defense/monsters/abilities/silverfish2
 
 # Enderman
 execute as @e[tag=defense-monster,tag=defense-enderman] if score @s defense.abilities matches 7.. run scoreboard players remove @s defense.abilities 1
@@ -334,22 +334,22 @@ execute as @e[tag=panda-center-marker,tag=!upgrade1,tag=!upgrade_shoot1,tag=!upg
 # Upgrade 1
 execute as @e[tag=panda-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"60","damage":"5","range":"11.5","age":"0","leaves":"small","scale":"1.0","translation":"-0.5"}
 # Shoot upgrade 1
-execute as @e[tag=panda-center-marker,tag=upgrade_shoot1,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"10","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
-execute as @e[tag=panda-center-marker,tag=upgrade_shoot1,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"5","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot1,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"10","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot1,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"5","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
 execute as @e[tag=panda-center-marker,tag=upgrade_shoot1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"70","damage":"4","range":"13.5","age":"1","leaves":"large","scale":"1.0","translation":"-0.5"}
 # Shoot upgrade 2
-execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 20 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"20","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
-execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 15 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"15","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
-execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"10","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
-execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"5","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 20 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"20","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 15 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"15","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"10","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
+execute as @e[tag=panda-center-marker,tag=upgrade_shoot2,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"5","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
 execute as @e[tag=panda-center-marker,tag=upgrade_shoot2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"70","damage":"4","range":"15.5","age":"1","leaves":"large","scale":"1.5","translation":"-0.75"}
 
 # BamBOOM upgrade 1
 execute as @e[tag=panda-center-marker,tag=upgrade_bamboom1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"70","damage":"8","range":"12.5","bomb_range":"3"}
 
 # BamBOOM upgrade 2
-execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"10","damage":"8","range":"13.5","bomb_range":"3"}
-execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2,tag=!defense.giant_disabled,tag=!defense.warden_disabled] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"5","damage":"8","range":"13.5","bomb_range":"3"}
+execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 10 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"10","damage":"8","range":"13.5","bomb_range":"3"}
+execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2,tag=!defense.giant_disabled,tag=!defense.warden_disabled,tag=!defense.creeper_disabled] if score @s defense.towers matches 5 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"5","damage":"8","range":"13.5","bomb_range":"3"}
 execute as @e[tag=panda-center-marker,tag=upgrade_bamboom2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_bomb {"cooldown":"80","damage":"8","range":"13.5","bomb_range":"3"}
 
 # TNT ticking

@@ -4,7 +4,7 @@
             "id": "minecraft:skeleton_skull"
         },
         "title": "Skeleton",
-        "description": "Health: 15\nSpeed: 1.4 BPS\nGold: 10\nWears armor, taking reduced damage from all attacks.",
+        "description": "Health: 15\nSpeed: 1.8 BPS\nGold: 10\nWears armor, taking reduced damage from all attacks.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

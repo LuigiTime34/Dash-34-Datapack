@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon witch ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:110 \
+        base:190 \
     }], \
     PersistenceRequired:1b \
 }

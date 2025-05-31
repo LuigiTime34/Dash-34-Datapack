@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:180 \
+        base:260 \
     }], \
     PersistenceRequired:1b, \
     Passengers:[ \ 
@@ -44,7 +44,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
         }, \
         { \
             id:"minecraft:attack_knockback", \
-            base:-5000 \
+            base:-4920 \
         }], \
         PersistenceRequired:1b, \
         ArmorItems:[{id:"minecraft:iron_boots"},{id:"minecraft:iron_leggings"},{id:"minecraft:iron_chestplate"},{id:"minecraft:iron_helmet"}] \

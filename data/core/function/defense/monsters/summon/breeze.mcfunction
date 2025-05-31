@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon breeze ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:160 \
+        base:240 \
     }, \
     { \
         id:"minecraft:armor", \

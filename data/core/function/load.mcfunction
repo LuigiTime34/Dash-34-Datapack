@@ -60,7 +60,7 @@ team add Players
 team add Monsters
 team add green
 execute as @e[tag=defense.panda] run data modify entity @s NoAI set value 0b
-schedule function core:defense/towers/panda/reset_pos 1t
+schedule function core:defense/towers/panda/remove_ai 1s
 
 tellraw @a {"text": "Datapack Has Loaded Succesfully!","color": "green","bold": true}
 playsound minecraft:block.note_block.xylophone master @a ~ ~ ~ 100000000000

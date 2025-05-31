@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:160 \
+        base:240 \
     }], \
     PersistenceRequired:1b \
 }

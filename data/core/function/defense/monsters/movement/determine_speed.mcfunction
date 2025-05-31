@@ -1,9 +1,9 @@
 # Get any modifiers to the enemy's speed and set the speed accordingly
 scoreboard players reset @s defense.slowness
-scoreboard players operation @s defense.slowness += @s defense.element.ice_power
+#scoreboard players operation @s defense.slowness += @s defense.element.ice_power
 scoreboard players operation @s defense.slowness += @s defense.storm.freeze_power
 scoreboard players operation @s defense.slowness += @s defense.bee.honey_slowness
-scoreboard players operation @s defense.slowness += @s defense.archer_slowness
+#scoreboard players operation @s defense.slowness += @s defense.archer_slowness
 scoreboard players operation @s[tag=defense-ravager] defense.slowness -= $ravager_speed defense.speed
 # Make the enemy slower if there's a modifier   
 scoreboard players operation @s defense.speed -= @s defense.slowness

@@ -19,7 +19,7 @@ execute positioned 4 -59 146 run summon zombified_piglin ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:150 \
+        base:230 \
     }, \
     { \
         id:"minecraft:armor", \
