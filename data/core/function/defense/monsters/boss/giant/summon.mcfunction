@@ -3,7 +3,7 @@ title @a title {"text":"Boss has spawned!", "font":"retitled_titles:regular", "c
 playsound entity.wither.spawn master @a ~ ~ ~ 1000000000000000000 0.7
 execute positioned 4 -59 146 run summon giant ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:400, \
+    Health:500, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -14,7 +14,7 @@ execute positioned 4 -59 146 run summon giant ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:400 \
+        base:500 \
     }, \
     { \
         id:"minecraft:attack_damage", \

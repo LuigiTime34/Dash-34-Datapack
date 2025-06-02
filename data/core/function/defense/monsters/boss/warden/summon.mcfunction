@@ -26,10 +26,9 @@ execute positioned 4 -59 146 run summon warden ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:armor", \
-        base:0 \
+        base:15 \
     }], \
     PersistenceRequired:1b \
 }
-# Removed armor of 15
 execute as @a[advancements={core:defense/mobs/warden=false}] run advancement grant @s only core:defense/mobs/warden
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-warden] defense.abilities 200

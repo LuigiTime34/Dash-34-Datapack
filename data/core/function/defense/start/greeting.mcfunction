@@ -3,4 +3,5 @@ execute as @a at @s run playsound minecraft:sound.custom.dialouge.4thpuzzle_gree
 
 function core:defense/monsters/castle/reset
 #function core:defense/items/tnt/reset_position
-function core:defense/monsters/waves/reset_towers
+#function core:defense/monsters/waves/reset_towers
+execute as @e[tag=defense.blocker_marker] at @s run function core:defense/blockers/get_blocker

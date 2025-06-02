@@ -14,7 +14,7 @@
             }
         },
         "title": "Zoglin",
-        "description": "Health: 120\nSpeed: 2.1 BPS\nGold: 25\nShort height makes it immune to bee towers; deals 50 extra damage to your base and is immune to knockback.",
+        "description": "Health: 140\nSpeed: 2.5 BPS\nGold: 25\nShort height makes it immune to bee towers; deals 50 extra damage to your base and is immune to knockback.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

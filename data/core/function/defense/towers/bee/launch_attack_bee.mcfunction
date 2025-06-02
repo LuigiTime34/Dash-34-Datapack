@@ -1,4 +1,3 @@
-$scoreboard players set @s defense.towers $(cooldown)
 execute as @n[tag=defense.bee_deployer] at @s anchored eyes positioned ^ ^ ^ positioned ~ -58.5 ~ anchored feet run function core:defense/towers/bee/raycast/start_ray
 execute if score $bee-target defense.bee_tower matches 0 run return run scoreboard players set @s defense.towers 2
 

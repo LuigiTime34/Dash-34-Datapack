@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon silverfish ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:20, \
+    Health:30, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon silverfish ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:20 \
+        base:30 \
     }, \
     { \
         id:"minecraft:attack_damage", \

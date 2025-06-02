@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:65, \
+    Health:75, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:65 \
+        base:75 \
     }, \
     { \
         id:"minecraft:attack_damage", \

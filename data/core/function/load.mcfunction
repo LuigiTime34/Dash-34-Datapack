@@ -52,6 +52,7 @@ scoreboard objectives add defense.panda_boo_delay dummy
 scoreboard objectives add defense.panda_boo_damage dummy
 scoreboard objectives add defense.panda_bomb_range dummy
 scoreboard objectives add UUID dummy
+scoreboard objectives add defense.blockers dummy
 
 team add defense_enemies
 bossbar add defense.mobs_left ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]
@@ -59,8 +60,6 @@ bossbar add defense.mobs_left ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"
 team add Players
 team add Monsters
 team add green
-execute as @e[tag=defense.panda] run data modify entity @s NoAI set value 0b
-schedule function core:defense/towers/panda/remove_ai 1s
 
 tellraw @a {"text": "Datapack Has Loaded Succesfully!","color": "green","bold": true}
 playsound minecraft:block.note_block.xylophone master @a ~ ~ ~ 100000000000

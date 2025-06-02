@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:20, \
+    Health:30, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:20 \
+        base:30 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -25,7 +25,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     Passengers:[ \ 
         {id:skeleton, \
         CustomNameVisible:1b, \
-        Health:15, \
+        Health:25, \
         NoAI:1b, \
         Rotation:[90f, \
         0.0f], \
@@ -36,7 +36,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
         Team:defense_enemies, \
         attributes:[{ \
             id:"max_health", \
-            base:15 \
+            base:25 \
         }, \
         { \
             id:"minecraft:attack_damage", \

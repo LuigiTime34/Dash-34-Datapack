@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon zombie ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:10, \
+    Health:20, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon zombie ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:10 \
+        base:20 \
     }, \
     { \
         id:"minecraft:attack_damage", \

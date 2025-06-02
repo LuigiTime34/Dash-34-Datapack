@@ -1,5 +1,4 @@
-scoreboard players set @s defense.abilities 100
-execute if entity @s[tag=defense-monster] run return fail
+execute if entity @s[tag=defense-monster] run return run scoreboard players remove @s defense.abilities 40
 tp @s ~ ~1 ~
 tag @s add defense-monster
 data modify entity @s Invulnerable set value 0b

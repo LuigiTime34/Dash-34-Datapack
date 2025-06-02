@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon skeleton ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:15, \
+    Health:25, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon skeleton ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:15 \
+        base:25 \
     }, \
     { \
         id:"minecraft:attack_damage", \

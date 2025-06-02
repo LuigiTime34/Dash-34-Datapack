@@ -14,7 +14,7 @@
             }
         },
         "title": "Charged Creeper",
-        "description": "Health: 60\nSpeed: 1.9 BPS\nGold: 10\nCreated when a Creeper is struck by lightning; disables nearby towers temporarily upon death.",
+        "description": "Health: 70\nSpeed: 2.3 BPS\nGold: 10\nCreated when a Creeper is struck by lightning; disables nearby towers temporarily upon death.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

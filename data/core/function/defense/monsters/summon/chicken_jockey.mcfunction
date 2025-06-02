@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon chicken ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:40, \
+    Health:50, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon chicken ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:40 \
+        base:50 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -24,7 +24,7 @@ execute positioned 4 -59 146 run summon chicken ~ ~ ~ { \
     Passengers:[{ \
         id:"minecraft:zombie", \
         CustomNameVisible:0b, \
-        Health:25, \
+        Health:35, \
         NoAI:1b, \
         Rotation:[90f, \
         0.0f], \
@@ -34,7 +34,7 @@ execute positioned 4 -59 146 run summon chicken ~ ~ ~ { \
         Team:defense_enemies, \
         attributes:[{ \
             id:"max_health", \
-            base:25 \
+            base:35 \
         }, \
         { \
             id:"minecraft:attack_damage", \

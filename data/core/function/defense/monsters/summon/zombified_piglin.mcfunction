@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon zombified_piglin ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:25, \
+    Health:35, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon zombified_piglin ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:25 \
+        base:35 \
     }, \
     { \
         id:"minecraft:attack_damage", \

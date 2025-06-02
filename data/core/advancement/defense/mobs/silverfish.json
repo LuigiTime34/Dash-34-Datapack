@@ -14,7 +14,7 @@
             }
         },
         "title": "Silverfish",
-        "description": "Health: 20\nSpeed: 2.8 BPS\nGold: 8\nBurrows underground for 2s every 3s, regenerating 3 health and becoming immune to damage. Immune to bees.",
+        "description": "Health: 30\nSpeed: 3.2 BPS\nGold: 8\nBurrows underground for 2s every 3s, regenerating 3 health and becoming immune to damage. Immune to bees.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

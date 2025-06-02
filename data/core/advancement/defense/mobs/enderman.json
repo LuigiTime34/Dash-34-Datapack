@@ -14,7 +14,7 @@
             }
         },
         "title": "Enderman",
-        "description": "Health: 70\nSpeed: 1.9 BPS\nGold: 16\nPeriodically teleports 6 blocks ahead on the path; Has a 50% chance to summon an Endermite when teleporting.",
+        "description": "Health: 90\nSpeed: 2.3 BPS\nGold: 16\nPeriodically teleports 6 blocks ahead on the path; Has a 50% chance to summon an Endermite when teleporting.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

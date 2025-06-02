@@ -6,7 +6,7 @@ playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 100000000000 0.8
 execute store result score @s defense.damage run data get entity @s Health
 execute store result score @s defense.extra_damage run attribute @s attack_damage get
 scoreboard players operation @s defense.damage += @s defense.extra_damage
-execute if entity @s[tag=defense.weakened] run function core:defense/towers/archer/witch/witch_weaken
+#execute if entity @s[tag=defense.weakened] run function core:defense/towers/archer/witch/witch_weaken
 
 scoreboard players set $recent_hit defense.damage 20
 scoreboard players operation $recent_damage defense.damage += @s defense.damage

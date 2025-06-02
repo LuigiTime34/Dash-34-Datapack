@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon breeze ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:65, \
+    Health:85, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon breeze ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:65 \
+        base:85 \
     }, \
     { \
         id:"minecraft:attack_damage", \
