@@ -5,6 +5,7 @@ execute if score #hit vdvcasttemp matches 0 positioned ~-0.05 ~-0.05 ~-0.05 as @
 #Run a function if a block was successfully detected.
 
 execute unless block ~ ~ ~ #core:blocks run function core:defense/towers/bee/raycast/hit_block
+execute if block ~ -60 ~ grass_block run function core:defense/towers/bee/raycast/hit_block
 scoreboard players add #distance vdvcasttemp 1
 
 #Advance forward and run the ray again if no entity and/or block was found.

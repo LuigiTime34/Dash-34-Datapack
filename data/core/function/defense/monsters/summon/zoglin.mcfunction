@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon zoglin ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:140, \
+    Health:150, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon zoglin ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:140 \
+        base:150 \
     }, \
     { \
         id:"minecraft:attack_damage", \
@@ -24,3 +24,4 @@ execute positioned 4 -59 146 run summon zoglin ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/zoglin=false}] run advancement grant @s only core:defense/mobs/zoglin
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-zoglin] defense.distance 0

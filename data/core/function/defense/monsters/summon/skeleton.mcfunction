@@ -26,3 +26,4 @@ execute positioned 4 -59 146 run summon skeleton ~ ~ ~ { \
 }
 execute as @a[advancements={core:defense/mobs/skeleton=false}] run advancement grant @s only core:defense/mobs/skeleton
 # execute positioned 4 -59 146 run data modify entity @n[tag=defense-skeleton] ArmorItems set value [{id:"minecraft:iron_boots"},{id:"minecraft:iron_leggings"},{id:"minecraft:iron_chestplate"},{id:"minecraft:iron_helmet"}]
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-skeleton] defense.distance 0

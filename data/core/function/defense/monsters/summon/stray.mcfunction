@@ -24,3 +24,4 @@ execute positioned 4 -59 146 run summon stray ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/stray=false}] run advancement grant @s only core:defense/mobs/stray
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-stray] defense.distance 0

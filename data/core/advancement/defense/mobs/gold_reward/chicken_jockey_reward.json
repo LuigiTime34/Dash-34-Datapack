@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "hit_illusioner": {
+        "hit_chicken_jockey": {
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": [
@@ -8,7 +8,7 @@
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "nbt": "{Tags:[\"defense-illusioner_decoy\"]}"
+                            "nbt": "{Tags:[\"defense-chicken_jockey\"]}"
                         }
                     }
                 ]
@@ -17,10 +17,10 @@
     },
     "requirements": [
         [
-            "hit_illusioner"
+            "hit_chicken_jockey"
         ]
     ],
     "rewards": {
-        "function": "core:defense/monsters/gold_reward/illusioner_decoy_gold"
+        "function": "core:defense/monsters/gold_reward/chicken_jockey_gold"
     }
 }

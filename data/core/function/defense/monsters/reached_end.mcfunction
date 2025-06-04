@@ -19,6 +19,6 @@ function core:defense/scoreboard/get_highest
 # See if the health has changed to uppdate the castle look
 execute if score $defense.health defense.damage matches 251..500 unless block -63 -44 131 yellow_concrete run function core:defense/monsters/castle/half_health
 execute if score $defense.health defense.damage matches ..250 unless block -63 -44 131 red_concrete run function core:defense/monsters/castle/low_health
-execute if score $defense.health defense.damage matches 500.. unless block -63 -44 131 green_concrete run function core:defense/monsters/castle/reset
+execute if score $defense.health defense.damage matches 500.. unless block -63 -44 131 lime_concrete run function core:defense/monsters/castle/reset
 
 execute if score $defense.health defense.damage matches ..0 run function core:defense/end/end {"outcome":"loss"}

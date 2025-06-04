@@ -29,3 +29,4 @@ execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     }] \
 }
 execute as @a[advancements={core:defense/mobs/charged_creeper=false}] run advancement grant @s only core:defense/mobs/charged_creeper
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-charged_creeper] defense.distance 0

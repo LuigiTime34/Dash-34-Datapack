@@ -25,3 +25,4 @@ execute positioned 4 -59 146 run summon silverfish ~ ~ ~ { \
 }
 execute as @a[advancements={core:defense/mobs/silverfish=false}] run advancement grant @s only core:defense/mobs/silverfish
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-silverfish] defense.abilities 100
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-bogged] defense.distance 0

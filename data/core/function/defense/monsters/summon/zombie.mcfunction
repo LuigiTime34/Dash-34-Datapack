@@ -28,3 +28,4 @@ execute positioned 4 -59 146 run summon zombie ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/zombie=false}] run advancement grant @s only core:defense/mobs/zombie
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-zombie] defense.distance 0

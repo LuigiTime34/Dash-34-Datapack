@@ -1,6 +1,6 @@
 execute as @s[tag=defense-skeleton] on vehicle on passengers run return fail
-scoreboard players reset @s defense
-scoreboard players reset @s defense.intersection
+# scoreboard players reset @s defense
+# scoreboard players reset @s defense.intersection
 execute if block ~ -61 ~1 gray_terracotta run return run rotate @s 0.0 0.0
 execute if block ~ -61 ~-1 gray_terracotta run return run rotate @s -180.0 0.0
 execute if block ~1 -61 ~ gray_terracotta run return run rotate @s -90.0 0.0

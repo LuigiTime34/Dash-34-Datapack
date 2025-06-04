@@ -22,12 +22,12 @@ summon illusioner ~ ~ ~ {\
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:90 \
+        base:200 \
     }], \
     PersistenceRequired:1b, \
 }
 scoreboard players add $mobs_left defense.wave 1
 data modify entity @n[tag=defense.illusioner_decoy_summon] Rotation set from entity @s Rotation
-execute at @n[tag=defense.illusioner_decoy_summon] run particle minecraft:electric_spark ~ ~ ~ 0.2 0.6 0.2 2 100
+execute at @n[tag=defense.illusioner_decoy_summon] run particle minecraft:soul_fire_flame ~ ~ ~ 0.2 0.6 0.2 2 75
 tag @n[tag=defense.illusioner_decoy_summon] remove defense-illusioner_decoy_summon
 playsound minecraft:entity.illusioner.prepare_mirror master @a ~ ~ ~ 10 1

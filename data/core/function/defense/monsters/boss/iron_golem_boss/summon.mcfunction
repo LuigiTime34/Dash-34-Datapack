@@ -3,7 +3,7 @@ title @a title {"text":"Boss has spawned!", "font":"retitled_titles:regular", "c
 playsound entity.wither.spawn master @a ~ ~ ~ 1000000000000000000 0.7
 execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:220, \
+    Health:250, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -18,7 +18,7 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:120 \
+        base:220 \
     }, \
     { \
         id:"minecraft:armor", \

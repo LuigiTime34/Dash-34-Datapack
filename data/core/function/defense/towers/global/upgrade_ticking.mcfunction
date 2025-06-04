@@ -24,7 +24,7 @@ $execute if items entity @s $(slot) *[custom_data~{element_sell:1b}] as @n[tag=t
 
 # beeEEE UPGRADES
 $execute if items entity @s $(slot) *[custom_data~{bee_upgrade1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"1","cost":"40","item_slot":"13","slot_to_replace":"13"}
-$execute if items entity @s $(slot) *[custom_data~{bee_upgrade_attack1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"_attack1","cost":"200","item_slot":"14","slot_to_replace":"15"}
+$execute if items entity @s $(slot) *[custom_data~{bee_upgrade_attack1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"_attack1","cost":"150","item_slot":"14","slot_to_replace":"15"}
 $execute if items entity @s $(slot) *[custom_data~{bee_upgrade_attack2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"_attack2","cost":"300","item_slot":"15","slot_to_replace":"13"}
 $execute if items entity @s $(slot) *[custom_data~{bee_upgrade_money1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"_money1","cost":"200","item_slot":"16","slot_to_replace":"11"}
 $execute if items entity @s $(slot) *[custom_data~{bee_upgrade_money2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=bee-center-marker] run function core:defense/towers/bee/placement/get_rotation {"building":"_money2","cost":"300","item_slot":"17","slot_to_replace":"13"}

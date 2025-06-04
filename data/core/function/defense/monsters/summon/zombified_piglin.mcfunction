@@ -28,3 +28,4 @@ execute positioned 4 -59 146 run summon zombified_piglin ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/zombified_piglin=false}] run advancement grant @s only core:defense/mobs/zombified_piglin
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-zombified_piglin] defense.distance 0

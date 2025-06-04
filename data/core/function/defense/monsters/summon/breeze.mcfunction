@@ -27,3 +27,4 @@ execute positioned 4 -59 146 run summon breeze ~ ~ ~ { \
     }] \
 }
 execute as @a[advancements={core:defense/mobs/breeze=false}] run advancement grant @s only core:defense/mobs/breeze
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-breeze] defense.distance 0

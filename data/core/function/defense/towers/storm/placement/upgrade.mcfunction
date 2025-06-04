@@ -1,5 +1,6 @@
 execute at @n[tag=storm-center-marker] run fill ~-3 ~ ~-3 ~3 ~14 ~3 light[level=8] replace
 kill @n[tag=storm-center-marker]
+kill @n[tag=defense.storm_rod]
 $place template core:defense/towers/storm/upgrade$(building) ~$(x_offset) ~ ~$(z_offset) $(rotation)
 $data modify entity @n[tag=$(building)] data.x_offset set from entity @s data.x_offset
 $data modify entity @n[tag=$(building)] data.z_offset set from entity @s data.z_offset

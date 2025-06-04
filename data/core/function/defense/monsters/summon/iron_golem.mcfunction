@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:220, \
+    Health:250, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:220 \
+        base:250 \
     }, \
     { \
         id:"minecraft:attack_knockback", \
@@ -28,3 +28,4 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/iron_golem=false}] run advancement grant @s only core:defense/mobs/iron_golem
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-iron_golem] defense.distance 0

@@ -54,3 +54,4 @@ execute positioned 4 -59 146 run summon chicken ~ ~ ~ { \
 }
 execute as @a[advancements={core:defense/mobs/chicken_jockey=false}] run advancement grant @s only core:defense/mobs/chicken_jockey
 execute positioned 4 -59 146 run playsound minecraft:sound.custom.chicken_jockey master @a ~ ~ ~ 10000000000000
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-chicken] defense.distance 0

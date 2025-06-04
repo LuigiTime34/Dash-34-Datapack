@@ -84,8 +84,10 @@ if __name__ == "__main__":
             if data.get('Ability'):
                 description_parts.append(f"\n{data['Ability']}")
             description_text = "".join(description_parts)
-            tellraw_json = json.dumps({"text": description_text, "color": "green"})
+            tellraw_json = json.dumps({"text": description_text, "color": "red"})
             content = (
+                f"title @s actionbar {{\"text\":\"New mob found!\", \"color\": \"red\", \"bold\":true}}\n"
+                f"tellraw @s {{\"text\":\"New mob found!\", \"color\": \"red\", \"bold\":true}}\n"
                 f"tellraw @s {tellraw_json}\n"
                 f"execute as @a at @s run playsound entity.villager.work_cartographer master @s ~ ~ ~ 1"
             )

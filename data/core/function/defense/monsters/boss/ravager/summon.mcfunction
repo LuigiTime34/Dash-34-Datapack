@@ -22,7 +22,7 @@ execute positioned 4 -59 146 run summon ravager ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:125 \
+        base:200 \
     }], \
     PersistenceRequired:1b, \
     Passengers:[{ \
@@ -45,7 +45,7 @@ execute positioned 4 -59 146 run summon ravager ~ ~ ~ { \
         }, \
         { \
             id:"minecraft:attack_knockback", \
-            base:90 \
+            base:200 \
         }], \
         PersistenceRequired:1b, \
     }] \

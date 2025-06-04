@@ -8,7 +8,10 @@ execute as @n[tag=bee-center-marker,tag=defense.off] run tag @s remove defense.o
 execute as @n[tag=tower-barrel-marker] run function core:defense/towers/global/rotate_back
 execute as @n[tag=tower-barrel-marker] at @s positioned ^ ^ ^1.5 run tp @p[gamemode=adventure] ~ -59 ~
 execute as @p[gamemode=adventure] at @s run function core:defense/towers/global/rotate_player
-execute as @n[tag=tower-barrel-marker] at @s positioned ^ ^ ^1.8 run summon minecraft:marker ~ -57.5 ~ {Tags:["defense.bee_deployer"]}
+execute if block ~ -60 ~-4.5 #core:path_blocks run summon minecraft:marker ~ -57.5 ~-4.8 {Tags:["defense.bee_deployer"]}
+execute if block ~ -60 ~4.5 #core:path_blocks run summon minecraft:marker ~ -57.5 ~4.8 {Tags:["defense.bee_deployer"]}
+execute if block ~-4.5 -60 ~ #core:path_blocks run summon minecraft:marker ~-4.8 -57.5 ~ {Tags:["defense.bee_deployer"]}
+execute if block ~4.5 -60 ~ #core:path_blocks run summon minecraft:marker ~4.8 -57.5 ~ {Tags:["defense.bee_deployer"]}
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ cyan_wool run rotate @s 0 0
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ blue_wool run rotate @s -90 0
 execute as @e[tag=defense.bee_deployer] at @s if block ~ -62 ~ light_blue_wool run rotate @s -180 0

@@ -1,3 +1,4 @@
+$scoreboard players add @s defense.distance $(distance)
 tag @s add this.moving.entity
 $execute positioned ^ ^ ^$(speed) run summon marker ~ ~ ~ {Tags:["this.moving.target"]}
 execute at @e[type=marker,tag=this.moving.target,limit=1] rotated as @s run tp @e[type=marker,tag=this.moving.target,limit=1] ~ ~ ~ ~ ~

@@ -19,8 +19,9 @@ execute positioned 4 -59 146 run summon bogged ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:260 \
+        base:190 \
     }] \
 }
 execute as @a[advancements={core:defense/mobs/bogged=false}] run advancement grant @s only core:defense/mobs/bogged
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-bogged] defense.abilities 20
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-bogged] defense.distance 0

@@ -87,10 +87,10 @@ execute as @e[tag=defense-monster,tag=defense-bogged] at @s if score @s defense.
 execute as @e[tag=defense-monster,tag=defense-bogged] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/bogged
 # Double speed at half health
 execute as @e[tag=defense-monster,tag=defense-bogged] store result score @s defense.bogged_health run data get entity @s Health
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..29 unless score @s defense.speed matches 200 at @s run playsound block.trial_spawner.ominous_activate master @a ~ ~ ~ 1
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..29 unless score @s defense.speed matches 200 at @s run particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0.3 0.6 0.3 0 35
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..30 unless score @s defense.speed matches 160 run attribute @s attack_knockback base set 200
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches 30.. unless score @s defense.speed matches 40 run attribute @s attack_knockback base set 100
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..39 unless score @s defense.speed matches 380 at @s run playsound block.trial_spawner.ominous_activate master @a ~ ~ ~ 1
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..39 unless score @s defense.speed matches 380 at @s run particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0.3 0.6 0.3 0 35
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..40 run attribute @s attack_knockback base set 380
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches 40.. run attribute @s attack_knockback base set 190
 
 # Silverfish
 execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
@@ -128,8 +128,13 @@ execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1
 execute as @e[tag=defense.creeper-death] if score @s defense.abilities matches 1 run kill @s
 execute as @e[tag=defense.creeper_disabled,tag=!tower-center-marker] run scoreboard players add @s defense.towers 1
 execute as @e[tag=defense.creeper_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
-execute as @e[tag=defense.creeper_disabled] at @s run particle electric_spark ~ ~ ~ 1 3 1 0 30
-execute as @e[tag=defense.creeper_disabled] at @s run particle flash ~ ~ ~ 1 3 1 0 1
+execute as @e[tag=defense.creeper_disabled] at @s unless entity @n[tag=defense.creeper_display,distance=..3.5] run summon minecraft:creeper ~ ~-3 ~ {NoAI:true,powered:1b,attributes:[{id:"minecraft:scale",base:8.0}],Invulnerable:true,active_effects:[{id:"minecraft:invisibility",duration:-1,show_particles:false}],Tags:["defense.creeper_display"]}
+execute as @e[tag=defense.creeper_display] run data merge entity @s {Fire:0}
+execute as @e[tag=defense.creeper_display] at @s unless entity @n[tag=defense.tower_marker,distance=..3.5] run tag @s add defense.dead_creeper_display
+execute as @e[tag=defense.dead_creeper_display] at @s run tp @s ~ -200 ~
+execute as @e[tag=defense.dead_creeper_display] run kill @s
+
+execute as @e[tag=defense.tower_marker,tag=!defense.creeper_disabled] at @s as @n[tag=defense.creeper_display,distance=..3.5] run tag @s add defense.dead_creeper_display
 
 # GIANT
 execute as @e[tag=defense-giant] at @s unless score @s defense.abilities matches 6.. run tp @s ~ ~-0.8 ~
@@ -142,6 +147,7 @@ execute as @e[tag=defense.giant_disabled,tag=!tower-center-marker] run scoreboar
 execute as @e[tag=defense.giant_disabled,tag=tower-center-marker] at @s run scoreboard players add @n[tag=archer-skeleton] defense.towers 1
 execute as @e[tag=defense.giant_disabled] at @s run particle minecraft:block_crumble{block_state:{Name:dirt}} ~ ~ ~ 2 0.1 2 0 100
 execute as @e[tag=defense.giant_disabled] unless entity @n[tag=defense-giant] run tag @s remove defense.giant_disabled
+execute as @e[tag=defense-giant] run data merge entity @s {Fire:0}
 
 # RAVAGER
 # Speed ability
@@ -205,15 +211,15 @@ execute as @p[gamemode=adventure] at @s at @n[tag=tower-barrel-marker,tag=open] 
 execute as @e[tag=tower-barrel-marker,type=marker,tag=!open] at @s if block ~ ~ ~ minecraft:barrel[open=true] run tag @s add open
 execute as @e[tag=tower-barrel-marker,type=minecraft:marker,tag=open] at @s if block ~ ~ ~ minecraft:barrel[open=false] run tag @s remove open
 # Targeting system
-execute as @e[tag=defense-monster] store result score @s defense.targetx run data get entity @s Pos[0] -10
-execute as @e[tag=defense-monster] store result score @s defense.targetz run data get entity @s Pos[2] -10
-execute as @e[tag=defense-monster] run scoreboard players operation @s defense.targetx -= $start.x defense.targetx
-execute as @e[tag=defense-monster] run scoreboard players operation @s defense.targetz -= $start.z defense.targetz
-execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance = @s defense.targetx
-execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
+#execute as @e[tag=defense-monster] store result score @s defense.targetx run data get entity @s Pos[0] -10
+#execute as @e[tag=defense-monster] store result score @s defense.targetz run data get entity @s Pos[2] -10
+#execute as @e[tag=defense-monster] run scoreboard players operation @s defense.targetx -= $start.x defense.targetx
+#execute as @e[tag=defense-monster] run scoreboard players operation @s defense.targetz -= $start.z defense.targetz
+#execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance = @s defense.targetx
+#execute as @e[tag=defense-monster] run scoreboard players operation @s defense.distance += @s defense.targetz
 execute as @e[tag=defense-monster,tag=defense-iron_golem] run scoreboard players operation @s defense.distance += $iron_golem defense.distance
 execute as @e[tag=defense-monster,tag=defense-illusioner_decoy] run scoreboard players operation @s defense.distance += $illusioner_decoy defense.distance
-execute as @e[tag=defense-monster,tag=defense-illusioner,tag=defense.illusioner_invisible] run scoreboard players operation @s defense.distance -= $illusioner_invis defense.distance
+
 # Display Ranges
 execute as @e[tag=defense.tower_marker,tag=!defense.off,tag=!bee-center-marker] at @s run rotate @s ~6 ~
 execute as @e[tag=defense.tower_marker,tag=!defense.off,tag=!bee-center-marker] at @s positioned ~ -58.5 ~ run function core:defense/towers/global/get_range
@@ -264,24 +270,24 @@ execute as @e[tag=defense.tower_square,tag=!defense.green] run data merge entity
 # execute as @e[tag=defense-monster] if score @s defense.bee.honey_slowness matches 1.. at @s run particle minecraft:falling_honey ~ ~ ~ 0.2 0.3 0.2 0 1
 
 # Base
-execute as @e[tag=bee-center-marker,tag=!upgrade1,tag=!upgrade_attack1,tag=!upgrade_attack2,tag=!upgrade_money1,tag=!upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"60","damage":"1","speed":20}
+execute as @e[tag=bee-center-marker,tag=!upgrade1,tag=!upgrade_attack1,tag=!upgrade_attack2,tag=!upgrade_money1,tag=!upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"40","damage":"2","speed":20}
 
 # First Upgrade
-execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"50","damage":"3","speed":"25"}
+execute as @e[tag=bee-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_bee {"cooldown":"30","damage":"3","speed":"25"}
 
 # Attack Upgrade 1
 execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 2 at @s run function core:defense/towers/bee/launch_attack_bee {"damage":"2","speed":"30"}
-execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_attack_bee_short {"cooldown":"35","damage":"2","speed":"30"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_attack_bee_short {"cooldown":"15","damage":"2","speed":"30"}
 
 # Attack Upgrade 2
-execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 2 at @s run function core:defense/towers/bee/launch_attack_bee_final {"cooldown":"30","damage":"3","speed":"40"}
-execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_attack_bee_short {"cooldown":"30","damage":"3","speed":"40"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 2 at @s run function core:defense/towers/bee/launch_attack_bee_final {"cooldown":"10","damage":"3","speed":"40"}
+execute as @e[tag=bee-center-marker,tag=upgrade_attack2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_attack_bee_short {"cooldown":"10","damage":"3","speed":"40"}
 
 # Money Upgrade 1
-execute as @e[tag=bee-center-marker,tag=upgrade_money1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"40","damage":"3","speed":"30","money":"1"}
+execute as @e[tag=bee-center-marker,tag=upgrade_money1] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"20","damage":"3","speed":"30","money":"1"}
 
 # Money Upgrade 2
-execute as @e[tag=bee-center-marker,tag=upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"40","damage":"4","speed":"30","money":"3"}
+execute as @e[tag=bee-center-marker,tag=upgrade_money2] if score @s defense.towers matches 1 at @s run function core:defense/towers/bee/launch_money_bee {"cooldown":"20","damage":"4","speed":"30","money":"3"}
 
 # MONEY RAIN
 execute as @e[tag=bee-center-marker,tag=upgrade_money2] at @s if entity @p[gamemode=adventure,distance=..15] run function core:defense/towers/bee/money_rain
@@ -298,18 +304,18 @@ execute as @e[tag=defense.bee_display] at @s run function core:defense/towers/be
 #  |___/\__\___/|_|  |_| |_| |_|
 # ====================================================================================================================
 # Base
-execute as @e[tag=storm-center-marker,tag=!upgrade1,tag=!upgrade_snow1,tag=!upgrade_snow2,tag=!upgrade_surge1,tag=!upgrade_surge2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity {"cooldown":"100","damage":"8","blow_power":"0.7","range":"11.5"}
+execute as @e[tag=storm-center-marker,tag=!upgrade1,tag=!upgrade_snow1,tag=!upgrade_snow2,tag=!upgrade_surge1,tag=!upgrade_surge2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity {"cooldown":"100","damage":"8","blow_power":"0.7","range":"13.5"}
 # First Upgrade
-execute as @e[tag=storm-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity {"cooldown":"100","damage":"10","blow_power":"0.9","range":"12.5"}
+execute as @e[tag=storm-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity {"cooldown":"100","damage":"10","blow_power":"0.9","range":"14.5"}
 # Snow 1
-execute as @e[tag=storm-center-marker,tag=upgrade_snow1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow {"cooldown":"120","damage":"10","blow_power":"0.9","range":"13.5","freeze_time":"80","freeze_power":"30"}
+execute as @e[tag=storm-center-marker,tag=upgrade_snow1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow {"cooldown":"120","damage":"10","blow_power":"0.9","range":"15.5","freeze_time":"80","freeze_power":"30"}
 # Snow 2
-execute as @e[tag=storm-center-marker,tag=upgrade_snow2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow_storm {"cooldown":"120","damage":"12","blow_power":"1.2","range":"13.5","freeze_time":"100","freeze_power":"50"}
+execute as @e[tag=storm-center-marker,tag=upgrade_snow2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow_storm {"cooldown":"120","damage":"12","blow_power":"1.2","range":"15.5","freeze_time":"100","freeze_power":"50"}
 
 # Surge 1
-execute as @e[tag=storm-center-marker,tag=upgrade_surge1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_chain {"cooldown":"80","damage":"12","blow_power":"0.5","range":"18.5","max_chain_length":"3","chain_radius":"4","chain_damage":"3"}
+execute as @e[tag=storm-center-marker,tag=upgrade_surge1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_chain {"cooldown":"80","damage":"12","blow_power":"0.5","range":"20.5","max_chain_length":"3","chain_radius":"4","chain_damage":"3"}
 # Surge 2
-execute as @e[tag=storm-center-marker,tag=upgrade_surge2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_chain {"cooldown":"80","damage":"15","blow_power":"0.5","range":"23.5","max_chain_length":"5","chain_radius":"6","chain_damage":"5"}
+execute as @e[tag=storm-center-marker,tag=upgrade_surge2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_chain {"cooldown":"80","damage":"15","blow_power":"0.5","range":"25.5","max_chain_length":"5","chain_radius":"6","chain_damage":"5"}
 
 # Chain cloud particles
 execute as @e[tag=defense.storm_cloud] at @s run particle minecraft:campfire_cosy_smoke ~ ~-52 ~ 0.5 0.3 0.5 0 100
@@ -335,7 +341,7 @@ execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1 at @s
 #  | |                            
 #  |_|                            
 # Base activation
-execute as @e[tag=panda-center-marker,tag=!upgrade1,tag=!upgrade_shoot1,tag=!upgrade_shoot2,tag=!upgrade_bamboom1,tag=!upgrade_bamboom2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"100","damage":"5","range":"9.5","age":"0","leaves":"none","scale":"1.0","translation":"-0.5"}
+execute as @e[tag=panda-center-marker,tag=!upgrade1,tag=!upgrade_shoot1,tag=!upgrade_shoot2,tag=!upgrade_bamboom1,tag=!upgrade_bamboom2] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"100","damage":"4","range":"11.5","age":"0","leaves":"none","scale":"1.0","translation":"-0.5"}
 # Upgrade 1
 execute as @e[tag=panda-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/panda/target_entity_normal {"cooldown":"60","damage":"5","range":"11.5","age":"0","leaves":"small","scale":"1.0","translation":"-0.5"}
 # Shoot upgrade 1

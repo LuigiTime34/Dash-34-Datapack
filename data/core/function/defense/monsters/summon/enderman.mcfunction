@@ -26,3 +26,4 @@ execute positioned 4 -59 146 run summon enderman ~ ~ ~ { \
 execute positioned 4 -59 146 run summon marker ~ ~ ~ {Tags:["defense.enderman-marker"]}
 execute as @a[advancements={core:defense/mobs/enderman=false}] run advancement grant @s only core:defense/mobs/enderman
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-enderman] defense.abilities 100
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-enderman] defense.distance 0

@@ -53,3 +53,4 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
 execute as @a[advancements={core:defense/mobs/spider=false}] run advancement grant @s only core:defense/mobs/spider
 
 scoreboard players add $mobs_left defense.wave 1
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-spider] defense.distance 0

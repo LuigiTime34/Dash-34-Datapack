@@ -14,7 +14,7 @@
             }
         },
         "title": "Warden",
-        "description": "Health: 1000\nSpeed: 2.1 BPS\nGold: 1\nHas permanent armor. Every 5s, sends a sonic boom that disables a nearby tower.",
+        "description": "Health: 1000\nSpeed: 2.5 BPS\nGold: 0\nHas permanent armor. Every 5s, sends a sonic boom that disables a nearby tower.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

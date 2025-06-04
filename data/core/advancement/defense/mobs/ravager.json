@@ -14,7 +14,7 @@
             }
         },
         "title": "Ravager",
-        "description": "Health: 400\nSpeed: 1.85 BPS\nGold: 30\nCarries Illusioner. Can damage itself to speed up for a short period of time. Has a 10% chance to speed up when damaged.",
+        "description": "Health: 400\nSpeed: 2 BPS\nGold: 30\nCarries Illusioner. Can damage itself to speed up for a short period of time. Has a 10% chance to speed up when damaged.",
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,

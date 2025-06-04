@@ -2,7 +2,7 @@ execute if entity @s[tag=defense-monster] run return run scoreboard players remo
 tp @s ~ ~1 ~
 tag @s add defense-monster
 data modify entity @s Invulnerable set value 0b
-attribute @s attack_knockback base set 220
+attribute @s attack_knockback base set 320
 data modify entity @s HurtTime set value 10
 execute store result score @s defense.damage run data get entity @s Health 10
 scoreboard players operation @s defense.damage += $silverfish defense.damage

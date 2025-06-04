@@ -20,7 +20,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs_root",
+    "parent": "core:defense/mobs/zombified_piglin",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"
