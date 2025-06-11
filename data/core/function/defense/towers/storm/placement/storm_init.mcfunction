@@ -1,4 +1,5 @@
 #function core:defense/towers/storm/placement/replace_items
+execute as @n[tag=defense.tower_square] run data merge entity @s {transformation:{scale:[0.0f,0.0f,0.5f]},interpolation_duration:2,start_interpolation:0,Glowing:0b}
 execute unless score $money defense.money matches 50.. run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 2 1
 execute unless score $money defense.money matches 50.. run return run tellraw @a {"text": "Not enough gold!","color": "gold"}
 

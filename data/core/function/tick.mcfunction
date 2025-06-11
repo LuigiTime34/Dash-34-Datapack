@@ -5,9 +5,9 @@ effect give @p[gamemode=adventure,tag=!taking-damage] minecraft:saturation infin
 effect give @p[gamemode=adventure,tag=!taking-damage] minecraft:resistance infinite 5 true
 execute as @e[tag=chair] if data entity @s interaction run function core:chair/mount_chair
 execute as @e[tag=chair] at @s if block ~ ~ ~ air run tp @s ~ ~-1 ~
-execute as @e[type=item] at @s on origin run data modify entity @n[type=item,tag=!Text_Display] Owner set from entity @s UUID
-execute as @e[type=item,tag=!hdr.dmg_indicator] run data modify entity @s PickupDelay set value 0s
-execute as @e[type=item] at @s on origin run tp @n[type=item,tag=!Text_Display] @s
+execute as @e[type=item] at @s on origin run data modify entity @n[type=item,tag=!defense.gold_item] Owner set from entity @s UUID
+execute as @e[type=item,tag=!hdr.dmg_indicator,tag=!defense.gold_item] run data modify entity @s PickupDelay set value 0s
+execute as @e[type=item] at @s on origin run tp @n[type=item,tag=!defense.gold_display] @s
 stopsound @a * ui.toast.challenge_complete
 
 

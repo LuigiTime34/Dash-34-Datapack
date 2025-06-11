@@ -1,11 +1,3 @@
-execute as @s[tag=defense-creeper] run function core:defense/monsters/abilities/creeper_convert_to_charged
-$damage @s[tag=!defense-breeze] $(damage) core:defense/wind_charge by @p
-tag @s remove defense-target
-playsound minecraft:entity.breeze.wind_burst master @a ~ ~ ~ 1 2
-particle minecraft:gust_emitter_small ~ ~ ~ 0.1 0.1 0.1 0 3
-summon lightning_bolt ~ ~-10 ~
+function core:defense/towers/storm/blow_back {"blow_power":"$(blow_power)","damage":"$(damage)"}
+$data merge storage core:defense.storm_raycast {"max_chain_length":"$(max_chain_length)","chain_damage":"$(chain_damage)","chain_radius":"$(chain_radius)"}
 function core:defense/towers/storm/chain/start_chain with storage core:defense.storm_raycast
-execute if entity @s[tag=defense-zoglin] run return 0
-execute if entity @s[tag=defense-skeleton] on vehicle run return run function core:defense/towers/storm/spider_jockey_fallback {"blow_power":"$(blow_power)"}
-$tp @s ^ ^ ^-$(blow_power)
-tag @s add chosen-path

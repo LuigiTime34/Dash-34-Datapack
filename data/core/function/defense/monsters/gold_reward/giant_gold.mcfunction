@@ -8,3 +8,5 @@ scoreboard players set $recent_kill defense.money 20
 scoreboard players add $recent_money defense.money 50
 
 function core:defense/scoreboard/get_highest
+
+execute unless score $defense.health defense.damage matches ..0 run function core:defense/end/end {"outcome":"win"}

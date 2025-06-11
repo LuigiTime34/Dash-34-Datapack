@@ -1,11 +1,11 @@
 forceload add 8 73 -70 159
 clone -77 -30 116 -77 -30 116 -77 -39 116
 scoreboard players set $wave_level defense.wave 0
-scoreboard players set $money defense.money 25
+scoreboard players set $money defense.money 180
 scoreboard players set $defense.health defense.damage 1000
 scoreboard players set $wave_timer defense.wave 30
 scoreboard players set $dead defense 0
-bossbar set minecraft:defense.mobs_left name ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]
+bossbar set minecraft:defense.mobs_left name ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"},{"text":"/40","bold":true,"color":"aqua"}]
 bossbar set minecraft:defense.mobs_left players @a
 bossbar set minecraft:defense.mobs_left visible true
 scoreboard objectives modify defense.display displayname ""
@@ -22,6 +22,7 @@ function core:defense/scoreboard/wave_timer
 scoreboard players set $defense_track music 1
 function core:defense/music_reset
 tag @p[gamemode=adventure] add defense-started
+team join defense_player @p[gamemode=adventure]
 title @p[gamemode=adventure] times 20 30 40
 title @p[gamemode=adventure] subtitle {"text":"tower defense", "font":"retitled_titles:regular", "color":"#25FF01"}
 title @p[gamemode=adventure] title {"text":"\uF903\u0009section 3\u000A", "font":"retitled_titles:regular", "color":"#26FF01"}

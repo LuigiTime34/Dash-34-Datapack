@@ -28,4 +28,4 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/iron_golem=false}] run advancement grant @s only core:defense/mobs/iron_golem
-execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-iron_golem] defense.distance 0
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-iron_golem] defense.distance 40000

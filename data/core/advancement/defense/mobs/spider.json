@@ -20,7 +20,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "core:defense/mobs/silverfish",
+    "parent": "core:defense/mobs_root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

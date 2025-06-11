@@ -77,7 +77,7 @@ if __name__ == "__main__":
             # --- Generate Content Directly ---
             display_name = name.replace('_', ' ')
             description_parts = [
-                f"New mob found!\n{display_name}\n",
+                f"{display_name}\n",
                 f"Speed: {data.get('Speed', '?')}\n",
                 f"Health: {data.get('Health', '?')}",
             ]

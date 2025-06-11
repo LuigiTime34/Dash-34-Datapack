@@ -1,6 +1,6 @@
 execute positioned 4 -59 146 run summon enderman ~ ~ ~ { \
     CustomNameVisible:1b, \
-    Health:90, \
+    Health:100, \
     NoAI:1b, \
     Rotation:[90f, \
     0.0f], \
@@ -11,7 +11,7 @@ execute positioned 4 -59 146 run summon enderman ~ ~ ~ { \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
-        base:90 \
+        base:100 \
     }, \
     { \
         id:"minecraft:attack_damage", \

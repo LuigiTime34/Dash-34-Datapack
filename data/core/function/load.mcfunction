@@ -53,13 +53,16 @@ scoreboard objectives add defense.panda_boo_damage dummy
 scoreboard objectives add defense.panda_bomb_range dummy
 scoreboard objectives add UUID dummy
 scoreboard objectives add defense.blockers dummy
+scoreboard objectives add defense.bee.gold_animation dummy
 
 team add defense_enemies
 bossbar add defense.mobs_left ["",{"text":"WAVE ","bold":true,"color":"aqua"},{"score":{"name":"$wave_level","objective":"defense.wave"},"bold":true,"color":"aqua"}]
+bossbar add core:defense.boss ""
 
 team add Players
 team add Monsters
 team add green
+team add defense_player
 
 tellraw @a {"text": "Datapack Has Loaded Succesfully!","color": "green","bold": true}
 playsound minecraft:block.note_block.xylophone master @a ~ ~ ~ 100000000000

@@ -1,4 +1,4 @@
-execute as @e[tag=defense.storm_cloud] at @s run particle minecraft:campfire_cosy_smoke ~ ~-52 ~ 0.5 0.3 0.5 0 100
+execute as @e[tag=defense.storm_cloud] at @s run particle minecraft:campfire_cosy_smoke ~ ~-52 ~ 0.5 0.3 0.5 0 100 force
 # See if the max chain limit has been reached
 $execute if score $current_chain defense.storm matches $(max_chain_length).. run return run function core:defense/towers/storm/chain/reset
 

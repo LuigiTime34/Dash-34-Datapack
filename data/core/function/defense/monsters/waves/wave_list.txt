@@ -1,113 +1,72 @@
 Wave 1
 Zombie
+Zombie
+Zombie
+Skeleton
+Skeleton
 
 Wave 2
-Zombie
+Spider
 Zombie
 
 Wave 3
 Zombie
 Zombie
+Spider
 Zombie
 
 Wave 4
+Chicken_Jockey
+Zombie
 Skeleton
+Zombie
+Zombie
 
 Wave 5
+Zombie
+Zombie
+Skeleton
+Chicken_Jockey
 Zombie
 Skeleton
 
 Wave 6
+Silverfish
+Silverfish
+Zombie
+Zombie
 Skeleton
 Zombie
 Zombie
 
 Wave 7
+Zombie
+Spider
+Zombie
+Spider
 Skeleton
-Skeleton
+Silverfish
+Zombie
 
 Wave 8
+Zombie
+Zombie
 Creeper
+Skeleton
+Silverfish
+Zombie
 
 Wave 9
 Skeleton
+Spider
+Zombie
+Silverfish
 Creeper
+Creeper
+Zombie
+Spider
 
 Wave 10
-Zombie
-Skeleton
-Creeper
-Zombie
-
-Wave 11
-Zombie
-Zombie
-Zombie
-Skeleton
-Skeleton
-
-Wave 12
-Spider
-Zombie
-
-Wave 13
-Zombie
-Zombie
-Spider
-Zombie
-
-Wave 14
-Chicken_Jockey
-Zombie
-Skeleton
-Zombie
-Zombie
-
-Wave 15
-Zombie
-Zombie
-Skeleton
-Chicken_Jockey
-Zombie
-Skeleton
-
-Wave 16
-Silverfish
-Silverfish
-Zombie
-Zombie
-Skeleton
-Zombie
-Zombie
-
-Wave 17
-Zombie
-Spider
-Zombie
-Spider
-Skeleton
-Silverfish
-Zombie
-
-Wave 18
-Zombie
-Zombie
-Creeper
-Skeleton
-Silverfish
-Zombie
-
-Wave 19
-Skeleton
-Spider
-Zombie
-Silverfish
-Creeper
-Creeper
-Zombie
-Spider
-
-Wave 20
 Skeleton
 Spider
 Spider
@@ -115,227 +74,233 @@ Iron_Golem_Boss
 Zombie
 Zombie
 
-Wave 21
+Wave 11
 Creeper
 Skeleton
 Witch
 Zombie
 Skeleton
 Spider
+
+Wave 12
+Chicken_Jockey
+Spider
+Skeleton
+Witch
+Zombie
+Creeper
+Silverfish
+
+Wave 13
+Enderman
+Zombie
+Zombie
+Zombie
+Chicken_Jockey
+Skeleton
+Skeleton
+Witch
+
+Wave 14
+Spider
+Enderman
+Silverfish
+Creeper
+Skeleton
+Chicken_Jockey
+Zombie
+
+Wave 15
+Enderman
+Skeleton
+Spider
+Skeleton
+Silverfish
+Silverfish
+Chicken_Jockey
+Creeper
+
+Wave 16
+Spider
+Enderman
+Chicken_Jockey
+Silverfish
+Zombie
+Skeleton
+Witch
+Zombie
+Skeleton
+
+Wave 17
+Spider
+Enderman
+Zombie
+Skeleton
+Witch
+Creeper
+Zombie
+Skeleton
+Silverfish
+Creeper
+
+Wave 18
+Zombie
+Zombie
+Skeleton
+Witch
+Silverfish
+Zombie
+Creeper
+Creeper
+Bogged
+
+Wave 19
+Spider
+Silverfish
+Enderman
+Zombie
+Skeleton
+Witch
+Skeleton
+Creeper
+Creeper
+Bogged
+
+Wave 20
+Iron_Golem
+Spider
+Enderman
+Zombie
+Skeleton
+Witch
+Creeper
+Zombie
+Silverfish
+Zombie
+Zombie
+Warden
+Zombie
+Zombie
+
+Wave 21
+Iron_Golem
+Spider
+Enderman
+Silverfish
+Zombie
+Skeleton
+Witch
+Creeper
+Zombie
+Bogged
 
 Wave 22
+Zombified_Piglin
 Chicken_Jockey
-Spider
+Zombie
 Skeleton
 Witch
-Zombie
 Creeper
-Silverfish
+Zombie
+Skeleton
+Creeper
 
 Wave 23
+Spider
+Zombified_Piglin
 Enderman
+Silverfish
 Zombie
-Zombie
-Zombie
-Chicken_Jockey
-Skeleton
 Skeleton
 Witch
+Skeleton
+Iron_Golem
+Creeper
 
 Wave 24
-Spider
+Iron_Golem
 Enderman
-Silverfish
-Creeper
-Skeleton
 Chicken_Jockey
+Silverfish
 Zombie
+Witch
+Creeper
+Zombie
+Skeleton
+Bogged
 
 Wave 25
-Enderman
-Skeleton
-Spider
-Skeleton
-Silverfish
-Silverfish
 Chicken_Jockey
+Iron_Golem
+Spider
+Spider
+Zombified_Piglin
+Silverfish
+Skeleton
 Creeper
+Witch
+Creeper
+Zombie
 
 Wave 26
+Zombified_Piglin
+Creeper
+Spider
 Spider
 Enderman
 Chicken_Jockey
-Silverfish
-Zombie
 Skeleton
 Witch
+Creeper
 Zombie
 Skeleton
+Silverfish
 
 Wave 27
-Spider
+Iron_Golem
 Enderman
+Enderman
+Spider
+Spider
+Zombified_Piglin
 Zombie
 Skeleton
 Witch
-Creeper
-Zombie
 Skeleton
-Silverfish
-Creeper
+Bogged
 
 Wave 28
-Zombie
+Chicken_Jockey
+Spider
+Spider
+Spider
+Chicken_Jockey
+Silverfish
+Skeleton
+Zombified_Piglin
+Witch
+Creeper
 Zombie
 Skeleton
-Witch
-Silverfish
-Zombie
-Creeper
-Creeper
-Bogged
 
 Wave 29
+Iron_Golem
+Chicken_Jockey
 Spider
-Silverfish
+Spider
+Witch
+Spider
 Enderman
+Zombified_Piglin
+Skeleton
+Zombified_Piglin
 Zombie
 Skeleton
-Witch
-Skeleton
 Creeper
-Creeper
-Bogged
 
 Wave 30
 Iron_Golem
 Spider
-Enderman
-Zombie
-Skeleton
-Witch
-Creeper
-Zombie
-Silverfish
-Zombie
-Zombie
-Giant
-Zombie
-Zombie
-
-Wave 31
-Iron_Golem
-Spider
-Enderman
-Silverfish
-Zombie
-Skeleton
-Witch
-Creeper
-Zombie
-Bogged
-
-Wave 32
-Zombified_Piglin
-Chicken_Jockey
-Zombie
-Skeleton
-Witch
-Creeper
-Zombie
-Skeleton
-Creeper
-
-Wave 33
-Spider
-Zombified_Piglin
-Enderman
-Silverfish
-Zombie
-Skeleton
-Witch
-Skeleton
-Iron_Golem
-Creeper
-
-Wave 34
-Iron_Golem
-Enderman
-Chicken_Jockey
-Silverfish
-Zombie
-Witch
-Creeper
-Zombie
-Skeleton
-Bogged
-
-Wave 35
-Chicken_Jockey
-Iron_Golem
-Spider
-Zombified_Piglin
-Silverfish
-Skeleton
-Creeper
-Witch
-Creeper
-Zombie
-
-Wave 36
-Zombified_Piglin
-Creeper
-Spider
-Enderman
-Chicken_Jockey
-Skeleton
-Witch
-Creeper
-Zombie
-Skeleton
-Silverfish
-
-Wave 37
-Iron_Golem
-Enderman
-Enderman
-Spider
-Zombified_Piglin
-Zombie
-Skeleton
-Witch
-Skeleton
-Bogged
-
-Wave 38
-Chicken_Jockey
-Spider
-Spider
-Chicken_Jockey
-Silverfish
-Skeleton
-Zombified_Piglin
-Witch
-Creeper
-Zombie
-Skeleton
-
-Wave 39
-Iron_Golem
-Chicken_Jockey
-Spider
-Witch
-Spider
-Enderman
-Zombified_Piglin
-Skeleton
-Zombified_Piglin
-Zombie
-Skeleton
-Creeper
-
-Wave 40
-Iron_Golem
 Spider
 Spider
 Enderman
@@ -351,7 +316,7 @@ Ravager
 Zombie
 Zombie
 
-Wave 41
+Wave 31
 Zombie
 Witch
 Creeper
@@ -362,10 +327,11 @@ Skeleton
 Creeper
 Bogged
 
-Wave 42
+Wave 32
 Iron_Golem
 Enderman
 Spider
+Spider
 Chicken_Jockey
 Skeleton
 Zombified_Piglin
@@ -376,8 +342,9 @@ Creeper
 Creeper
 Bogged
 
-Wave 43
+Wave 33
 Bogged
+Spider
 Spider
 Enderman
 Skeleton
@@ -391,7 +358,7 @@ Creeper
 Bogged
 Zombie
 
-Wave 44
+Wave 34
 Iron_Golem
 Creeper
 Chicken_Jockey
@@ -403,7 +370,8 @@ Skeleton
 Witch
 Creeper
 
-Wave 45
+Wave 35
+Spider
 Spider
 Spider
 Enderman
@@ -416,10 +384,11 @@ Silverfish
 Creeper
 Bogged
 
-Wave 46
+Wave 36
 Iron_Golem
 Silverfish
 Enderman
+Spider
 Spider
 Chicken_Jockey
 Skeleton
@@ -430,8 +399,9 @@ Witch
 Creeper
 Bogged
 
-Wave 47
+Wave 37
 Iron_Golem
+Spider
 Spider
 Spider
 Enderman
@@ -446,10 +416,11 @@ Witch
 Creeper
 Bogged
 
-Wave 48
+Wave 38
 Chicken_Jockey
 Silverfish
 Iron_Golem
+Spider
 Spider
 Chicken_Jockey
 Enderman
@@ -464,9 +435,10 @@ Witch
 Creeper
 Bogged
 
-Wave 49
+Wave 39
 Iron_Golem
 Enderman
+Spider
 Spider
 Chicken_Jockey
 Skeleton
@@ -479,17 +451,13 @@ Witch
 Bogged
 Bogged
 
-Wave 50
+Wave 40
 Spider
-Zombie
-Zombie
-Zombie
+Spider
 Skeleton
 Silverfish
-Iron_Golem
 Spider
 Silverfish
-Chicken_Jockey
 Enderman
 Skeleton
 Zombified_Piglin
@@ -499,10 +467,6 @@ Witch
 Zombified_Piglin
 Creeper
 Bogged
-Zombie
-Zombie
-Zombie
-Zombie
-Warden
+Giant
 Creeper
 Creeper

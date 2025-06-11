@@ -5,7 +5,7 @@ summon endermite ~ ~ ~ { \
     Tags:["defense-monster", \
     "cw_hp_disp", \
     "defense-endermite", \
-    "Entity-Dummy"], \
+    "Entity-Dummy","defense.new_endermite"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \

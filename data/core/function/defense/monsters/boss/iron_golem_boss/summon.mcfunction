@@ -1,6 +1,11 @@
 title @a times 10 60 20
 title @a title {"text":"Boss has spawned!", "font":"retitled_titles:regular", "color":"#27FF06"}
 playsound entity.wither.spawn master @a ~ ~ ~ 1000000000000000000 0.7
+bossbar set core:defense.boss players @a
+bossbar set core:defense.boss visible true
+bossbar set core:defense.boss name {"selector":"@n[tag=defense.boss]"}
+bossbar set core:defense.boss max 220
+bossbar set core:defense.boss value 220
 execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     CustomNameVisible:1b, \
     Health:250, \
@@ -10,7 +15,7 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     Tags:["defense-monster", \
     "cw_hp_disp", \
     "defense-iron_golem", \
-    "Entity-Dummy"], \
+    "Entity-Dummy","defense.boss"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -31,3 +36,4 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     PersistenceRequired:1b \
 }
 execute as @a[advancements={core:defense/mobs/iron_golem=false}] run advancement grant @s only core:defense/mobs/iron_golem
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-iron_golem] defense.distance 40000

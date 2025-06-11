@@ -7,7 +7,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     Tags:["defense-monster", \
     "cw_hp_disp", \
     "defense-spider", \
-    "Entity-Dummy"], \
+    "Entity-Dummy","defense.has_skellie"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -32,7 +32,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
         Tags:["defense-monster", \
         "cw_hp_disp", \
         "defense-skeleton", \
-        "Entity-Dummy"], \
+        "Entity-Dummy","defense.riding_spider"], \
         Team:defense_enemies, \
         attributes:[{ \
             id:"max_health", \
@@ -53,4 +53,5 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
 execute as @a[advancements={core:defense/mobs/spider=false}] run advancement grant @s only core:defense/mobs/spider
 
 scoreboard players add $mobs_left defense.wave 1
+execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-skeleton] defense.distance 0
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-spider] defense.distance 0

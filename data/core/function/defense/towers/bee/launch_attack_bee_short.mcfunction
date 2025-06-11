@@ -6,7 +6,7 @@ execute as @e[tag=defense.bee_deployer,distance=..4.95,tag=defense.found_target]
 execute as @s[tag=upgrade_attack2] run scoreboard players add @s defense.bee_cooldown 1
 $execute as @s[tag=upgrade_attack2] run execute if score @s defense.bee_cooldown matches 6.. run return run function core:defense/towers/bee/launch_queen_bee {"damage":"$(damage)","speed":"$(speed)","cooldown":"$(cooldown)"}
 
-$execute at @e[tag=defense.bee_deployer,distance=..4.95,tag=defense.found_target] run summon text_display ~ ~-1 ~ {Tags:["defense.bee_display"],teleport_duration:1,Passengers:[{id:"minecraft:bee",AngerTime:10000,NoAI:1b,Tags:["defense.bee","defense.short_bee"],Health:$(damage),Invulnerable:1b,attributes:[{id:"attack_knockback",base:$(speed)},{id:"attack_damage",base:0}]}]}
+$execute at @e[tag=defense.bee_deployer,distance=..4.95,tag=defense.found_target] run summon text_display ~ ~-1 ~ {Tags:["defense.bee_display"],teleport_duration:1,Passengers:[{id:"minecraft:bee",AngerTime:10000,NoAI:1b,Team:"defense_player",Tags:["defense.bee","defense.short_bee"],Health:$(damage),Invulnerable:1b,attributes:[{id:"attack_knockback",base:$(speed)},{id:"attack_damage",base:0}]}]}
 execute as @e[tag=defense.bee_display] at @s if block ~ -62 ~ cyan_wool run rotate @s 0 0
 execute as @e[tag=defense.bee_display] at @s if block ~ -62 ~ blue_wool run rotate @s -90 0
 execute as @e[tag=defense.bee_display] at @s if block ~ -62 ~ light_blue_wool run rotate @s -180 0

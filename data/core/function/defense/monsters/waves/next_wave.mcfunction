@@ -1,5 +1,7 @@
+kill @e[tag=defense.panda_landing]
+kill @e[tag=defense.panda_tnt]
 scoreboard players set $wave_track defense.wave 1
-execute if score $wave_level defense.wave matches 3 run function core:defense/start/warning
+#execute if score $wave_level defense.wave matches 3 run function core:defense/start/warning
 $function core:defense/monsters/waves/wave$(wave)
 #execute if score $wave_level defense.wave matches 5 run function core:defense/monsters/waves/destroy_tower
 #execute if score $wave_level defense.wave matches 10 run function core:defense/monsters/waves/destroy_tower2
