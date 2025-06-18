@@ -5,9 +5,10 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-iron_golem", \
-    "Entity-Dummy"], \
+    "Entity-Dummy", \
+    "defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -15,7 +16,7 @@ execute positioned 4 -59 146 run summon iron_golem ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:220 \
+        base:22 \
     }, \
     { \
         id:"minecraft:armor", \

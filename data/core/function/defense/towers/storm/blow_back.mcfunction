@@ -7,7 +7,6 @@ summon lightning_bolt ~ ~-10 ~
 execute if entity @s[tag=defense-warden] run return fail
 $execute if entity @s[tag=defense-skeleton] on vehicle at @s run return run function core:defense/towers/storm/spider_jockey_fallback {"blow_power":"$(blow_power)"}
 $tp @s ^ ^ ^-$(blow_power)
-tag @s add chosen-path
 $data modify storage core:defense.storm_blowback power set value $(blow_power)
-execute store result score $blow_power defense.distance run data get storage core:defense.storm_blowback power 1000
+execute store result score $blow_power defense.distance run data get storage core:defense.storm_blowback power 200
 scoreboard players operation @s defense.distance -= $blow_power defense.distance

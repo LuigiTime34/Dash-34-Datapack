@@ -5,9 +5,10 @@ execute positioned 4 -59 146 run summon witch ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-witch", \
-    "Entity-Dummy"], \
+    "Entity-Dummy", \
+    "defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -19,7 +20,7 @@ execute positioned 4 -59 146 run summon witch ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:210 \
+        base:21 \
     }], \
     PersistenceRequired:1b \
 }

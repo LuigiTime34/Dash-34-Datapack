@@ -1,15 +1,8 @@
-playsound entity.enderman.teleport master @a ~ ~ ~ 0.5
-tag @s add defense.enderman-tping
-function core:defense/monsters/abilities/enderman_recursive
-tag @s remove defense.enderman-tping
-
-tag @s add this
-# Find the linked enderman
-execute as @e[type=marker,tag=this,limit=1] if score @s defense.entity_id = @n[type=enderman,tag=defense-enderman,tag=this] defense.marker_id run tp @s ~ ~ ~
-
-scoreboard players set @s defense.abilities 112
-execute unless predicate {condition:"random_chance","chance":0.2} run return 0
+scoreboard players set @s defense.abilities 100
+scoreboard players set @s defense.speed 1200
+playsound entity.enderman.teleport master @a ~ ~ ~ 2
+execute unless predicate {condition:"random_chance","chance":0.3} run return 0
 function core:defense/monsters/summon/endermite
-rotate @n[tag=defense-endermite] facing entity @s feet
+execute at @s run tp @n[tag=defense.new_endermite] ~ ~ ~ ~ ~
 scoreboard players operation @n[tag=defense-endermite,tag=defense.new_endermite] defense.distance = @s defense.distance
 tag @n[tag=defense-endermite,tag=defense.new_endermite] remove defense.new_endermite

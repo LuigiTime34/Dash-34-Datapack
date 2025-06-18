@@ -5,9 +5,10 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-spider", \
-    "Entity-Dummy","defense.has_skellie"], \
+    "Entity-Dummy","defense.has_skellie", \
+    "defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -19,7 +20,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:260 \
+        base:26 \
     }], \
     PersistenceRequired:1b, \
     Passengers:[ \ 
@@ -30,7 +31,7 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
         Rotation:[90f, \
         0.0f], \
         Tags:["defense-monster", \
-        "cw_hp_disp", \
+        "defense.health_display", \
         "defense-skeleton", \
         "Entity-Dummy","defense.riding_spider"], \
         Team:defense_enemies, \
@@ -41,10 +42,6 @@ execute positioned 4 -59 146 run summon spider ~ ~ ~ { \
         { \
             id:"minecraft:attack_damage", \
             base:0 \
-        }, \
-        { \
-            id:"minecraft:attack_knockback", \
-            base:-4920 \
         }], \
         PersistenceRequired:1b, \
         ArmorItems:[{id:"minecraft:iron_boots"},{id:"minecraft:iron_leggings"},{id:"minecraft:iron_chestplate"},{id:"minecraft:iron_helmet"}] \

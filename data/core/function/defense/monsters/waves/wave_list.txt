@@ -1,63 +1,104 @@
 Wave 1
 Zombie
-Zombie
-Zombie
-Skeleton
-Skeleton
 
 Wave 2
-Spider
+Zombie
 Zombie
 
 Wave 3
 Zombie
 Zombie
-Spider
 Zombie
 
 Wave 4
-Chicken_Jockey
-Zombie
 Skeleton
-Zombie
-Zombie
 
 Wave 5
-Zombie
-Zombie
-Skeleton
-Chicken_Jockey
 Zombie
 Skeleton
 
 Wave 6
-Silverfish
-Silverfish
-Zombie
-Zombie
 Skeleton
 Zombie
 Zombie
 
 Wave 7
-Zombie
-Spider
-Zombie
-Spider
 Skeleton
-Silverfish
-Zombie
+Skeleton
 
 Wave 8
-Zombie
-Zombie
 Creeper
-Skeleton
-Silverfish
-Zombie
 
 Wave 9
 Skeleton
+Creeper
+
+Wave 10
+Zombie
+Skeleton
+Creeper
+Zombie
+
+Wave 11
+Zombie
+Zombie
+Zombie
+Skeleton
+Skeleton
+
+Wave 12
+Spider
+Zombie
+
+Wave 13
+Zombie
+Zombie
+Spider
+Zombie
+
+Wave 14
+Chicken_Jockey
+Zombie
+Skeleton
+Zombie
+Zombie
+
+Wave 15
+Zombie
+Zombie
+Skeleton
+Chicken_Jockey
+Zombie
+Skeleton
+
+Wave 16
+Silverfish
+Silverfish
+Zombie
+Zombie
+Skeleton
+Zombie
+Zombie
+
+Wave 17
+Zombie
+Spider
+Zombie
+Spider
+Skeleton
+Silverfish
+Zombie
+
+Wave 18
+Zombie
+Zombie
+Creeper
+Skeleton
+Silverfish
+Zombie
+
+Wave 19
+Skeleton
 Spider
 Zombie
 Silverfish
@@ -66,7 +107,7 @@ Creeper
 Zombie
 Spider
 
-Wave 10
+Wave 20
 Skeleton
 Spider
 Spider
@@ -74,7 +115,7 @@ Iron_Golem_Boss
 Zombie
 Zombie
 
-Wave 11
+Wave 21
 Creeper
 Skeleton
 Witch
@@ -82,7 +123,7 @@ Zombie
 Skeleton
 Spider
 
-Wave 12
+Wave 22
 Chicken_Jockey
 Spider
 Skeleton
@@ -91,7 +132,7 @@ Zombie
 Creeper
 Silverfish
 
-Wave 13
+Wave 23
 Enderman
 Zombie
 Zombie
@@ -101,7 +142,7 @@ Skeleton
 Skeleton
 Witch
 
-Wave 14
+Wave 24
 Spider
 Enderman
 Silverfish
@@ -110,7 +151,7 @@ Skeleton
 Chicken_Jockey
 Zombie
 
-Wave 15
+Wave 25
 Enderman
 Skeleton
 Spider
@@ -120,7 +161,7 @@ Silverfish
 Chicken_Jockey
 Creeper
 
-Wave 16
+Wave 26
 Spider
 Enderman
 Chicken_Jockey
@@ -131,7 +172,7 @@ Witch
 Zombie
 Skeleton
 
-Wave 17
+Wave 27
 Spider
 Enderman
 Zombie
@@ -143,7 +184,7 @@ Skeleton
 Silverfish
 Creeper
 
-Wave 18
+Wave 28
 Zombie
 Zombie
 Skeleton
@@ -154,7 +195,7 @@ Creeper
 Creeper
 Bogged
 
-Wave 19
+Wave 29
 Spider
 Silverfish
 Enderman
@@ -166,7 +207,7 @@ Creeper
 Creeper
 Bogged
 
-Wave 20
+Wave 30
 Iron_Golem
 Spider
 Enderman
@@ -182,7 +223,7 @@ Warden
 Zombie
 Zombie
 
-Wave 21
+Wave 31
 Iron_Golem
 Spider
 Enderman
@@ -194,7 +235,7 @@ Creeper
 Zombie
 Bogged
 
-Wave 22
+Wave 32
 Zombified_Piglin
 Chicken_Jockey
 Zombie
@@ -205,7 +246,7 @@ Zombie
 Skeleton
 Creeper
 
-Wave 23
+Wave 33
 Spider
 Zombified_Piglin
 Enderman
@@ -217,7 +258,7 @@ Skeleton
 Iron_Golem
 Creeper
 
-Wave 24
+Wave 34
 Iron_Golem
 Enderman
 Chicken_Jockey
@@ -229,7 +270,7 @@ Zombie
 Skeleton
 Bogged
 
-Wave 25
+Wave 35
 Chicken_Jockey
 Iron_Golem
 Spider
@@ -242,7 +283,7 @@ Witch
 Creeper
 Zombie
 
-Wave 26
+Wave 36
 Zombified_Piglin
 Creeper
 Spider
@@ -256,7 +297,7 @@ Zombie
 Skeleton
 Silverfish
 
-Wave 27
+Wave 37
 Iron_Golem
 Enderman
 Enderman
@@ -269,7 +310,7 @@ Witch
 Skeleton
 Bogged
 
-Wave 28
+Wave 38
 Chicken_Jockey
 Spider
 Spider
@@ -283,7 +324,7 @@ Creeper
 Zombie
 Skeleton
 
-Wave 29
+Wave 39
 Iron_Golem
 Chicken_Jockey
 Spider
@@ -298,7 +339,7 @@ Zombie
 Skeleton
 Creeper
 
-Wave 30
+Wave 40
 Iron_Golem
 Spider
 Spider
@@ -316,7 +357,7 @@ Ravager
 Zombie
 Zombie
 
-Wave 31
+Wave 41
 Zombie
 Witch
 Creeper
@@ -327,7 +368,7 @@ Skeleton
 Creeper
 Bogged
 
-Wave 32
+Wave 42
 Iron_Golem
 Enderman
 Spider
@@ -342,7 +383,7 @@ Creeper
 Creeper
 Bogged
 
-Wave 33
+Wave 43
 Bogged
 Spider
 Spider
@@ -358,7 +399,7 @@ Creeper
 Bogged
 Zombie
 
-Wave 34
+Wave 44
 Iron_Golem
 Creeper
 Chicken_Jockey
@@ -370,7 +411,7 @@ Skeleton
 Witch
 Creeper
 
-Wave 35
+Wave 45
 Spider
 Spider
 Spider
@@ -384,7 +425,7 @@ Silverfish
 Creeper
 Bogged
 
-Wave 36
+Wave 46
 Iron_Golem
 Silverfish
 Enderman
@@ -399,7 +440,7 @@ Witch
 Creeper
 Bogged
 
-Wave 37
+Wave 47
 Iron_Golem
 Spider
 Spider
@@ -416,7 +457,7 @@ Witch
 Creeper
 Bogged
 
-Wave 38
+Wave 48
 Chicken_Jockey
 Silverfish
 Iron_Golem
@@ -435,7 +476,7 @@ Witch
 Creeper
 Bogged
 
-Wave 39
+Wave 49
 Iron_Golem
 Enderman
 Spider
@@ -451,7 +492,7 @@ Witch
 Bogged
 Bogged
 
-Wave 40
+Wave 50
 Spider
 Spider
 Skeleton

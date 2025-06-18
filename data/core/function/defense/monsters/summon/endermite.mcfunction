@@ -3,9 +3,9 @@ summon endermite ~ ~ ~ { \
     Health:30, \
     NoAI:1b, \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-endermite", \
-    "Entity-Dummy","defense.new_endermite"], \
+    "Entity-Dummy","defense.new_endermite","defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -17,7 +17,7 @@ summon endermite ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:340 \
+        base:34 \
     }], \
     PersistenceRequired:1b \
 }

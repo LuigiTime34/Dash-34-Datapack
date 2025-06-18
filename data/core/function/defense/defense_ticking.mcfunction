@@ -80,6 +80,7 @@ execute if entity @n[tag=defense.boss] run bossbar set core:defense.boss name {"
 # Spider With Skellie Riding
 # Rotate snap
 execute as @e[tag=defense-skeleton] on vehicle on passengers at @s run data modify entity @s Rotation set from entity @n[tag=defense-spider,distance=..1] Rotation
+# Store same distance
 execute as @e[tag=defense-skeleton,tag=defense.riding_spider] at @s run scoreboard players operation @s defense.distance = @n[tag=defense-spider,distance=..1] defense.distance
 execute as @e[tag=defense-spider] on passengers on vehicle run tag @s add defense.has_skellie
 execute as @e[tag=defense-spider] run tag @s remove defense.has_skellie
@@ -95,10 +96,10 @@ execute as @e[tag=defense-monster,tag=defense-bogged] at @s if score @s defense.
 execute as @e[tag=defense-monster,tag=defense-bogged] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/bogged
 # Double speed at half health
 execute as @e[tag=defense-monster,tag=defense-bogged] store result score @s defense.bogged_health run data get entity @s Health
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..39 unless score @s defense.speed matches 380 at @s run playsound block.trial_spawner.ominous_activate master @a ~ ~ ~ 1
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..39 unless score @s defense.speed matches 380 at @s run particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0.3 0.6 0.3 0 35
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..40 run attribute @s attack_knockback base set 380
-execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches 40.. run attribute @s attack_knockback base set 190
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..39 unless score @s defense.speed matches 38 at @s run playsound block.trial_spawner.ominous_activate master @a ~ ~ ~ 1
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..39 unless score @s defense.speed matches 38 at @s run particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0.3 0.6 0.3 0 35
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches ..40 run scoreboard players set @s defense.speed 38
+execute as @e[tag=defense-monster,tag=defense-bogged] if score @s defense.bogged_health matches 40.. run scoreboard players set @s defense.speed 19
 
 # Silverfish
 execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
@@ -106,9 +107,9 @@ execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.
 execute as @e[tag=defense-silverfish,type=silverfish] at @s if score @s defense.abilities matches 60 run function core:defense/monsters/abilities/silverfish2
 
 # Enderman
-execute as @e[tag=defense-monster,tag=defense-enderman] if score @s defense.abilities matches 13.. run scoreboard players remove @s defense.abilities 1
+execute as @e[tag=defense-monster,tag=defense-enderman] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
 
-execute as @e[tag=defense-monster,tag=defense-enderman] at @s if score @s defense.abilities matches 13 run function core:defense/monsters/abilities/enderman
+execute as @e[tag=defense-monster,tag=defense-enderman] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/enderman
 
 # Create a marker for each enderman that doesn't have one
 execute as @e[tag=defense-monster,tag=defense-enderman,tag=!has_marker] at @s run function core:defense/monsters/abilities/summon_enderman_marker
@@ -123,6 +124,7 @@ execute as @e[tag=defense-baby_zombie,tag=!defense-monster] on vehicle on passen
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster,tag=!defense-jockey] run function core:defense/monsters/abilities/chicken_jockey_dismount
 # Rotate snap
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-chicken,distance=..1] Rotation
+# Store same distance
 execute as @e[tag=defense-baby_zombie,tag=!defense-monster] at @s run scoreboard players operation @s defense.distance = @n[tag=defense-chicken,distance=..1] defense.distance
 
 # BIG Chicken Jockey
@@ -131,10 +133,11 @@ execute as @e[tag=defense-big_jockey_zombie,tag=!defense-monster] on vehicle on 
 execute as @e[tag=defense-big_jockey_zombie,tag=!defense-monster,tag=!defense-big_jockey] run function core:defense/monsters/abilities/chicken_jockey_dismount
 # Rotate snap
 execute as @e[tag=defense-big_jockey_zombie,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-big_chicken,distance=..1.5] Rotation
+# Store same distance
 execute as @e[tag=defense-big_jockey_zombie,tag=!defense-monster] at @s run scoreboard players operation @s defense.distance = @n[tag=defense-big_chicken,distance=..1] defense.distance
 
 # Zombified Piglin
-execute as @e[tag=defense-zombified_piglin] if data entity @s {HurtTime:9s} at @s rotated ~ 0 positioned ^ ^ ^-1 run function core:defense/monsters/abilities/zombified_piglin_reinforcements
+execute as @e[tag=defense-zombified_piglin] if data entity @s {HurtTime:9s} at @s rotated ~ 0 positioned ^ ^ ^-0.2 run function core:defense/monsters/abilities/zombified_piglin_reinforcements
 
 # Charged Creeper
 execute as @e[tag=defense.creeper-death,tag=defense.not_dead] run tag @s remove defense.not_dead
@@ -175,19 +178,7 @@ execute as @n[tag=defense-ravager,tag=defense.ravager_speed] if score @s defense
 # Damage self to speed
 execute as @e[tag=defense-ravager] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
 execute as @e[tag=defense-ravager] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/boss/ravager/damage_self
-execute as @e[tag=defense-ravager] at @s if score @s defense.abilities matches 150 run attribute @s attack_knockback base set 210
-
-# ILLUSIONER
-# Detect dismount
-execute as @e[tag=defense-illusioner,tag=defense-illusioner_rider] run tag @s remove defense-illusioner_rider
-execute as @e[tag=defense-illusioner,tag=!defense-monster] on vehicle on passengers run tag @s add defense-illusioner_rider
-execute as @e[tag=defense-illusioner,tag=!defense-monster,tag=!defense-illusioner_rider] run function core:defense/monsters/boss/ravager/dismount
-# Rotate snap
-execute as @e[tag=defense-illusioner,tag=!defense-monster] at @s run data modify entity @s Rotation set from entity @n[tag=defense-ravager] Rotation
-
-# Decoys
-execute as @e[tag=defense-illusioner] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-illusioner] if score @s defense.abilities matches 1 at @s run function core:defense/monsters/boss/ravager/prepare_decoys
+execute as @e[tag=defense-ravager] at @s if score @s defense.abilities matches 150 run scoreboard players set @s defense.speed 20
 
 
 # Warden
@@ -326,9 +317,9 @@ execute as @e[tag=storm-center-marker,tag=!upgrade1,tag=!upgrade_snow1,tag=!upgr
 # First Upgrade
 execute as @e[tag=storm-center-marker,tag=upgrade1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity {"cooldown":"100","damage":"10","blow_power":"0.9","range":"14.5"}
 # Snow 1
-execute as @e[tag=storm-center-marker,tag=upgrade_snow1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow {"cooldown":"120","damage":"10","blow_power":"0.9","range":"15.5","freeze_time":"80","freeze_power":"30"}
+execute as @e[tag=storm-center-marker,tag=upgrade_snow1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow {"cooldown":"120","damage":"10","blow_power":"0.9","range":"15.5","freeze_time":"80","freeze_power":"3"}
 # Snow 2
-execute as @e[tag=storm-center-marker,tag=upgrade_snow2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow_storm {"cooldown":"120","damage":"12","blow_power":"1.2","range":"15.5","freeze_time":"100","freeze_power":"50"}
+execute as @e[tag=storm-center-marker,tag=upgrade_snow2] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_snow_storm {"cooldown":"120","damage":"12","blow_power":"1.2","range":"15.5","freeze_time":"100","freeze_power":"5"}
 
 # Surge 1
 execute as @e[tag=storm-center-marker,tag=upgrade_surge1] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/target_entity_chain {"cooldown":"80","damage":"12","blow_power":"0.5","range":"20.5","max_chain_length":"3","chain_radius":"4","chain_damage":"3"}
@@ -344,9 +335,8 @@ execute as @e[tag=defense-monster] if score @s defense.storm.freeze_timer matche
 execute as @e[tag=defense-monster] if score @s defense.storm.freeze_timer matches 1 run scoreboard players set @s defense.storm.freeze_power 0
 # Freeze storm logic
 execute at @e[tag=storm.freeze_storm] run particle snowflake ~ ~ ~ 0.5 1 0.5 0 30
-execute as @e[tag=defense-monster,tag=!defense-stray] at @s if entity @n[tag=storm.freeze_storm,distance=..3] run scoreboard players set @s defense.storm.freeze_power 60
+execute as @e[tag=defense-monster,tag=!defense-stray] at @s if entity @n[tag=storm.freeze_storm,distance=..3] run scoreboard players set @s defense.storm.freeze_power 6
 execute as @e[tag=defense-monster] at @s if entity @n[tag=storm.freeze_storm,distance=..3] run scoreboard players set @s defense.storm.freeze_timer 100
-execute as @e[tag=defense-monster,tag=defense-stray] at @s if entity @n[tag=storm.freeze_storm,distance=..3] run scoreboard players set @s defense.storm.freeze_power -60
 
 execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=storm.freeze_storm] if score @s defense.towers matches 1 at @s run function core:defense/towers/storm/kill_freezestorm

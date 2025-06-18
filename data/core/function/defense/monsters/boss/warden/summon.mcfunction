@@ -13,9 +13,9 @@ execute positioned 4 -59 146 run summon warden ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-warden", \
-    "Entity-Dummy","defense.boss"], \
+    "Entity-Dummy","defense.boss","defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -27,7 +27,7 @@ execute positioned 4 -59 146 run summon warden ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:200 \
+        base:20 \
     }, \
     { \
         id:"minecraft:armor", \

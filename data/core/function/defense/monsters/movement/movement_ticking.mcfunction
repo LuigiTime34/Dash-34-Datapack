@@ -1,11 +1,8 @@
 # End of path
-execute if block ~ ~-0.1 ~ black_concrete run function core:defense/monsters/reached_end
-# Determine Speed
-execute store result score @s defense.speed run attribute @s attack_knockback base get
+execute if block ~ -59 ~ black_concrete run function core:defense/monsters/reached_end
+# Get initial speed
+execute as @e[tag=defense.new_mob] run function core:defense/monsters/movement/set_initial_speed
 # Move
 function core:defense/monsters/movement/determine_speed
-# Intersection
-execute if entity @s[tag=!chosen-path] if block ~ ~-0.1 ~ ochre_froglight if entity @n[type=marker,tag=defense-intersection,distance=..0.3] run function core:defense/intersection/decide_turn
-execute if entity @s[tag=chosen-path] if block ~ -63 ~ white_concrete run tag @s remove chosen-path
 # Fallback in case they go out of bounds :[
 execute if block ~ -61 ~ black_glazed_terracotta run tp @s @n[tag=defense-intersection]

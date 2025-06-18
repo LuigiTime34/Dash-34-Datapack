@@ -5,9 +5,10 @@ execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-charged_creeper", \
-    "Entity-Dummy"], \
+    "Entity-Dummy", \
+    "defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -19,7 +20,7 @@ execute positioned 4 -59 146 run summon creeper ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:230 \
+        base:23 \
     }], \
     PersistenceRequired:1b, \
     powered:1b, \

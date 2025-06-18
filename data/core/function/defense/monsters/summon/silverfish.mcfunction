@@ -5,9 +5,10 @@ execute positioned 4 -59 146 run summon silverfish ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-silverfish", \
-    "Entity-Dummy"], \
+    "Entity-Dummy", \
+    "defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -19,7 +20,7 @@ execute positioned 4 -59 146 run summon silverfish ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:320 \
+        base:32 \
     }], \
     PersistenceRequired:1b \
 }

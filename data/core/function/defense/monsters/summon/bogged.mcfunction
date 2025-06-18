@@ -5,9 +5,10 @@ execute positioned 4 -59 146 run summon bogged ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-bogged", \
-    "Entity-Dummy"], \
+    "Entity-Dummy", \
+    "defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -19,7 +20,7 @@ execute positioned 4 -59 146 run summon bogged ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:190 \
+        base:19 \
     }] \
 }
 execute as @a[advancements={core:defense/mobs/bogged=false}] run advancement grant @s only core:defense/mobs/bogged

@@ -5,9 +5,10 @@ execute positioned 4 -59 146 run summon enderman ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-enderman", \
-    "Entity-Dummy"], \
+    "Entity-Dummy", \
+    "defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -19,11 +20,12 @@ execute positioned 4 -59 146 run summon enderman ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:230 \
+        base:23 \
     }], \
     PersistenceRequired:1b \
 }
-execute positioned 4 -59 146 run summon marker ~ ~ ~ {Tags:["defense.enderman-marker"]}
+execute positioned 4 -59 146 run summon marker ~ ~ ~ {Tags:["defense.enderman-marker", \
+    "defense.new_mob"]}
 execute as @a[advancements={core:defense/mobs/enderman=false}] run advancement grant @s only core:defense/mobs/enderman
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-enderman] defense.abilities 100
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-enderman] defense.distance 0

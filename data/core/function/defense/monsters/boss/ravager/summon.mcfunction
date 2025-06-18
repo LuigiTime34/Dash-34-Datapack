@@ -13,9 +13,9 @@ execute positioned 4 -59 146 run summon ravager ~ ~ ~ { \
     Rotation:[90f, \
     0.0f], \
     Tags:["defense-monster", \
-    "cw_hp_disp", \
+    "defense.health_display", \
     "defense-ravager", \
-    "Entity-Dummy","defense.boss"], \
+    "Entity-Dummy","defense.boss","defense.new_mob"], \
     Team:defense_enemies, \
     attributes:[{ \
         id:"max_health", \
@@ -27,7 +27,7 @@ execute positioned 4 -59 146 run summon ravager ~ ~ ~ { \
     }, \
     { \
         id:"minecraft:attack_knockback", \
-        base:200 \
+        base:20 \
     }], \
     PersistenceRequired:1b, \
 }
@@ -56,5 +56,6 @@ execute positioned 4 -59 146 run summon ravager ~ ~ ~ { \
 #         }], \
 #         PersistenceRequired:1b, \
 #     }] \
+
 execute positioned 4 -59 146 run scoreboard players set @n[tag=defense-ravager] defense.abilities 150
 execute as @a[advancements={core:defense/mobs/ravager=false}] run advancement grant @s only core:defense/mobs/ravager

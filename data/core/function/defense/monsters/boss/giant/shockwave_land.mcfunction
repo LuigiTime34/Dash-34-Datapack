@@ -7,4 +7,3 @@ execute positioned ~ -59 ~ as @e[tag=defense.tower_marker,distance=..13] run tag
 execute store result score @s defense.wave run random value 1..2
 execute if score @s defense.wave matches 1 run function core:defense/monsters/boss/giant/summon_armored_zombie
 execute if score @s defense.wave matches 2 run function core:defense/monsters/boss/giant/summon_chicken_jockey
-execute if score @s defense.wave matches 2 run playsound minecraft:sound.custom.chicken_jockey master @a ~ ~ ~ 10000000000000 0.5
